@@ -743,21 +743,17 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 
 .logo-chip{
   aspect-ratio: 2.4 / 1;
-  border:1px solid var(--line);
-  border-radius:12px;
   display:flex; align-items:center; justify-content:center;
   font-family:'JetBrains Mono', monospace;
   font-size:clamp(10px, 1.1vw, 12.5px);
   letter-spacing:0.04em;
   color:var(--muted);
-  background: rgba(245,247,250,0.02);
-  transition: border-color 0.4s, color 0.4s, background 0.4s;
+  transition: color 0.4s, opacity 0.4s;
   will-change: transform;
 }
 .logo-chip:hover{
-  border-color:var(--cyan);
   color:var(--ink);
-  background: rgba(0,229,255,0.06);
+  opacity: 0.85;
 }
 .logo-float{
   display:inline-block;
