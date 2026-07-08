@@ -206,42 +206,60 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   background-position: center, center, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
-/* "How we do it" detail panels — shifted variants of each service gradient */
+/* "How we do it" panels — reuse the matching service photo, shifted gradient */
 .panel--seo-how .gradient{
-  background:
-    radial-gradient(ellipse 50% 45% at 20% 70%, rgba(0,229,255,0.28), transparent 60%),
-    radial-gradient(ellipse 60% 55% at 88% 20%, rgba(255,43,214,0.26), transparent 60%),
-    linear-gradient(170deg, #04070e 0%, #0b1424 50%, #090c16 100%);
+  background-image:
+    radial-gradient(ellipse 50% 45% at 20% 70%, rgba(0,229,255,0.32), transparent 60%),
+    radial-gradient(ellipse 60% 55% at 88% 20%, rgba(255,43,214,0.28), transparent 60%),
+    url('/images/seo-bg.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .panel--cro-how .gradient{
-  background:
-    radial-gradient(ellipse 55% 50% at 15% 60%, rgba(255,43,214,0.28), transparent 60%),
+  background-image:
+    radial-gradient(ellipse 55% 50% at 15% 60%, rgba(255,43,214,0.32), transparent 60%),
     radial-gradient(ellipse 50% 55% at 85% 25%, rgba(0,229,255,0.30), transparent 60%),
-    linear-gradient(160deg, #04060e 0%, #0a1222 50%, #0b0918 100%);
+    url('/images/cro-bg.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .panel--ecommerce-how .gradient{
-  background:
+  background-image:
     radial-gradient(ellipse 50% 55% at 18% 80%, rgba(255,43,214,0.30), transparent 60%),
-    radial-gradient(ellipse 45% 50% at 82% 22%, rgba(0,229,255,0.26), transparent 60%),
-    linear-gradient(162deg, #05070e 0%, #0a1020 48%, #09091a 100%);
+    radial-gradient(ellipse 45% 50% at 82% 22%, rgba(0,229,255,0.28), transparent 60%),
+    url('/images/ecommerce-bg.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .panel--funnel-how .gradient{
-  background:
+  background-image:
     radial-gradient(ellipse 60% 45% at 82% 80%, rgba(0,229,255,0.28), transparent 60%),
-    radial-gradient(ellipse 45% 50% at 20% 22%, rgba(255,43,214,0.28), transparent 60%),
-    linear-gradient(155deg, #04060c 0%, #0a1322 48%, #0a0818 100%);
+    radial-gradient(ellipse 45% 50% at 20% 22%, rgba(255,43,214,0.30), transparent 60%),
+    url('/images/funnel-bg.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .panel--analytics-how .gradient{
-  background:
-    radial-gradient(ellipse 50% 50% at 50% 78%, rgba(255,43,214,0.26), transparent 60%),
+  background-image:
+    radial-gradient(ellipse 50% 50% at 50% 78%, rgba(255,43,214,0.28), transparent 60%),
     radial-gradient(ellipse 55% 50% at 20% 22%, rgba(0,229,255,0.30), transparent 60%),
-    linear-gradient(165deg, #03050b 0%, #09101e 48%, #0b0918 100%);
+    url('/images/analytics-bg.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .panel--data-how .gradient{
-  background:
-    radial-gradient(ellipse 55% 50% at 80% 75%, rgba(255,43,214,0.28), transparent 60%),
+  background-image:
+    radial-gradient(ellipse 55% 50% at 80% 75%, rgba(255,43,214,0.30), transparent 60%),
     radial-gradient(ellipse 50% 50% at 18% 28%, rgba(0,229,255,0.32), transparent 60%),
-    linear-gradient(168deg, #03050b 0%, #09101e 50%, #0c091a 100%);
+    url('/images/data-bg.jpg');
+  background-size: auto, auto, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .panel-bg::after{
   content:'';
@@ -266,7 +284,13 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .panel--ecommerce .panel-bg::before,
 .panel--funnel .panel-bg::before,
 .panel--analytics .panel-bg::before,
-.panel--data .panel-bg::before{
+.panel--data .panel-bg::before,
+.panel--seo-how .panel-bg::before,
+.panel--cro-how .panel-bg::before,
+.panel--ecommerce-how .panel-bg::before,
+.panel--funnel-how .panel-bg::before,
+.panel--analytics-how .panel-bg::before,
+.panel--data-how .panel-bg::before{
   background:
     linear-gradient(100deg, rgba(5,7,13,0.92) 0%, rgba(5,7,13,0.65) 45%, rgba(5,7,13,0.35) 70%, rgba(5,7,13,0.55) 100%),
     radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,0,0,0.6), transparent 65%);
@@ -534,6 +558,15 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   max-width:780px;
   overflow:hidden;
 }
+/* Home hero: center content vertically and bigger headline to stand out */
+.panel--home .panel-content{
+  justify-content: center;
+  max-width: 900px;
+}
+.panel--home .headline{
+  font-size: clamp(2.8rem, min(7vw, 8.5vh), 6rem);
+  line-height: 1.0;
+}
 
 .eyebrow{
   font-family:'JetBrains Mono', monospace;
@@ -555,8 +588,8 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 .headline{
   font-family:'Unbounded', sans-serif;
   font-weight:700;
-  font-size: clamp(2.4rem, min(6.2vw, 7.6vh), 5.4rem);
-  line-height:1.0;
+  font-size: clamp(2rem, min(5vw, 6.4vh), 4.2rem);
+  line-height:1.05;
   letter-spacing:-0.01em;
   margin-bottom:24px;
   will-change: transform, opacity;
@@ -1070,11 +1103,12 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   .nav-logo-mark{ height:26px; width:auto; }
   .nav-cta{ padding:8px 14px; font-size:12px; }
 
-  /* Panel content area — tighter top/bottom clearance */
+  /* Panel content area — tighter clearance, centered vertically on mobile */
   .panel-content{
     top: 68px;
     bottom: 68px;
     padding: 0 20px;
+    justify-content: center;
   }
   .panel-content--logos{
     top: 68px;

@@ -237,7 +237,8 @@ import gsap from 'gsap';
       });
     });
   }
-  const extraGoTriggers = document.querySelectorAll('.nav-cta[data-go], .footer-contact[data-go]');
+  // All elements with data-go not already covered by dots/navLinks
+  const extraGoTriggers = document.querySelectorAll('[data-go]:not(.dot):not(.nav-links a):not(.nav-logo)');
   bindGoTriggers(dots);
   bindGoTriggers(navLinks);
   bindGoTriggers(extraGoTriggers);
