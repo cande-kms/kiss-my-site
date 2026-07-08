@@ -763,6 +763,14 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   display:inline-block;
   will-change: transform;
 }
+.logo-img{
+  max-width: 75%;
+  max-height: 44px;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 
 /* Cases card grid */
 .cases-grid{
