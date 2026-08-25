@@ -372,7 +372,7 @@ html[data-lang="es"] .i18n-es{ display:inline; }
 .svc2-success h4{ font-family:'Jost',sans-serif; margin:0 0 10px; }
 .svc2-success p{ font-size:0.9rem; color:var(--muted); margin:0; }
 
-.related-services{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:40px 0 0; max-width:760px; }
+.related-services{ position:static; display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:40px 0 0; max-width:760px; }
 .related-label{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); }
 .related-link{ font-size:0.9rem; font-weight:600; color:hsl(var(--accent-h) 82% 72%); text-decoration:none; }
 .related-link:hover{ text-decoration:underline; }
@@ -1034,7 +1034,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">VWO Partner</span><span class="i18n-es">VWO Partner</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -1045,7 +1044,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-cro-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-cro-email" name="email" type="email" required></div>
         <div><label for="f-cro-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-cro-company" name="company" type="text" required></div>
         <div><label for="f-cro-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-cro-phone" name="phone" type="tel"></div>
-        <div><label for="f-cro-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-cro-website" name="website" type="text" placeholder="yourcompany.com" data-ph-en="yourcompany.com" data-ph-es="tuempresa.com" required></div>
         <div class="full"><label for="f-cro-challenge"><span class="i18n-en">What&#x27;s your main challenge today?</span><span class="i18n-es">¿Cuál es tu principal desafío hoy?</span></label><textarea id="f-cro-challenge" name="challenge" placeholder="E.g. we have 75% cart abandonment and don&#x27;t know why." data-ph-en="E.g. we have 75% cart abandonment and don&#x27;t know why." data-ph-es="Ej: tenemos 75% de abandono de carrito y no sabemos por qué."></textarea></div>
         <div class="full"><button class="pill pill-glow" type="submit"><span class="i18n-en">Request my free audit</span><span class="i18n-es">Pedir mi auditoría gratis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
       </form>
@@ -1273,7 +1271,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Buenos Aires · LATAM</span><span class="i18n-es">Buenos Aires · LATAM</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -1284,7 +1281,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-seo-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-seo-email" name="email" type="email" required></div>
         <div><label for="f-seo-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-seo-company" name="company" type="text" required></div>
         <div><label for="f-seo-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-seo-phone" name="phone" type="tel"></div>
-        <div><label for="f-seo-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-seo-website" name="website" type="text" placeholder="yourcompany.com" data-ph-en="yourcompany.com" data-ph-es="tuempresa.com" required></div>
         <div class="full"><label for="f-seo-budget"><span class="i18n-en">Current monthly digital marketing spend</span><span class="i18n-es">Inversión mensual actual en marketing digital</span></label><select id="f-seo-budget" name="budget"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="Under $500k ARS" data-en="Under $500k ARS" data-es="Menos de $500 mil ARS">Under $500k ARS</option><option value="$500k–2M ARS" data-en="$500k–2M ARS" data-es="$500 mil–2M ARS">$500k–2M ARS</option><option value="$2M–10M ARS" data-en="$2M–10M ARS" data-es="$2M–10M ARS">$2M–10M ARS</option><option value="Over $10M ARS" data-en="Over $10M ARS" data-es="Más de $10M ARS">Over $10M ARS</option><option value="Not currently investing" data-en="Not currently investing" data-es="No estamos invirtiendo actualmente">Not currently investing</option></select></div>
         <div class="full"><label for="f-seo-challenge"><span class="i18n-en">What&#x27;s your main challenge today?</span><span class="i18n-es">¿Cuál es tu principal desafío hoy?</span></label><textarea id="f-seo-challenge" name="challenge" placeholder="E.g. we get decent brand traffic but don&#x27;t show up for category searches." data-ph-en="E.g. we get decent brand traffic but don&#x27;t show up for category searches." data-ph-es="Ej: tenemos buen tráfico de marca pero no aparecemos en búsquedas de categoría."></textarea></div>
         <div class="full"><button class="pill pill-glow" type="submit"><span class="i18n-en">Request my free diagnostic</span><span class="i18n-es">Pedir mi diagnóstico gratis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
@@ -1513,7 +1509,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Buenos Aires · LATAM</span><span class="i18n-es">Buenos Aires · LATAM</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -1524,7 +1519,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-ecommerce-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-ecommerce-email" name="email" type="email" required></div>
         <div><label for="f-ecommerce-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-ecommerce-company" name="company" type="text" required></div>
         <div><label for="f-ecommerce-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-ecommerce-phone" name="phone" type="tel"></div>
-        <div><label for="f-ecommerce-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-ecommerce-website" name="website" type="text" placeholder="yourcompany.com (or &#x27;I don&#x27;t have one yet&#x27;)" data-ph-en="yourcompany.com (or &#x27;I don&#x27;t have one yet&#x27;)" data-ph-es="tuempresa.com (o &quot;todavía no tengo&quot;)" required></div>
         <div class="full"><label for="f-ecommerce-need"><span class="i18n-en">What do you need?</span><span class="i18n-es">¿Qué necesitás?</span></label><select id="f-ecommerce-need" name="need"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="Store launch" data-en="Store launch" data-es="Lanzamiento de tienda">Store launch</option><option value="Platform migration" data-en="Platform migration" data-es="Migración de plataforma">Platform migration</option><option value="Maintenance / CRO" data-en="Maintenance / CRO" data-es="Mantenimiento / CRO">Maintenance / CRO</option><option value="Other" data-en="Other" data-es="Otro">Other</option></select></div>
         <div class="full"><label for="f-ecommerce-platform"><span class="i18n-en">Current platform</span><span class="i18n-es">Plataforma actual</span></label><select id="f-ecommerce-platform" name="platform"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="None yet" data-en="None yet" data-es="Todavía ninguna">None yet</option><option value="Tiendanube" data-en="Tiendanube" data-es="Tiendanube">Tiendanube</option><option value="VTEX" data-en="VTEX" data-es="VTEX">VTEX</option><option value="WooCommerce" data-en="WooCommerce" data-es="WooCommerce">WooCommerce</option><option value="Magento" data-en="Magento" data-es="Magento">Magento</option><option value="Other" data-en="Other" data-es="Otra">Other</option></select></div>
         <div class="full"><label for="f-ecommerce-products"><span class="i18n-en">Approximate number of products</span><span class="i18n-es">Cantidad aproximada de productos</span></label><select id="f-ecommerce-products" name="products"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="Under 50" data-en="Under 50" data-es="Menos de 50">Under 50</option><option value="50–500" data-en="50–500" data-es="50–500">50–500</option><option value="500–5,000" data-en="500–5,000" data-es="500–5.000">500–5,000</option><option value="Over 5,000" data-en="Over 5,000" data-es="Más de 5.000">Over 5,000</option></select></div>
@@ -1755,7 +1749,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Buenos Aires · LATAM</span><span class="i18n-es">Buenos Aires · LATAM</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -1993,7 +1986,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Buenos Aires · LATAM</span><span class="i18n-es">Buenos Aires · LATAM</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -2004,7 +1996,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-data-integration-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-data-integration-email" name="email" type="email" required></div>
         <div><label for="f-data-integration-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-data-integration-company" name="company" type="text" required></div>
         <div><label for="f-data-integration-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-data-integration-phone" name="phone" type="tel"></div>
-        <div><label for="f-data-integration-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-data-integration-website" name="website" type="text" placeholder="yourcompany.com" data-ph-en="yourcompany.com" data-ph-es="tuempresa.com" required></div>
         <div class="full"><label for="f-data-integration-need"><span class="i18n-en">What do you need to solve?</span><span class="i18n-es">¿Qué necesitás resolver?</span></label><select id="f-data-integration-need" name="need"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="Analytics audit" data-en="Analytics audit" data-es="Auditoría de analítica">Analytics audit</option><option value="Measurement implementation" data-en="Measurement implementation" data-es="Implementación de medición">Measurement implementation</option><option value="Data integration" data-en="Data integration" data-es="Integración de datos">Data integration</option><option value="Dashboards" data-en="Dashboards" data-es="Dashboards">Dashboards</option><option value="Attribution" data-en="Attribution" data-es="Atribución">Attribution</option><option value="NPS measurement" data-en="NPS measurement" data-es="Medición de NPS">NPS measurement</option></select></div>
         <div class="full"><label for="f-data-integration-challenge"><span class="i18n-en">What&#x27;s your main challenge today?</span><span class="i18n-es">¿Cuál es tu principal desafío hoy?</span></label><textarea id="f-data-integration-challenge" name="challenge" placeholder="E.g. each platform reports a different sales number and we don&#x27;t know which to trust." data-ph-en="E.g. each platform reports a different sales number and we don&#x27;t know which to trust." data-ph-es="Ej: cada plataforma reporta un número de ventas distinto y no sabemos en cuál confiar."></textarea></div>
         <div class="full"><button class="pill pill-glow" type="submit"><span class="i18n-en">Request my free diagnostic</span><span class="i18n-es">Pedir mi diagnóstico gratis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
@@ -2233,7 +2224,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Fixed-fee project</span><span class="i18n-es">Proyecto a precio fijo</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -2244,7 +2234,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-analytics-audit-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-analytics-audit-email" name="email" type="email" required></div>
         <div><label for="f-analytics-audit-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-analytics-audit-company" name="company" type="text" required></div>
         <div><label for="f-analytics-audit-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-analytics-audit-phone" name="phone" type="tel"></div>
-        <div><label for="f-analytics-audit-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-analytics-audit-website" name="website" type="text" placeholder="yourcompany.com" data-ph-en="yourcompany.com" data-ph-es="tuempresa.com" required></div>
         <div class="full"><label for="f-analytics-audit-challenge"><span class="i18n-en">What&#x27;s your main challenge today?</span><span class="i18n-es">¿Cuál es tu principal desafío hoy?</span></label><textarea id="f-analytics-audit-challenge" name="challenge" placeholder="E.g. we get good traffic but conversion has been flat for months." data-ph-en="E.g. we get good traffic but conversion has been flat for months." data-ph-es="Ej: tenemos buen tráfico pero la conversión está estancada hace meses."></textarea></div>
         <div class="full"><button class="pill pill-glow" type="submit"><span class="i18n-en">Request my free audit</span><span class="i18n-es">Pedir mi auditoría gratis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
       </form>
@@ -2472,7 +2461,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">GA4 certified</span><span class="i18n-es">Certificados en GA4</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -2483,7 +2471,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-analytics-implementation-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-analytics-implementation-email" name="email" type="email" required></div>
         <div><label for="f-analytics-implementation-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-analytics-implementation-company" name="company" type="text" required></div>
         <div><label for="f-analytics-implementation-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-analytics-implementation-phone" name="phone" type="tel"></div>
-        <div><label for="f-analytics-implementation-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-analytics-implementation-website" name="website" type="text" placeholder="yourcompany.com" data-ph-en="yourcompany.com" data-ph-es="tuempresa.com" required></div>
         <div class="full"><label for="f-analytics-implementation-current_setup"><span class="i18n-en">Current analytics setup</span><span class="i18n-es">Configuración actual de analítica</span></label><select id="f-analytics-implementation-current_setup" name="current_setup"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="No GA4 yet" data-en="No GA4 yet" data-es="Todavía no tenemos GA4">No GA4 yet</option><option value="GA4 but untrusted" data-en="GA4 but untrusted" data-es="Tenemos GA4 pero no confiamos en él">GA4 but untrusted</option><option value="GA4 working, need refinement" data-en="GA4 working, need refinement" data-es="GA4 funcionando, necesita ajustes">GA4 working, need refinement</option></select></div>
         <div class="full"><label for="f-analytics-implementation-challenge"><span class="i18n-en">What&#x27;s your main challenge today?</span><span class="i18n-es">¿Cuál es tu principal desafío hoy?</span></label><textarea id="f-analytics-implementation-challenge" name="challenge" placeholder="E.g. our team reports different numbers depending on the source." data-ph-en="E.g. our team reports different numbers depending on the source." data-ph-es="Ej: nuestro equipo reporta números distintos según la fuente."></textarea></div>
         <div class="full"><button class="pill pill-glow" type="submit"><span class="i18n-en">Request my free diagnostic</span><span class="i18n-es">Pedir mi diagnóstico gratis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
@@ -2712,7 +2699,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Fixed-fee project</span><span class="i18n-es">Proyecto a precio fijo</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
@@ -2723,7 +2709,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div><label for="f-funnel-audit-email"><span class="i18n-en">Corporate email</span><span class="i18n-es">Email corporativo</span> *</label><input id="f-funnel-audit-email" name="email" type="email" required></div>
         <div><label for="f-funnel-audit-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span> *</label><input id="f-funnel-audit-company" name="company" type="text" required></div>
         <div><label for="f-funnel-audit-phone"><span class="i18n-en">Phone / WhatsApp</span><span class="i18n-es">Teléfono / WhatsApp</span></label><input id="f-funnel-audit-phone" name="phone" type="tel"></div>
-        <div><label for="f-funnel-audit-website"><span class="i18n-en">Current website</span><span class="i18n-es">Sitio web actual</span> *</label><input id="f-funnel-audit-website" name="website" type="text" placeholder="yourcompany.com" data-ph-en="yourcompany.com" data-ph-es="tuempresa.com" required></div>
         <div class="full"><label for="f-funnel-audit-lead_channels"><span class="i18n-en">Which channels bring you leads?</span><span class="i18n-es">¿Qué canales te traen leads?</span></label><select id="f-funnel-audit-lead_channels" name="lead_channels"><option value="" disabled selected data-en="Select an option" data-es="Elegí una opción">Select an option</option><option value="Paid only" data-en="Paid only" data-es="Solo pago">Paid only</option><option value="Organic only" data-en="Organic only" data-es="Solo orgánico">Organic only</option><option value="Paid + organic" data-en="Paid + organic" data-es="Pago + orgánico">Paid + organic</option><option value="Paid + organic + referral" data-en="Paid + organic + referral" data-es="Pago + orgánico + referidos">Paid + organic + referral</option></select></div>
         <div class="full"><label for="f-funnel-audit-challenge"><span class="i18n-en">What&#x27;s your main challenge today?</span><span class="i18n-es">¿Cuál es tu principal desafío hoy?</span></label><textarea id="f-funnel-audit-challenge" name="challenge" placeholder="E.g. cost per lead keeps rising and sales says quality is dropping." data-ph-en="E.g. cost per lead keeps rising and sales says quality is dropping." data-ph-es="Ej: el costo por lead no para de subir y ventas dice que la calidad está bajando."></textarea></div>
         <div class="full"><button class="pill pill-glow" type="submit"><span class="i18n-en">Request my free audit</span><span class="i18n-es">Pedir mi auditoría gratis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
@@ -2952,7 +2937,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="final-tags">
 <span><span class="i18n-en">Response &lt; 48h</span><span class="i18n-es">Respuesta &lt; 48h</span></span>
 <span><span class="i18n-en">No commitment</span><span class="i18n-es">Sin compromiso</span></span>
-<span><span class="i18n-en">Buenos Aires · LATAM</span><span class="i18n-es">Buenos Aires · LATAM</span></span>
         </div>
       </div>
       <div class="svc2-form-card glass glow-card">
