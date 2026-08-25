@@ -811,11 +811,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <form class="contact-form" id="contactForm">
     <input type="hidden" id="interestField" name="interest" value="General inquiry">
-    <div><label for="cf-name"><span class="i18n-en">Name</span><span class="i18n-es">Nombre</span></label><input id="cf-name" required></div>
-    <div><label for="cf-email">Email</label><input id="cf-email" type="email" required></div>
-    <div><label for="cf-phone"><span class="i18n-en">Phone</span><span class="i18n-es">Teléfono</span></label><input id="cf-phone" type="tel"></div>
-    <div><label for="cf-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span></label><input id="cf-company"></div>
-    <div class="full"><label for="cf-message"><span class="i18n-en">Message</span><span class="i18n-es">Mensaje</span></label><textarea id="cf-message" required></textarea></div>
+    <div><label for="cf-name"><span class="i18n-en">Name</span><span class="i18n-es">Nombre</span></label><input id="cf-name" name="name" required></div>
+    <div><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" required></div>
+    <div><label for="cf-phone"><span class="i18n-en">Phone</span><span class="i18n-es">Teléfono</span></label><input id="cf-phone" name="phone" type="tel"></div>
+    <div><label for="cf-company"><span class="i18n-en">Company</span><span class="i18n-es">Empresa</span></label><input id="cf-company" name="company"></div>
+    <div class="full"><label for="cf-message"><span class="i18n-en">Message</span><span class="i18n-es">Mensaje</span></label><textarea id="cf-message" name="message" required></textarea></div>
     <div class="full contact-form-actions">
       <button class="pill pill-glow" type="submit"><span class="i18n-en">Send</span><span class="i18n-es">Enviar</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <a class="pill pill-ghost" href="https://calendar.app.google/X5SNb8Ty9hk7FSMH7" target="_blank" rel="noopener"><span class="i18n-en">Or schedule a call</span><span class="i18n-es">O agendá una llamada</span> &rarr;</a>
@@ -3606,21 +3606,48 @@ document.querySelectorAll('#heroTabs .tab').forEach(function(tab){
   applyRoute();
 })();
 
+var WEB3FORMS_KEYS = ['e7a0904a-a886-49a3-b9e7-2c716fe8b3b2', '81a34f81-7dc3-4089-b3d2-a4e7aaec9344'];
+
+function submitToWeb3Forms(formEl, subject){
+  var payload = {};
+  new FormData(formEl).forEach(function(value, key){ payload[key] = value; });
+  payload.subject = subject;
+  payload.from_name = 'Kiss My Site website';
+  return Promise.all(WEB3FORMS_KEYS.map(function(key){
+    var body = Object.assign({}, payload, { access_key: key });
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(body)
+    }).catch(function(err){ return { ok:false, error: err }; });
+  }));
+}
+
 var form = document.getElementById('contactForm');
 form.addEventListener('submit', function(e){
   e.preventDefault();
-  document.getElementById('successInterest').textContent = document.getElementById('interestValue').textContent;
-  form.style.display = 'none';
-  document.getElementById('contactSuccess').classList.add('show');
+  var btn = form.querySelector('button[type="submit"]');
+  if(btn) btn.disabled = true;
+  var interest = document.getElementById('interestValue').textContent;
+  submitToWeb3Forms(form, 'New contact — ' + interest).then(function(){
+    document.getElementById('successInterest').textContent = interest;
+    form.style.display = 'none';
+    document.getElementById('contactSuccess').classList.add('show');
+  }).finally(function(){ if(btn) btn.disabled = false; });
 });
 
 document.querySelectorAll('.svc2-form').forEach(function(f){
   f.addEventListener('submit', function(e){
     e.preventDefault();
+    var btn = f.querySelector('button[type="submit"]');
+    if(btn) btn.disabled = true;
+    var slug = f.id.replace('svc2form-', '');
     var card = f.closest('.svc2-form-card');
-    f.style.display = 'none';
-    var ok = card && card.querySelector('.svc2-success');
-    if(ok) ok.classList.add('show');
+    submitToWeb3Forms(f, 'New lead — ' + slug).then(function(){
+      f.style.display = 'none';
+      var ok = card && card.querySelector('.svc2-success');
+      if(ok) ok.classList.add('show');
+    }).finally(function(){ if(btn) btn.disabled = false; });
   });
 });
 
