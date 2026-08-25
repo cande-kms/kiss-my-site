@@ -224,6 +224,7 @@ html[data-lang="es"] .i18n-es{ display:inline; }
 /* ---- testimonials ---- */
 .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 @media (max-width:900px){ .testi-grid{ grid-template-columns:1fr; } }
+.testi-grid--single{ grid-template-columns:1fr; max-width:640px; margin:0 auto; }
 .testi-card{ padding:28px 24px; }
 .testi-quote{ font-family:'Jost',sans-serif; font-size:2.6rem; font-weight:700; line-height:1; margin-bottom:10px; color:hsl(var(--accent-h) 70% 60% / 0.55); }
 .testi-card blockquote{ margin:0 0 18px; font-size:0.96rem; font-style:italic; color:var(--muted); }
@@ -766,24 +767,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section" id="testimonials" data-hue="276" style="padding-top:30px;">
   <div class="eyebrow">· What clients say</div>
   <h2 class="sf-heading"><span class="i18n-en">What our <b class="gradient-text">clients say</b></span><span class="i18n-es">Lo que dicen <b class="gradient-text">nuestros clientes</b></span></h2>
-  <p class="section-lede"><span class="i18n-en">A few real stories from clients we've worked with — we're still collecting more.</span><span class="i18n-es">Algunas historias reales de clientes con los que trabajamos — todavía seguimos sumando más.</span></p>
-  <div class="testi-grid">
+  <p class="section-lede"><span class="i18n-en">A real story from a client we've worked with.</span><span class="i18n-es">Una historia real de un cliente con el que trabajamos.</span></p>
+  <div class="testi-grid testi-grid--single">
     <div class="testi-card glass glow-card">
       <div class="testi-quote">"</div>
-      <blockquote><span class="i18n-en">When we started building Hawaianas.com.ar, we were pretty lost — we knew there was potential, but wanted to get the foundations right from day one. Cande and Mati from Kiss My Site didn't just make the project possible; they were with us at every step, helping us think things through and sharing their experience with real generosity. What we value most, beyond the professional quality, is the human warmth they worked with — we recommend them with total confidence.</span><span class="i18n-es">Cuando empezamos con la idea de lanzar nuestra tienda online Hawaianas.com.ar, estábamos bastante desorientados. Sabíamos que había potencial, pero queríamos hacerlo bien desde el inicio: con una estructura optimizada, una base sólida y una experiencia de usuario que realmente funcionara. Ahí aparecieron Cande y Mati de KissMy.Site, y no solo hicieron que el proyecto fuera posible, sino que nos acompañaron en cada etapa del proceso. Nos ayudaron a ordenar ideas, resolver dudas (¡incluso algunas que no tenían que ver directamente con la tienda!) y aportaron su experiencia con una generosidad enorme. Hoy estamos muy contentos y cómodos con el resultado. Más allá de la calidad profesional, lo que más destacamos es la calidez humana con la que trabajaron. Los recomendamos con total confianza.</span></blockquote>
+      <blockquote><span class="i18n-en">When we started building Hawaianas.com.ar we were pretty lost — we knew there was potential, but wanted to get the foundations right from day one. Cande and Mati from Kiss My Site were with us at every step, sharing their experience with real generosity. Beyond the professional quality, what we value most is the human warmth — we recommend them with total confidence.</span><span class="i18n-es">Cuando empezamos con la idea de lanzar nuestra tienda online Hawaianas.com.ar, estábamos bastante desorientados. Ahí aparecieron Cande y Mati de KissMy.Site, y no solo hicieron que el proyecto fuera posible, sino que nos acompañaron en cada etapa, ayudándonos a ordenar ideas y aportando su experiencia con una generosidad enorme. Más allá de la calidad profesional, lo que más destacamos es la calidez humana con la que trabajaron — los recomendamos con total confianza.</span></blockquote>
       <div class="testi-who"><span class="i18n-en">Amira Maslub, E-commerce Manager — Hawaianas</span><span class="i18n-es">Amira Maslub, Gerenta de E-commerce — Hawaianas</span></div>
-    </div>
-    <div class="testi-card glass glow-card">
-      <div class="testi-quote">"</div>
-      <blockquote><span class="i18n-en">[PLACEHOLDER] They set up tracking we didn't even know we needed. Now every report actually means something.</span><span class="i18n-es">[PLACEHOLDER] Nos armaron el tracking que ni sabíamos que necesitábamos. Ahora cada reporte realmente significa algo.</span></blockquote>
-      <div class="testi-who"><span class="i18n-en">Name, Title — Company</span><span class="i18n-es">Nombre, Cargo — Empresa</span></div>
-      <span class="testi-pending"><span class="i18n-en">Quote pending</span><span class="i18n-es">Cita pendiente</span></span>
-    </div>
-    <div class="testi-card glass glow-card">
-      <div class="testi-quote">"</div>
-      <blockquote><span class="i18n-en">[PLACEHOLDER] We finally have one dashboard the whole team trusts, across every market we operate in.</span><span class="i18n-es">[PLACEHOLDER] Por fin tenemos un solo dashboard en el que confía todo el equipo, en cada mercado en el que operamos.</span></blockquote>
-      <div class="testi-who"><span class="i18n-en">Name, Title — Company</span><span class="i18n-es">Nombre, Cargo — Empresa</span></div>
-      <span class="testi-pending"><span class="i18n-en">Quote pending</span><span class="i18n-es">Cita pendiente</span></span>
     </div>
   </div>
 </section>
