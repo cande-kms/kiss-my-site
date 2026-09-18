@@ -3853,7 +3853,14 @@ function submitToWeb3Forms(formEl, subject){
   try {
     var slug = formEl.id === 'contactForm' ? 'contact' : formEl.id.replace('svc2form-', '');
     var attr = window.Atribucion ? window.Atribucion.get() : {};
-    var copia = Object.assign({}, payload, attr, { servicio: slug, url: location.href });
+    // Un id único por envío: lo reciben el pixel de Meta (navegador) y el servidor,
+    // así Meta cuenta UNA conversión y no dos.
+    var eventId = 'lead-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+    var cookie = function(n){ var m = document.cookie.match('(?:^|; )' + n + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : ''; };
+    var copia = Object.assign({}, payload, attr, {
+      servicio: slug, url: location.href, event_id: eventId,
+      fbp: cookie('_fbp'), fbc: cookie('_fbc'), user_agent: navigator.userAgent
+    });
     delete copia.access_key; delete copia.subject; delete copia.from_name;
     fetch(LEADS_ENDPOINT, {
       method: 'POST',
@@ -3864,7 +3871,7 @@ function submitToWeb3Forms(formEl, subject){
 
     // Evento de conversión para Google Tag Manager (el GTM del sitio ya lo escucha)
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'generate_lead', servicio: slug, currency: 'ARS' });
+    window.dataLayer.push({ event: 'generate_lead', servicio: slug, currency: 'ARS', event_id: eventId });
   } catch (e) {}
   // ---------- FIN NUEVO ----------
 
