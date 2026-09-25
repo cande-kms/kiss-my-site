@@ -149,12 +149,16 @@ SEO_CA = dict(
          "act as the strategy and technical layer while your team handles content production and publishing."),
     ],
     related=[
-        ("agency-seo-usa", "SEO agency USA"),
-        ("agency-seo-washington", "SEO agency Washington"),
-        ("agency-seo-arizona", "SEO agency Arizona"),
-        ("agency-seo-oregon", "SEO agency Oregon"),
         ("agency-cro-california", "CRO agency California"),
         ("agency-ecommerce-california", "Ecommerce agency California"),
+    ],
+    mid_cta=[
+        ("Tired of paying for rankings that don't convert?",
+         "Let's find out where organic traffic is actually leaking money — no cost, no commitment."),
+        ("Curious what this looks like for your industry?",
+         "Get a free audit scoped to your site and your California competitors."),
+        ("Ready for an agency that reports revenue, not vanity metrics?",
+         "Request your free SEO audit and see the first roadmap before you commit to anything."),
     ],
     final_h2="Get your free SEO audit for California",
     final_body="Tell us about your project and within 48 business hours we'll hand you a real analysis of your "
@@ -266,12 +270,16 @@ CRO_CA = dict(
          "winner."),
     ],
     related=[
-        ("agency-cro-usa", "CRO agency USA"),
-        ("agency-cro-washington", "CRO agency Washington"),
-        ("agency-cro-arizona", "CRO agency Arizona"),
-        ("agency-cro-oregon", "CRO agency Oregon"),
         ("agency-seo-california", "SEO agency California"),
         ("agency-ecommerce-california", "Ecommerce agency California"),
+    ],
+    mid_cta=[
+        ("Your traffic is already there — you're just losing it at the door.",
+         "Get a free conversion audit and find the three most expensive leaks in your funnel."),
+        ("Curious what a test roadmap looks like for your site?",
+         "Request a free audit and we'll show you where the quickest wins are."),
+        ("Ready for growth you can actually prove?",
+         "Get your free CRO audit and see the first test hypotheses before you commit to anything."),
     ],
     final_h2="Get your free CRO audit for California",
     final_body="Tell us about your project and within 48 business hours we'll hand you the most expensive leaks "
@@ -378,12 +386,16 @@ ECOMMERCE_CA = dict(
          "Pay, plus sales tax, shipping carriers and ERP or 3PL tools, so checkout stays fast and reliable."),
     ],
     related=[
-        ("agency-ecommerce-usa", "Ecommerce agency USA"),
-        ("agency-ecommerce-washington", "Ecommerce agency Washington"),
-        ("agency-ecommerce-arizona", "Ecommerce agency Arizona"),
-        ("agency-ecommerce-oregon", "Ecommerce agency Oregon"),
         ("agency-seo-california", "SEO agency California"),
         ("agency-cro-california", "CRO agency California"),
+    ],
+    mid_cta=[
+        ("Don't let a shaky platform cap your growth.",
+         "Get a free store audit and find out what's costing you sales before it costs you more."),
+        ("Curious what this looks like for your catalog?",
+         "Request a free audit scoped to your platform, your products and your California traffic."),
+        ("Ready for a store built to scale, not just launch?",
+         "Get your free ecommerce audit and see the first roadmap before you commit to anything."),
     ],
     final_h2="Get your free ecommerce audit for California",
     final_body="Tell us about your store and within 48 business hours we'll hand you the highest-impact fixes — "
@@ -511,6 +523,17 @@ def render_faq_schema(faqs):
 def json_str(s):
     import json as _json
     return _json.dumps(s)
+
+def render_mid_cta(headline, body, hue):
+    return f'''<section class="section section-slim" data-hue="{hue}">
+  <div class="mid-cta glass glow-card">
+    <div class="mid-cta-copy">
+      <h3>{esc(headline)}</h3>
+      <p>{esc(body)}</p>
+    </div>
+    <a class="pill pill-glow" href="#pseo-contact">Get my free audit &rarr;</a>
+  </div>
+</section>'''
 
 def render_page(d):
     canonical = f"https://kissmy.site/en/{d['slug']}"
@@ -649,6 +672,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+{render_mid_cta(d['mid_cta'][0][0], d['mid_cta'][0][1], 272)}
+
 <!-- Bloque 4: Servicio y entregables -->
 <section class="section" data-hue="263" id="pseo-what">
   <div class="eyebrow">&middot; What you get</div>
@@ -678,6 +703,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+{render_mid_cta(d['mid_cta'][1][0], d['mid_cta'][1][1], 260)}
+
 <!-- Bloque 8: Así trabajamos (sin casos de EEUU todavía) -->
 <section class="section" data-hue="268">
   <div class="eyebrow">&middot; Our approach</div>
@@ -705,6 +732,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2 class="sf-heading">Why {esc(d['state'])} businesses choose us over a typical agency</h2>
   {render_diff_table()}
 </section>
+
+{render_mid_cta(d['mid_cta'][2][0], d['mid_cta'][2][1], 285)}
 
 <!-- Bloque 11: FAQs -->
 <section class="section" data-hue="287">

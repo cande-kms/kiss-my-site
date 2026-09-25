@@ -511,3 +511,11 @@ html[data-lang="es"] .i18n-es{ display:inline; }
 .related-link{ display:inline-flex; align-items:center; gap:6px; padding:10px 18px; border-radius:999px; background:var(--glass-strong); border:1px solid var(--line); font-size:0.86rem; font-weight:600; color:var(--ink); text-decoration:none; transition:border-color .2s ease, transform .2s ease, background .2s ease; }
 .related-link:hover{ border-color:hsl(var(--accent-h) 82% 62% / 0.6); background:hsl(var(--accent-h) 82% 62% / 0.1); transform:translateY(-2px); text-decoration:none; }
 .related-link span{ color:hsl(var(--accent-h) 82% 72%); }
+
+/* Intermediate CTA banners — anchor mid-scroll attention back to the form, so conversion isn't only at the very top/bottom */
+.section-slim{ padding:48px clamp(24px,6vw,96px) !important; }
+.mid-cta{ max-width:920px; margin:0 auto; padding:38px 46px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap; text-align:left; }
+.mid-cta-copy h3{ font-family:'Jost',sans-serif; font-weight:700; font-size:1.3rem; margin:0 0 6px; }
+.mid-cta-copy p{ margin:0; font-size:0.92rem; color:var(--muted); max-width:46ch; }
+.mid-cta .pill{ flex:none; }
+@media (max-width:700px){ .mid-cta{ flex-direction:column; text-align:center; padding:32px 28px; } .mid-cta-copy p{ max-width:none; } }
