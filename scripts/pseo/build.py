@@ -451,8 +451,14 @@ def render_industries(industries, slug_prefix):
 
 def render_approach(steps):
     out = []
-    for title, body in steps:
-        out.append(f'<li><b>{esc(title)}</b> {esc(body)}</li>')
+    for i, (title, body) in enumerate(steps, 1):
+        out.append(f'''<div class="step-row">
+  <div class="step-num">{i:02d}</div>
+  <div>
+    <h4>{esc(title)}</h4>
+    <p>{esc(body)}</p>
+  </div>
+</div>''')
     return "\n".join(out)
 
 def render_testimonials():
@@ -466,10 +472,17 @@ def render_testimonials():
     return "\n".join(out)
 
 def render_diff_table():
-    rows = "\n".join(
-        f'<tr><td>{esc(a)}</td><td>{esc(b)}</td></tr>' for a, b in DIFFERENTIATORS_TABLE
-    )
-    return f'''<table class="why-table"><thead><tr><th>The typical agency</th><th>Kiss My Site in action</th></tr></thead><tbody>{rows}</tbody></table>'''
+    cards = "\n".join(f'''<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p>{esc(a)}</p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p>{esc(b)}</p>
+  </div>
+</div>''' for a, b in DIFFERENTIATORS_TABLE)
+    return f'<div class="why-compare">{cards}</div>'
 
 def render_faqs(faqs):
     out = []
@@ -480,7 +493,7 @@ def render_faqs(faqs):
 def render_related(related):
     out = []
     for slug, label in related:
-        out.append(f'<a class="related-link" href="/en/{slug}">{esc(label)} &rarr;</a>')
+        out.append(f'<a class="related-link" href="/en/{slug}">{esc(label)} <span>&rarr;</span></a>')
     return "\n".join(out)
 
 def render_faq_schema(faqs):
@@ -673,9 +686,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2 class="sf-heading">{esc(d['approach_h2'])}</h2>
   <div class="approach-block">
     <p class="section-lede">{esc(d['approach_lede'])}</p>
-    <ol>
+    <div class="step-list">
 {render_approach(d['approach_steps'])}
-    </ol>
+    </div>
   </div>
 </section>
 
@@ -703,8 +716,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {render_faqs(d['faqs'])}
   </div>
   <nav class="related-services" aria-label="Related pages">
-    <span class="related-label">Related pages:</span>
+    <span class="related-label">Related pages</span>
+    <div class="related-chips">
 {render_related(d['related'])}
+    </div>
   </nav>
 </section>
 
