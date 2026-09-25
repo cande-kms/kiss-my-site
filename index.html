@@ -355,10 +355,18 @@ html[data-lang="es"] .i18n-es{ display:inline; }
 .why-tag{ font-family:'IBM Plex Mono',monospace; font-size:0.74rem; padding:8px 14px; border-radius:999px; background:var(--glass-strong); border:1px solid var(--line); color:var(--muted); }
 .why-quote{ border-left:3px solid hsl(var(--accent-h) 82% 62%); padding:4px 0 4px 22px; font-family:'Jost',sans-serif; font-size:1.15rem; font-style:italic; color:var(--ink); margin:0 0 28px; }
 .why-quote cite{ display:block; font-family:'IBM Plex Mono',monospace; font-style:normal; font-size:0.76rem; color:var(--muted); margin-top:12px; }
-.why-table{ width:100%; border-collapse:collapse; font-size:0.86rem; }
-.why-table th{ text-align:left; font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); padding:0 0 12px; font-weight:500; }
-.why-table td{ padding:14px 0; border-top:1px solid var(--line); color:var(--muted); vertical-align:top; }
-.why-table td:last-child{ color:var(--ink); font-weight:600; }
+/* Comparison cards ("why us") — replaces a plain two-column table with a visual old-vs-new card grid, centered as a block */
+.why-compare{ display:flex; flex-wrap:wrap; justify-content:center; gap:18px; margin:0 auto; max-width:600px; }
+.why-card{ flex:1 1 260px; max-width:290px; padding:26px; }
+.why-old,.why-new{ display:flex; gap:12px; align-items:flex-start; }
+.why-old{ margin-bottom:16px; padding-bottom:16px; border-bottom:1px dashed var(--line); }
+.why-old-icon,.why-new-icon{ flex:none; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+.why-old-icon{ background:hsl(340 82% 62% / 0.16); }
+.why-old-icon svg{ width:11px; height:11px; color:hsl(340 82% 68%); }
+.why-new-icon{ background:hsl(var(--accent-h) 82% 62% / 0.18); }
+.why-new-icon svg{ width:12px; height:12px; color:hsl(var(--accent-h) 82% 70%); }
+.why-old p{ margin:0; font-size:0.86rem; color:var(--muted); text-decoration:line-through; text-decoration-color:hsl(340 82% 62% / 0.45); text-decoration-thickness:1.5px; }
+.why-new p{ margin:0; font-size:1rem; color:var(--ink); font-weight:600; line-height:1.45; }
 
 .contact-form select{ width:100%; background:var(--glass); border:1px solid var(--line-strong); border-radius:10px; padding:13px 14px; color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:0.92rem; appearance:none; }
 .contact-form select:focus{ outline:2px solid hsl(var(--accent-h) 82% 62%); outline-offset:1px; }
@@ -378,11 +386,13 @@ html[data-lang="es"] .i18n-es{ display:inline; }
 .svc2-success h4{ font-family:'Jost',sans-serif; margin:0 0 10px; }
 .svc2-success p{ font-size:0.9rem; color:var(--muted); margin:0; }
 
-.related-services{ position:static; display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:40px 0 0; max-width:760px; }
+.related-services{ position:static; display:flex; flex-direction:column; align-items:center; gap:16px; margin:40px auto 0; max-width:760px; padding-top:28px; border-top:1px solid var(--line); text-align:center; }
 .hp-field{ position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden; }
 .related-label{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); }
-.related-link{ font-size:0.9rem; font-weight:600; color:hsl(var(--accent-h) 82% 72%); text-decoration:none; }
-.related-link:hover{ text-decoration:underline; }
+.related-chips{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; }
+.related-link{ display:inline-flex; align-items:center; gap:6px; padding:10px 18px; border-radius:999px; background:var(--glass-strong); border:1px solid var(--line); font-size:0.86rem; font-weight:600; color:var(--ink); text-decoration:none; transition:border-color .2s ease, transform .2s ease, background .2s ease; }
+.related-link:hover{ border-color:hsl(var(--accent-h) 82% 62% / 0.6); background:hsl(var(--accent-h) 82% 62% / 0.1); transform:translateY(-2px); text-decoration:none; }
+.related-link span{ color:hsl(var(--accent-h) 82% 72%); }
 
 /* ---- glow-card border effect (ported from BorderGlow) ---- */
 .glow-card{
@@ -1020,10 +1030,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">A redesign is changing a hundred things at once and praying. A test is changing one thing and knowing.</span><span class="i18n-es">Un rediseño es cambiar cien cosas a la vez y rezar. Un test es cambiar una cosa y saber.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Full redesign</span><span class="i18n-es">Rediseño completo</span></td><td><span class="i18n-en">Incremental, validated changes</span><span class="i18n-es">Cambios incrementales y validados</span></td></tr>
-<tr><td><span class="i18n-en">Generic &quot;best practices&quot;</span><span class="i18n-es">&quot;Buenas prácticas&quot; genéricas</span></td><td><span class="i18n-en">Hypotheses drawn from your data</span><span class="i18n-es">Hipótesis extraídas de tus datos</span></td></tr>
-<tr><td><span class="i18n-en">Test stops once it&#x27;s &quot;winning&quot;</span><span class="i18n-es">El test se corta cuando &quot;va ganando&quot;</span></td><td><span class="i18n-en">Runs to the calculated sample size</span><span class="i18n-es">Corre hasta la muestra calculada</span></td></tr>
-<tr><td><span class="i18n-en">Reports conversion rate</span><span class="i18n-es">Reporta tasa de conversión</span></td><td><span class="i18n-en">Reports incremental revenue</span><span class="i18n-es">Reporta ingresos incrementales</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Full redesign</span><span class="i18n-es">Rediseño completo</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Incremental, validated changes</span><span class="i18n-es">Cambios incrementales y validados</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Generic &quot;best practices&quot;</span><span class="i18n-es">&quot;Buenas prácticas&quot; genéricas</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Hypotheses drawn from your data</span><span class="i18n-es">Hipótesis extraídas de tus datos</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Test stops once it&#x27;s &quot;winning&quot;</span><span class="i18n-es">El test se corta cuando &quot;va ganando&quot;</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Runs to the calculated sample size</span><span class="i18n-es">Corre hasta la muestra calculada</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Reports conversion rate</span><span class="i18n-es">Reporta tasa de conversión</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Reports incremental revenue</span><span class="i18n-es">Reporta ingresos incrementales</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1041,8 +1089,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/seo"><span class="i18n-en">Smart, Scalable SEO</span><span class="i18n-es">SEO Inteligente y Escalable</span> &rarr;</a>
-<a class="related-link" href="/servicios/funnel-audit"><span class="i18n-en">Sales &amp; Lead Funnel Audit</span><span class="i18n-es">Auditoría de Funnel de Ventas y Leads</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/seo"><span class="i18n-en">Smart, Scalable SEO</span><span class="i18n-es">SEO Inteligente y Escalable</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/funnel-audit"><span class="i18n-en">Sales &amp; Lead Funnel Audit</span><span class="i18n-es">Auditoría de Funnel de Ventas y Leads</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -1272,10 +1322,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">Good people run a good business. We work as partners to our clients, not as vendors who send a PDF at month&#x27;s end.</span><span class="i18n-es">La buena gente hace buenos negocios. Trabajamos como socios de nuestros clientes, no como proveedores que mandan un PDF a fin de mes.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Reports rankings</span><span class="i18n-es">Reporta rankings</span></td><td><span class="i18n-en">Reports attributed revenue</span><span class="i18n-es">Reporta ingresos atribuidos</span></td></tr>
-<tr><td><span class="i18n-en">Delivers blog posts</span><span class="i18n-es">Entrega posts de blog</span></td><td><span class="i18n-en">Delivers pages that sell</span><span class="i18n-es">Entrega páginas que venden</span></td></tr>
-<tr><td><span class="i18n-en">Vanishes after handoff</span><span class="i18n-es">Desaparece después de la entrega</span></td><td><span class="i18n-en">Works alongside your team</span><span class="i18n-es">Trabaja junto a tu equipo</span></td></tr>
-<tr><td><span class="i18n-en">12-month lock-in</span><span class="i18n-es">Contrato atado a 12 meses</span></td><td><span class="i18n-en">No minimum commitment</span><span class="i18n-es">Sin compromiso mínimo</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Reports rankings</span><span class="i18n-es">Reporta rankings</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Reports attributed revenue</span><span class="i18n-es">Reporta ingresos atribuidos</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Delivers blog posts</span><span class="i18n-es">Entrega posts de blog</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Delivers pages that sell</span><span class="i18n-es">Entrega páginas que venden</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Vanishes after handoff</span><span class="i18n-es">Desaparece después de la entrega</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Works alongside your team</span><span class="i18n-es">Trabaja junto a tu equipo</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">12-month lock-in</span><span class="i18n-es">Contrato atado a 12 meses</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">No minimum commitment</span><span class="i18n-es">Sin compromiso mínimo</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1293,8 +1381,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> &rarr;</a>
-<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -1525,10 +1615,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">A working store is the floor, not the goal. The goal is that it sells more next month than it does today.</span><span class="i18n-es">Una tienda que funciona es el piso, no el objetivo. El objetivo es que venda más el mes que viene que hoy.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Buys a bought theme</span><span class="i18n-es">Compra un theme comprado</span></td><td><span class="i18n-en">Designs for conversion</span><span class="i18n-es">Diseña pensando en la conversión</span></td></tr>
-<tr><td><span class="i18n-en">Analytics comes later</span><span class="i18n-es">La analítica llega después</span></td><td><span class="i18n-en">Measurement from day one</span><span class="i18n-es">Medición desde el día uno</span></td></tr>
-<tr><td><span class="i18n-en">Delivers and disappears</span><span class="i18n-es">Entrega y desaparece</span></td><td><span class="i18n-en">Ongoing maintenance and improvements</span><span class="i18n-es">Mantenimiento y mejoras continuas</span></td></tr>
-<tr><td><span class="i18n-en">Migrates and crosses fingers</span><span class="i18n-es">Migra y cruza los dedos</span></td><td><span class="i18n-en">A 301 plan and 90-day monitoring</span><span class="i18n-es">Un plan de 301 y monitoreo de 90 días</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Buys a bought theme</span><span class="i18n-es">Compra un theme comprado</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Designs for conversion</span><span class="i18n-es">Diseña pensando en la conversión</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Analytics comes later</span><span class="i18n-es">La analítica llega después</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Measurement from day one</span><span class="i18n-es">Medición desde el día uno</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Delivers and disappears</span><span class="i18n-es">Entrega y desaparece</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Ongoing maintenance and improvements</span><span class="i18n-es">Mantenimiento y mejoras continuas</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Migrates and crosses fingers</span><span class="i18n-es">Migra y cruza los dedos</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">A 301 plan and 90-day monitoring</span><span class="i18n-es">Un plan de 301 y monitoreo de 90 días</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1546,8 +1674,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/seo"><span class="i18n-en">Smart, Scalable SEO</span><span class="i18n-es">SEO Inteligente y Escalable</span> &rarr;</a>
-<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/seo"><span class="i18n-en">Smart, Scalable SEO</span><span class="i18n-es">SEO Inteligente y Escalable</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -1780,10 +1910,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">A dashboard nobody opens isn&#x27;t a deliverable. It&#x27;s a file.</span><span class="i18n-es">Un dashboard que nadie abre no es un entregable. Es un archivo.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">One dashboard for everyone</span><span class="i18n-es">Un dashboard para todos</span></td><td><span class="i18n-en">One view per audience</span><span class="i18n-es">Una vista por audiencia</span></td></tr>
-<tr><td><span class="i18n-en">Manual monthly exports</span><span class="i18n-es">Exportaciones manuales mensuales</span></td><td><span class="i18n-en">Automatic daily updates</span><span class="i18n-es">Actualizaciones automáticas diarias</span></td></tr>
-<tr><td><span class="i18n-en">Built around the tool</span><span class="i18n-es">Construido alrededor de la herramienta</span></td><td><span class="i18n-en">Built around the decision</span><span class="i18n-es">Construido alrededor de la decisión</span></td></tr>
-<tr><td><span class="i18n-en">Delivered and forgotten</span><span class="i18n-es">Se entrega y se olvida</span></td><td><span class="i18n-en">Trained team, documented handoff</span><span class="i18n-es">Equipo capacitado, entrega documentada</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">One dashboard for everyone</span><span class="i18n-es">Un dashboard para todos</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">One view per audience</span><span class="i18n-es">Una vista por audiencia</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Manual monthly exports</span><span class="i18n-es">Exportaciones manuales mensuales</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Automatic daily updates</span><span class="i18n-es">Actualizaciones automáticas diarias</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Built around the tool</span><span class="i18n-es">Construido alrededor de la herramienta</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Built around the decision</span><span class="i18n-es">Construido alrededor de la decisión</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Delivered and forgotten</span><span class="i18n-es">Se entrega y se olvida</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Trained team, documented handoff</span><span class="i18n-es">Equipo capacitado, entrega documentada</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1801,8 +1969,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> &rarr;</a>
-<a class="related-link" href="/servicios/analytics-implementation"><span class="i18n-en">Analytics Implementation</span><span class="i18n-es">Implementación de Analítica</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/analytics-implementation"><span class="i18n-en">Analytics Implementation</span><span class="i18n-es">Implementación de Analítica</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -2032,10 +2202,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">A dashboard nobody opens isn&#x27;t a deliverable. It&#x27;s a file.</span><span class="i18n-es">Un dashboard que nadie abre no es un entregable. Es un archivo.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Starts from the tool</span><span class="i18n-es">Arranca desde la herramienta</span></td><td><span class="i18n-en">Starts from the business decision</span><span class="i18n-es">Arranca desde la decisión de negocio</span></td></tr>
-<tr><td><span class="i18n-en">One dashboard for everyone</span><span class="i18n-es">Un dashboard para todos</span></td><td><span class="i18n-en">One dashboard per audience</span><span class="i18n-es">Un dashboard por audiencia</span></td></tr>
-<tr><td><span class="i18n-en">Delivers and disappears</span><span class="i18n-es">Se entrega y desaparece</span></td><td><span class="i18n-en">Measures real adoption</span><span class="i18n-es">Mide la adopción real</span></td></tr>
-<tr><td><span class="i18n-en">Leaves you dependent</span><span class="i18n-es">Te deja dependiendo de ellos</span></td><td><span class="i18n-en">Documents and trains your team</span><span class="i18n-es">Documenta y capacita a tu equipo</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Starts from the tool</span><span class="i18n-es">Arranca desde la herramienta</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Starts from the business decision</span><span class="i18n-es">Arranca desde la decisión de negocio</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">One dashboard for everyone</span><span class="i18n-es">Un dashboard para todos</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">One dashboard per audience</span><span class="i18n-es">Un dashboard por audiencia</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Delivers and disappears</span><span class="i18n-es">Se entrega y desaparece</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Measures real adoption</span><span class="i18n-es">Mide la adopción real</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Leaves you dependent</span><span class="i18n-es">Te deja dependiendo de ellos</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Documents and trains your team</span><span class="i18n-es">Documenta y capacita a tu equipo</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -2053,8 +2261,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/data-visualization"><span class="i18n-en">Data Visualization</span><span class="i18n-es">Visualización de Datos</span> &rarr;</a>
-<a class="related-link" href="/servicios/analytics-implementation"><span class="i18n-en">Analytics Implementation</span><span class="i18n-es">Implementación de Analítica</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/data-visualization"><span class="i18n-en">Data Visualization</span><span class="i18n-es">Visualización de Datos</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/analytics-implementation"><span class="i18n-en">Analytics Implementation</span><span class="i18n-es">Implementación de Analítica</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -2285,10 +2495,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">You can&#x27;t fix what you can&#x27;t see — and you can&#x27;t prioritize what isn&#x27;t ranked.</span><span class="i18n-es">No podés arreglar lo que no ves — y no podés priorizar lo que no está ordenado.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">A 40-page PDF</span><span class="i18n-es">Un PDF de 40 páginas</span></td><td><span class="i18n-en">A short, ranked action plan</span><span class="i18n-es">Un plan de acción corto y ordenado</span></td></tr>
-<tr><td><span class="i18n-en">Generic checklist</span><span class="i18n-es">Checklist genérica</span></td><td><span class="i18n-en">Findings specific to your funnel</span><span class="i18n-es">Hallazgos específicos de tu funnel</span></td></tr>
-<tr><td><span class="i18n-en">No follow-through</span><span class="i18n-es">Sin seguimiento</span></td><td><span class="i18n-en">We can implement the fixes too</span><span class="i18n-es">También podemos implementar los arreglos</span></td></tr>
-<tr><td><span class="i18n-en">One-size audit</span><span class="i18n-es">Auditoría única para todos</span></td><td><span class="i18n-en">Scoped to your site and traffic</span><span class="i18n-es">Definida según tu sitio y tu tráfico</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">A 40-page PDF</span><span class="i18n-es">Un PDF de 40 páginas</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">A short, ranked action plan</span><span class="i18n-es">Un plan de acción corto y ordenado</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Generic checklist</span><span class="i18n-es">Checklist genérica</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Findings specific to your funnel</span><span class="i18n-es">Hallazgos específicos de tu funnel</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">No follow-through</span><span class="i18n-es">Sin seguimiento</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">We can implement the fixes too</span><span class="i18n-es">También podemos implementar los arreglos</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">One-size audit</span><span class="i18n-es">Auditoría única para todos</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Scoped to your site and traffic</span><span class="i18n-es">Definida según tu sitio y tu tráfico</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -2306,8 +2554,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/analytics-implementation"><span class="i18n-en">Analytics Implementation</span><span class="i18n-es">Implementación de Analítica</span> &rarr;</a>
-<a class="related-link" href="/servicios/funnel-audit"><span class="i18n-en">Sales &amp; Lead Funnel Audit</span><span class="i18n-es">Auditoría de Funnel de Ventas y Leads</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/analytics-implementation"><span class="i18n-en">Analytics Implementation</span><span class="i18n-es">Implementación de Analítica</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/funnel-audit"><span class="i18n-en">Sales &amp; Lead Funnel Audit</span><span class="i18n-es">Auditoría de Funnel de Ventas y Leads</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -2537,10 +2787,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">Bad data doesn&#x27;t just mislead you once. It quietly misleads every decision built on top of it.</span><span class="i18n-es">Los datos malos no te engañan una sola vez. Engañan en silencio cada decisión que se construye sobre ellos.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Default GA4 events</span><span class="i18n-es">Eventos por defecto de GA4</span></td><td><span class="i18n-en">Events mapped to your KPIs</span><span class="i18n-es">Eventos mapeados a tus KPIs</span></td></tr>
-<tr><td><span class="i18n-en">Undocumented setup</span><span class="i18n-es">Configuración sin documentar</span></td><td><span class="i18n-en">Fully documented handoff</span><span class="i18n-es">Entrega totalmente documentada</span></td></tr>
-<tr><td><span class="i18n-en">Last-click attribution only</span><span class="i18n-es">Solo atribución de último clic</span></td><td><span class="i18n-en">Full-funnel view across channels</span><span class="i18n-es">Vista completa del funnel entre canales</span></td></tr>
-<tr><td><span class="i18n-en">Set up once, forgotten</span><span class="i18n-es">Se configura una vez y se olvida</span></td><td><span class="i18n-en">Validated and monitored ongoing</span><span class="i18n-es">Validado y monitoreado de forma continua</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Default GA4 events</span><span class="i18n-es">Eventos por defecto de GA4</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Events mapped to your KPIs</span><span class="i18n-es">Eventos mapeados a tus KPIs</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Undocumented setup</span><span class="i18n-es">Configuración sin documentar</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Fully documented handoff</span><span class="i18n-es">Entrega totalmente documentada</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Last-click attribution only</span><span class="i18n-es">Solo atribución de último clic</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Full-funnel view across channels</span><span class="i18n-es">Vista completa del funnel entre canales</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Set up once, forgotten</span><span class="i18n-es">Se configura una vez y se olvida</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Validated and monitored ongoing</span><span class="i18n-es">Validado y monitoreado de forma continua</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -2558,8 +2846,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/analytics-audit"><span class="i18n-en">Analytics &amp; CRO Audit</span><span class="i18n-es">Auditoría de Analítica y CRO</span> &rarr;</a>
-<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/analytics-audit"><span class="i18n-en">Analytics &amp; CRO Audit</span><span class="i18n-es">Auditoría de Analítica y CRO</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -2790,10 +3080,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">Scaling ad spend on a leaky funnel doesn&#x27;t grow your business. It scales the leak.</span><span class="i18n-es">Escalar la inversión en ads sobre un funnel con fugas no hace crecer tu negocio. Escala la fuga.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Reviews the landing page only</span><span class="i18n-es">Revisa solo la landing page</span></td><td><span class="i18n-en">Reviews click-to-close, including handoff</span><span class="i18n-es">Revisa del clic al cierre, incluida la entrega</span></td></tr>
-<tr><td><span class="i18n-en">Vanity metrics (clicks, fills)</span><span class="i18n-es">Métricas de vanidad (clics, formularios)</span></td><td><span class="i18n-en">Ranked by revenue impact</span><span class="i18n-es">Ordenado por impacto en ingresos</span></td></tr>
-<tr><td><span class="i18n-en">Generic checklist</span><span class="i18n-es">Checklist genérica</span></td><td><span class="i18n-en">Findings specific to your channels</span><span class="i18n-es">Hallazgos específicos de tus canales</span></td></tr>
-<tr><td><span class="i18n-en">Single-channel view</span><span class="i18n-es">Vista de un solo canal</span></td><td><span class="i18n-en">Paid, organic, and referral together</span><span class="i18n-es">Pago, orgánico y referidos juntos</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Reviews the landing page only</span><span class="i18n-es">Revisa solo la landing page</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Reviews click-to-close, including handoff</span><span class="i18n-es">Revisa del clic al cierre, incluida la entrega</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Vanity metrics (clicks, fills)</span><span class="i18n-es">Métricas de vanidad (clics, formularios)</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Ranked by revenue impact</span><span class="i18n-es">Ordenado por impacto en ingresos</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Generic checklist</span><span class="i18n-es">Checklist genérica</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Findings specific to your channels</span><span class="i18n-es">Hallazgos específicos de tus canales</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Single-channel view</span><span class="i18n-es">Vista de un solo canal</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Paid, organic, and referral together</span><span class="i18n-es">Pago, orgánico y referidos juntos</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -2811,8 +3139,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> &rarr;</a>
-<a class="related-link" href="/servicios/analytics-audit"><span class="i18n-en">Analytics &amp; CRO Audit</span><span class="i18n-es">Auditoría de Analítica y CRO</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/analytics-audit"><span class="i18n-en">Analytics &amp; CRO Audit</span><span class="i18n-es">Auditoría de Analítica y CRO</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 
@@ -3043,10 +3373,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <blockquote class="why-quote">&ldquo;<span class="i18n-en">A score without context is trivia. A score connected to LTV is a strategy.</span><span class="i18n-es">Un puntaje sin contexto es trivia. Un puntaje conectado al LTV es una estrategia.</span>&rdquo;<cite>— Kiss My Site, Buenos Aires</cite></blockquote>
-        <table class="why-table"><thead><tr><th><span class="i18n-en">The typical approach</span><span class="i18n-es">El estándar típico</span></th><th><span class="i18n-en">Kiss My Site in action</span><span class="i18n-es">Kiss My Site en acción</span></th></tr></thead><tbody><tr><td><span class="i18n-en">Generic survey template</span><span class="i18n-es">Plantilla de encuesta genérica</span></td><td><span class="i18n-en">Built around your customer journey</span><span class="i18n-es">Construida alrededor de tu recorrido de cliente</span></td></tr>
-<tr><td><span class="i18n-en">One-off surveys</span><span class="i18n-es">Encuestas puntuales</span></td><td><span class="i18n-en">Continuous, comparable measurement</span><span class="i18n-es">Medición continua y comparable</span></td></tr>
-<tr><td><span class="i18n-en">A number to report</span><span class="i18n-es">Un número para reportar</span></td><td><span class="i18n-en">A signal connected to LTV and action</span><span class="i18n-es">Una señal conectada a LTV y a la acción</span></td></tr>
-<tr><td><span class="i18n-en">Channels measured separately</span><span class="i18n-es">Canales medidos por separado</span></td><td><span class="i18n-en">In-store and online unified</span><span class="i18n-es">Tienda y online unificados</span></td></tr></tbody></table>
+        <div class="why-compare">
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Generic survey template</span><span class="i18n-es">Plantilla de encuesta genérica</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Built around your customer journey</span><span class="i18n-es">Construida alrededor de tu recorrido de cliente</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">One-off surveys</span><span class="i18n-es">Encuestas puntuales</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">Continuous, comparable measurement</span><span class="i18n-es">Medición continua y comparable</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">A number to report</span><span class="i18n-es">Un número para reportar</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">A signal connected to LTV and action</span><span class="i18n-es">Una señal conectada a LTV y a la acción</span></p>
+  </div>
+</div>
+<div class="why-card glass glow-card">
+  <div class="why-old">
+    <div class="why-old-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+    <p><span class="i18n-en">Channels measured separately</span><span class="i18n-es">Canales medidos por separado</span></p>
+  </div>
+  <div class="why-new">
+    <div class="why-new-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg></div>
+    <p><span class="i18n-en">In-store and online unified</span><span class="i18n-es">Tienda y online unificados</span></p>
+  </div>
+</div>
+        </div>
       </div>
     </div>
   </div>
@@ -3064,8 +3432,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <nav class="related-services" aria-label="Related services">
       <span class="related-label"><span class="i18n-en">Related services:</span><span class="i18n-es">Servicios relacionados:</span></span>
-<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> &rarr;</a>
-<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> &rarr;</a>
+      <div class="related-chips">
+<a class="related-link" href="/servicios/data-integration"><span class="i18n-en">Data Integration</span><span class="i18n-es">Integración de Datos</span> <span>&rarr;</span></a>
+<a class="related-link" href="/servicios/cro"><span class="i18n-en">Data &amp; CRO: Continuous Evolution</span><span class="i18n-es">Datos y CRO: Evolución Continua</span> <span>&rarr;</span></a>
+      </div>
     </nav>
   </div>
 

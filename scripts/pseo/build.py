@@ -452,12 +452,10 @@ def render_industries(industries, slug_prefix):
 def render_approach(steps):
     out = []
     for i, (title, body) in enumerate(steps, 1):
-        out.append(f'''<div class="step-row">
-  <div class="step-num">{i:02d}</div>
-  <div>
-    <h4>{esc(title)}</h4>
-    <p>{esc(body)}</p>
-  </div>
+        out.append(f'''<div class="approach-card glass glow-card">
+  <span class="approach-num">{i:02d}</span>
+  <h4>{esc(title)}</h4>
+  <p>{esc(body)}</p>
 </div>''')
     return "\n".join(out)
 
@@ -686,7 +684,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2 class="sf-heading">{esc(d['approach_h2'])}</h2>
   <div class="approach-block">
     <p class="section-lede">{esc(d['approach_lede'])}</p>
-    <div class="step-list">
+    <div class="approach-grid">
 {render_approach(d['approach_steps'])}
     </div>
   </div>
