@@ -7,8 +7,10 @@ Escribe en public/en/agency-{service}-{state-slug}.html
 """
 import html as htmlmod
 import os
+import subprocess
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "public", "en")
+ASSETS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "public", "assets")
 
 # ---------------------------------------------------------------------------
 # Testimonios reales (los mismos del sitio principal — confirmado con Cande)
@@ -563,13 +565,13 @@ def render_page(d):
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="/atribucion.js"></script>
+<script src="/atribucion.js" defer></script>
 <title>{esc(d['title'])}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(d['meta_desc'])}">
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" href="/images/favicon.png">
-<link rel="stylesheet" href="/assets/kms-shared.css">
+<link rel="stylesheet" href="/assets/kms-shared.min.css">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
 new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
@@ -794,13 +796,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </div>
 
-<script src="/assets/kms-shared.js"></script>
+<script src="/assets/kms-shared.min.js" defer></script>
 </body>
 </html>
 '''
 
+def minify_shared_assets():
+    # Regenerates kms-shared.min.{css,js} from their source files via esbuild, so the
+    # minified assets served to every pSEO page can never silently drift out of sync
+    # with the source — for Core Web Vitals / mobile load time, per the SEO review.
+    pairs = [("kms-shared.css", "kms-shared.min.css"), ("kms-shared.js", "kms-shared.min.js")]
+    for src, out in pairs:
+        src_path = os.path.join(ASSETS_DIR, src)
+        out_path = os.path.join(ASSETS_DIR, out)
+        subprocess.run(
+            ["npx", "esbuild", src_path, "--minify", f"--outfile={out_path}"],
+            check=True, cwd=os.path.join(os.path.dirname(__file__), "..", ".."),
+        )
+        print(f"minified {src} -> {out} ({os.path.getsize(out_path)} bytes)")
+
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
+    minify_shared_assets()
     for d in PAGES:
         html_out = render_page(d)
         path = os.path.join(OUT_DIR, f"{d['slug']}.html")
