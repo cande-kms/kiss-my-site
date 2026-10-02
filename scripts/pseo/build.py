@@ -26,11 +26,11 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "pseo_data.json")
 with open(DATA_PATH, encoding="utf-8") as f:
     DATA = json.load(f)
 
-# Estados que generamos en esta tanda (muestra para revisión antes del lote completo).
-# Las páginas de EEUU a nivel país ("USA (nacional)") quedan para una pasada aparte:
-# necesitan un directorio de los 51 estados (como el ejemplo de referencia que mostró
-# Cande), no tiene sentido listar 51 chips sueltos como en las páginas de estado.
-SAMPLE_STATES = ["Texas", "Florida"]
+# Estados que generamos en esta tanda. Las páginas de EEUU a nivel país
+# ("USA (nacional)") quedan para una pasada aparte: necesitan un directorio de
+# los 51 estados (como el ejemplo de referencia que mostró Cande), no tiene
+# sentido listar 51 chips sueltos como en las páginas de estado.
+ALL_STATES = sorted({v["estado"] for v in DATA["estructura"].values() if v["nivel"] == "Estado"})
 
 # ---------------------------------------------------------------------------
 # Contenido compartido entre todas las páginas (igual en todos los estados)
@@ -809,8 +809,8 @@ def urls_for_states(state_names):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     minify_shared_assets()
-    urls = urls_for_states(SAMPLE_STATES)
-    print(f"Generating {len(urls)} pages for states: {SAMPLE_STATES}")
+    urls = urls_for_states(ALL_STATES)
+    print(f"Generating {len(urls)} pages for {len(ALL_STATES)} states")
     for url in urls:
         d = build_page_data(url)
         html_out = render_page(d)
