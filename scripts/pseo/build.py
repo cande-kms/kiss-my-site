@@ -3,17 +3,37 @@
 """
 Generador de páginas de SEO programático (EEUU) para Kiss My Site.
 Uso: python3 scripts/pseo/build.py
+
+Combina:
+- SERVICE_TEMPLATES: copy compartido por servicio (SEO/CRO/Ecommerce), con
+  {state}/{city} como placeholders — es el mismo contenido para todos los
+  estados, tal como lo pidió Cande.
+- scripts/pseo/data/pseo_data.json: datos reales por URL extraídos del Excel
+  del especialista (title/meta/H1, FAQs, JSON-LD y enlazado interno). No se
+  inventa nada de esto, se usa tal cual lo escribió.
+
 Escribe en public/en/agency-{service}-{state-slug}.html
 """
 import html as htmlmod
+import json
 import os
 import subprocess
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "public", "en")
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "public", "assets")
+DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "pseo_data.json")
+
+with open(DATA_PATH, encoding="utf-8") as f:
+    DATA = json.load(f)
+
+# Estados que generamos en esta tanda. Las páginas de EEUU a nivel país
+# ("USA (nacional)") quedan para una pasada aparte: necesitan un directorio de
+# los 51 estados (como el ejemplo de referencia que mostró Cande), no tiene
+# sentido listar 51 chips sueltos como en las páginas de estado.
+ALL_STATES = sorted({v["estado"] for v in DATA["estructura"].values() if v["nivel"] == "Estado"})
 
 # ---------------------------------------------------------------------------
-# Testimonios reales (los mismos del sitio principal — confirmado con Cande)
+# Contenido compartido entre todas las páginas (igual en todos los estados)
 # ---------------------------------------------------------------------------
 TESTIMONIALS = [
     dict(
@@ -45,367 +65,332 @@ DIFFERENTIATORS_TABLE = [
 ]
 
 # ---------------------------------------------------------------------------
-# Datos por página — California
+# Plantillas por servicio — el mismo copy para los 51 estados, con {state} y
+# {city} como únicas variables. Title/meta/H1/FAQs/schema NO van acá: esos
+# vienen del Excel (ver DATA), porque ya están redactados estado por estado.
 # ---------------------------------------------------------------------------
+SERVICE_TEMPLATES = {
+    "SEO": dict(
+        service_label="SEO",
+        service_type_schema="Search Engine Optimization",
+        hero_lede="If organic search isn't actively working for you, you're leaving qualified traffic — and "
+                  "sales — on the table every single day in one of the most competitive markets in the country. "
+                  "We audit your site, build a technical, content and authority plan around real buyer intent, "
+                  "and track it all the way to revenue, not just rankings.",
+        hero_bullets=[
+            "Complete technical audit, prioritized by revenue impact — not a 200-item checklist",
+            "Content built around {state} buyer intent, not generic keyword volume",
+            "Your own live dashboard — the same one we use, every day",
+            "No lock-in contracts. If we're not moving the needle, you'll know.",
+        ],
+        proof_stats=[
+            ("8+", "Years running SEO programs"),
+            ("40+", "Active clients across industries"),
+            ("+180%", "Avg. organic traffic growth, 12 months"),
+            ("4.2x", "Avg. return on investment"),
+        ],
+        pain_h2="If you've shopped for an SEO agency in {state}, you've probably already lived this",
+        pain_items=[
+            ("Reports full of rankings and zero revenue.", "You climbed keywords into the top 3 and revenue "
+             "stayed flat. Someone sold you rankings, not demand."),
+            ("A content plan nobody asked to read.", "Zero search volume, zero purchase intent — traffic on "
+             "paper, not in your bank account."),
+            ("Technical debt nobody touches.", "Google wastes crawl budget on URLs that shouldn't exist, while "
+             "your most important pages don't get indexed."),
+            ("100% dependent on paid media.", "The day you pause ad spend in one of the most expensive CPC "
+             "markets in the US, traffic drops to zero."),
+            ("Nobody can tell you what organic actually makes.", "Not the last agency, not your analytics setup "
+             "— and without that number, any conversation about budget is a guess."),
+        ],
+        services_h2="Full-stack SEO: technical, content and authority",
+        services_lede="We don't sell isolated \"content packages.\" We work the levers that actually move "
+                      "organic search, prioritized by impact on your business.",
+        services_cards=[
+            ("🔧", "Technical SEO", "Full crawl, Core Web Vitals, URL architecture, structured data and JS "
+             "rendering, prioritized by effort vs. impact."),
+            ("🔍", "Keyword research", "We map your full market by real buyer intent and match it to your "
+             "catalog or service lines, fixing cannibalization and gaps."),
+            ("✍️", "Content production", "Category pages, comparisons and buying guides written to win a "
+             "decision — every page built around one keyword and one metric."),
+            ("🔗", "Digital PR", "Editorial links from real, relevant media outlets. No link farms, no penalty "
+             "risk."),
+            ("📍", "Local SEO", "Google Business Profile, local landing pages and citations, so you show up "
+             "for \"near me\" and city-level searches across {state}."),
+            ("🧩", "Programmatic SEO", "Structured, data-driven landing pages at scale — built the right way, "
+             "with real differentiated content, not thin duplicate pages."),
+        ],
+        method_h2="From audit to revenue, in four stages",
+        method_steps=[
+            ("Diagnostic", "Week 1–2", "We analyze your site, your direct {state} competitors, and your "
+             "current traffic and revenue. You walk away with an actionable document either way."),
+            ("Roadmap", "Week 3", "Full technical audit, intent-based keyword research and architecture "
+             "mapping. We define KPIs and set up the shared dashboard."),
+            ("Execution", "Month 2–6", "Monthly sprints: technical fixes alongside your dev team, content "
+             "publishing and authority building. Biweekly meeting, monthly report."),
+            ("Measure & iterate", "Ongoing", "We double down on what's working, cut what isn't, and open new "
+             "clusters — this is where organic starts lowering acquisition cost."),
+        ],
+        industries=[
+            ("💻", "Technology & SaaS"), ("🎬", "Entertainment & Media"), ("🏨", "Tourism & Hospitality"),
+            ("🏠", "Real Estate"), ("🏥", "Healthcare"), ("👗", "Retail & Fashion"),
+            ("🌱", "Agriculture & Food"), ("💼", "Professional Services"),
+        ],
+        approach_h2="Our approach, in practice",
+        approach_lede="We don't have a published {state} case yet — here's what a real first engagement looks "
+                      "like, based on how we actually work.",
+        approach_steps=[
+            ("We start with the free audit.", "A full crawl plus a review of your top {state} competitors. You "
+             "get the three most expensive issues we find, in writing, whether you hire us or not."),
+            ("We build a roadmap tied to revenue.", "Not a checklist — a prioritized plan that says which fix "
+             "moves which number, and by roughly how much."),
+            ("We report on what the business cares about.", "Organic traffic and rankings are inputs. The "
+             "report that matters tracks leads and revenue attributed to organic."),
+        ],
+        mid_cta=[
+            ("Tired of paying for rankings that don't convert?",
+             "Let's find out where organic traffic is actually leaking money — no cost, no commitment."),
+            ("Curious what this looks like for your industry?",
+             "Get a free audit scoped to your site and your {state} competitors."),
+            ("Ready for an agency that reports revenue, not vanity metrics?",
+             "Request your free SEO audit and see the first roadmap before you commit to anything."),
+        ],
+        final_h2="Get your free SEO audit for {state}",
+        final_body="Tell us about your project and within 48 business hours we'll hand you a real analysis of "
+                   "your organic situation — no cost, no commitment.",
+    ),
+    "CRO": dict(
+        service_label="CRO",
+        service_type_schema="Conversion Rate Optimization",
+        hero_lede="You already have the traffic. In a market as expensive to advertise in as {state}, doubling "
+                  "your ad spend is the most costly way to grow. We make the traffic you already have leave you "
+                  "more money: conversion audits, experimentation and funnel optimization, backed by method and "
+                  "evidence.",
+        hero_bullets=[
+            "Conversion audit built on quantitative and qualitative data",
+            "A/B testing program: hypotheses, measurement and learning",
+            "Every change validated with statistical significance, not opinion",
+            "We work with what you already have — no full site redesign required",
+        ],
+        proof_stats=[
+            ("8+", "Years running CRO programs"),
+            ("40+", "Active clients across industries"),
+            ("+95%", "Avg. conversion rate lift, 12 months"),
+            ("1 of 3", "Leaks found in a typical first audit"),
+        ],
+        pain_h2="If you've been burned by a CRO agency in {state} before, this will sound familiar",
+        pain_items=[
+            ("A full redesign, sold as \"optimization.\"", "Months of work, no A/B test, no way to know what "
+             "actually moved the number."),
+            ("Tests that stop the moment they look good.", "Called a winner before reaching statistical "
+             "significance — then the lift disappears in production."),
+            ("Reports on conversion rate, never on revenue.", "A rate can go up while revenue per session goes "
+             "down. Nobody checked."),
+            ("One-size-fits-all \"best practice\" changes.", "Copied from a blog post, not from your actual "
+             "session recordings or funnel data."),
+            ("No idea what to test next.", "A single test, then silence — no backlog, no prioritization "
+             "framework."),
+        ],
+        services_h2="Full CRO: research, testing and proof",
+        services_lede="We don't run tests for the sake of testing. Every hypothesis comes from real data about "
+                      "your {state} traffic and how it actually behaves.",
+        services_cards=[
+            ("🔬", "Conversion audit", "Quantitative analytics review plus heatmaps and session recordings to "
+             "find where and why people drop off."),
+            ("🧪", "A/B & multivariate testing", "Structured hypotheses, proper sample-size math, and "
+             "statistically validated results — never a coin flip."),
+            ("🛒", "Checkout & form optimization", "Field-by-field review of your highest-friction steps, where "
+             "small changes move the most revenue."),
+            ("📊", "Analytics & tracking review", "GA4 and GTM audited so every test is measured against "
+             "numbers you can actually trust."),
+            ("🧭", "UX research", "User interviews and usability testing when the data says \"something's "
+             "wrong\" but not \"why.\""),
+            ("📈", "Personalization", "Segment-specific experiences for your highest-value traffic once the "
+             "foundational tests are won."),
+        ],
+        method_h2="From audit to proven lift, in four stages",
+        method_steps=[
+            ("Diagnostic", "Week 1–2", "We review your funnel, analytics setup and your top {state} "
+             "competitors. You get the three most expensive leaks in writing, whether you hire us or not."),
+            ("Hypothesis backlog", "Week 3", "We prioritize a testing roadmap by expected impact and effort, "
+             "and set up the shared reporting dashboard."),
+            ("Execution", "Month 2–6", "Monthly testing cycles: design, build, run to significance, analyze. "
+             "Biweekly meeting, monthly report."),
+            ("Measure & iterate", "Ongoing", "Winners get rolled out permanently, losers get documented as "
+             "learning — the backlog never runs dry."),
+        ],
+        industries=[
+            ("💻", "SaaS & Technology"), ("🛍️", "E-commerce & Retail"), ("🏨", "Travel & Hospitality"),
+            ("🏥", "Healthcare"), ("🏠", "Real Estate"), ("💰", "Financial Services"),
+            ("🎓", "Education"), ("💼", "Professional Services"),
+        ],
+        approach_h2="Our approach, in practice",
+        approach_lede="We don't have a published {state} case yet — here's what a real first engagement looks "
+                      "like, based on how we actually work.",
+        approach_steps=[
+            ("We start with the free audit.", "A full funnel and analytics review, plus a look at your top "
+             "{state} competitors. You get the three most expensive leaks in writing, whether you hire us or "
+             "not."),
+            ("We build a hypothesis backlog, not a single test.", "Prioritized by expected revenue impact, so "
+             "the roadmap survives past the first result."),
+            ("We report on revenue, not just conversion rate.", "Every test tracks revenue per session and "
+             "cost per lead, validated for statistical significance before we call a winner."),
+        ],
+        mid_cta=[
+            ("Your traffic is already there — you're just losing it at the door.",
+             "Get a free conversion audit and find the three most expensive leaks in your funnel."),
+            ("Curious what a test roadmap looks like for your site?",
+             "Request a free audit and we'll show you where the quickest wins are."),
+            ("Ready for growth you can actually prove?",
+             "Get your free CRO audit and see the first test hypotheses before you commit to anything."),
+        ],
+        final_h2="Get your free CRO audit for {state}",
+        final_body="Tell us about your project and within 48 business hours we'll hand you the most expensive "
+                   "leaks in your current funnel — no cost, no commitment.",
+    ),
+    "Ecommerce": dict(
+        service_label="Ecommerce",
+        service_type_schema="Ecommerce Development",
+        hero_lede="The difference between a {state} store that scales and one that stalls is the foundation. "
+                  "We support you at every step — platform, catalog, payments and CRO — to make sure your "
+                  "online store is built on solid, strategic ground from day one.",
+        hero_bullets=[
+            "Platform selection and build: Shopify, Shopify Plus, BigCommerce, WooCommerce or VTEX",
+            "Catalog and category SEO built for how people actually search",
+            "Checkout CRO to close the gap between visits and orders",
+            "Migrations that don't lose your existing rankings or revenue",
+        ],
+        proof_stats=[
+            ("8+", "Years building ecommerce stores"),
+            ("40+", "Active clients across industries"),
+            ("+120%", "Avg. store revenue growth, 12 months"),
+            ("0", "Rankings lost on a properly planned migration"),
+        ],
+        pain_h2="If you're evaluating an ecommerce agency in {state}, you've probably already run into this",
+        pain_items=[
+            ("A store that looks good and converts badly.", "Nobody tested the checkout with real users before "
+             "launch — friction hides in the details."),
+            ("A migration that tanked your rankings.", "No redirect plan, no metadata carried over, and three "
+             "months of organic traffic gone."),
+            ("A platform picked for the wrong reasons.", "Chosen because it was trendy, not because it fit "
+             "your catalog size or growth plan."),
+            ("Integrations that don't talk to each other.", "Inventory, shipping and your ERP live in three "
+             "different places, and someone reconciles it by hand."),
+            ("SEO treated as an afterthought.", "Category and product pages built for design, not for the "
+             "searches that actually drive {state} traffic."),
+        ],
+        services_h2="Full ecommerce: build, optimize and grow",
+        services_lede="We don't just launch a store and disappear. Every build is scoped around what actually "
+                      "grows revenue after go-live.",
+        services_cards=[
+            ("🛠️", "Store builds & migrations", "Shopify, Shopify Plus, BigCommerce, WooCommerce and VTEX, with "
+             "a full redirect and metadata plan on every migration."),
+            ("🗂️", "Catalog & category SEO", "Faceted navigation, pagination and category structure built "
+             "around real buyer search intent, not just design."),
+            ("💳", "Checkout CRO", "Field-by-field review of your highest-drop-off step, tested and validated, "
+             "not guessed."),
+            ("🔌", "Integrations", "Stripe, PayPal and Shop Pay, plus sales tax, shipping carriers and ERP or "
+             "3PL tools, so checkout stays fast and reliable."),
+            ("📈", "Analytics & attribution", "GA4 ecommerce tracking wired correctly, so every dollar of "
+             "revenue is attributed to the channel that earned it."),
+            ("✉️", "Lifecycle marketing", "Abandoned cart, post-purchase and win-back flows that turn one "
+             "order into repeat revenue."),
+        ],
+        method_h2="From audit to launch, in four stages",
+        method_steps=[
+            ("Diagnostic", "Week 1–2", "We review your current store (or scope a new one), your {state} "
+             "competitors, and your catalog and traffic. You get an actionable document either way."),
+            ("Roadmap", "Week 3", "Platform decision, information architecture, and a prioritized backlog of "
+             "fixes or build tasks, with the shared dashboard set up."),
+            ("Execution", "Month 2–6", "Build or fix sprints, catalog and category SEO, checkout CRO. "
+             "Biweekly meeting, monthly report."),
+            ("Measure & iterate", "Ongoing", "We monitor conversion rate, AOV and organic traffic weekly after "
+             "launch, and keep testing the checkout."),
+        ],
+        industries=[
+            ("👗", "Fashion & Apparel"), ("💄", "Beauty & Personal Care"), ("🏠", "Home & Furniture"),
+            ("🍔", "Food & Beverage"), ("💪", "Health & Wellness"), ("🎁", "Specialty & Gifts"),
+            ("📱", "Electronics"), ("🐾", "Pet Products"),
+        ],
+        approach_h2="Our approach, in practice",
+        approach_lede="We don't have a published {state} case yet — here's what a real first engagement looks "
+                      "like, based on how we actually work.",
+        approach_steps=[
+            ("We start with the free audit.", "A full review of your store or a scoping session for a new "
+             "one, plus a look at your top {state} competitors."),
+            ("We plan the migration before we touch anything.", "Every URL mapped, every redirect planned, "
+             "metadata and structured data preserved — indexation and traffic monitored daily after launch."),
+            ("We report on revenue, not just traffic.", "Conversion rate, AOV and organic traffic tracked "
+             "weekly, so you know the store is actually working, not just live."),
+        ],
+        mid_cta=[
+            ("Don't let a shaky platform cap your growth.",
+             "Get a free store audit and find out what's costing you sales before it costs you more."),
+            ("Curious what this looks like for your catalog?",
+             "Request a free audit scoped to your platform, your products and your {state} traffic."),
+            ("Ready for a store built to scale, not just launch?",
+             "Get your free ecommerce audit and see the first roadmap before you commit to anything."),
+        ],
+        final_h2="Get your free ecommerce audit for {state}",
+        final_body="Tell us about your store and within 48 business hours we'll hand you the highest-impact "
+                   "fixes — no cost, no commitment.",
+    ),
+}
 
-SEO_CA = dict(
-    slug="agency-seo-california",
-    service_label="SEO",
-    service_type_schema="Search Engine Optimization",
-    state="California", state_abbr="CA", main_city="Los Angeles",
-    title="SEO Agency in California | Free SEO Audit | Kiss My Site",
-    meta_desc="Hire an SEO agency in California. Technical SEO, content and link building that grow qualified "
-              "leads. Book your free audit today. Serving Los Angeles.",
-    h1="SEO Agency in California",
-    eyebrow="SEO Agency · California",
-    hero_lede="If organic search isn't actively working for you, you're leaving qualified traffic — and sales — "
-              "on the table every single day in one of the most competitive markets in the country. We audit "
-              "your site, build a technical, content and authority plan around real buyer intent, and track it "
-              "all the way to revenue, not just rankings.",
-    hero_bullets=[
-        "Complete technical audit, prioritized by revenue impact — not a 200-item checklist",
-        "Content built around California buyer intent, not generic keyword volume",
-        "Your own live dashboard — the same one we use, every day",
-        "No lock-in contracts. If we're not moving the needle, you'll know.",
-    ],
-    proof_stats=[
-        ("8+", "Years running SEO programs"),
-        ("40+", "Active clients across industries"),
-        ("+180%", "Avg. organic traffic growth, 12 months"),
-        ("4.2x", "Avg. return on investment"),
-    ],
-    pain_h2="If you've shopped for an SEO agency in California, you've probably already lived this",
-    pain_items=[
-        ("Reports full of rankings and zero revenue.", "You climbed keywords into the top 3 and revenue stayed "
-         "flat. Someone sold you rankings, not demand."),
-        ("A content plan nobody asked to read.", "Zero search volume, zero purchase intent — traffic on paper, "
-         "not in your bank account."),
-        ("Technical debt nobody touches.", "Google wastes crawl budget on URLs that shouldn't exist, while your "
-         "most important pages don't get indexed."),
-        ("100% dependent on paid media.", "The day you pause ad spend in one of the most expensive CPC markets "
-         "in the US, traffic drops to zero."),
-        ("Nobody can tell you what organic actually makes.", "Not the last agency, not your analytics setup — "
-         "and without that number, any conversation about budget is a guess."),
-    ],
-    services_h2="Full-stack SEO: technical, content and authority",
-    services_lede="We don't sell isolated \"content packages.\" We work the levers that actually move organic "
-                  "search, prioritized by impact on your business.",
-    services_cards=[
-        ("🔧", "Technical SEO", "Full crawl, Core Web Vitals, URL architecture, structured data and JS "
-         "rendering, prioritized by effort vs. impact."),
-        ("🔍", "Keyword research", "We map your full market by real buyer intent and match it to your catalog "
-         "or service lines, fixing cannibalization and gaps."),
-        ("✍️", "Content production", "Category pages, comparisons and buying guides written to win a decision — "
-         "every page built around one keyword and one metric."),
-        ("🔗", "Digital PR", "Editorial links from real, relevant media outlets. No link farms, no penalty "
-         "risk."),
-        ("📍", "Local SEO", "Google Business Profile, local landing pages and citations, so you show up for "
-         "\"near me\" and city-level searches across California."),
-        ("🧩", "Programmatic SEO", "Structured, data-driven landing pages at scale — built the right way, with "
-         "real differentiated content, not thin duplicate pages."),
-    ],
-    method_h2="From audit to revenue, in four stages",
-    method_steps=[
-        ("Diagnostic", "Week 1–2", "We analyze your site, your direct California competitors, and your current "
-         "traffic and revenue. You walk away with an actionable document either way."),
-        ("Roadmap", "Week 3", "Full technical audit, intent-based keyword research and architecture mapping. "
-         "We define KPIs and set up the shared dashboard."),
-        ("Execution", "Month 2–6", "Monthly sprints: technical fixes alongside your dev team, content "
-         "publishing and authority building. Biweekly meeting, monthly report."),
-        ("Measure & iterate", "Ongoing", "We double down on what's working, cut what isn't, and open new "
-         "clusters — this is where organic starts lowering acquisition cost."),
-    ],
-    industries=[
-        ("💻", "Technology & SaaS"), ("🎬", "Entertainment & Media"), ("🏨", "Tourism & Hospitality"),
-        ("🏠", "Real Estate"), ("🏥", "Healthcare"), ("👗", "Retail & Fashion"),
-        ("🌱", "Agriculture & Food"), ("💼", "Professional Services"),
-    ],
-    approach_h2="Our approach, in practice",
-    approach_lede="We don't have a published California case yet — here's what a real first engagement looks "
-                  "like, based on how we actually work.",
-    approach_steps=[
-        ("We start with the free audit.", "A full crawl plus a review of your top California competitors. You "
-         "get the three most expensive issues we find, in writing, whether you hire us or not."),
-        ("We build a roadmap tied to revenue.", "Not a checklist — a prioritized plan that says which fix moves "
-         "which number, and by roughly how much."),
-        ("We report on what the business cares about.", "Organic traffic and rankings are inputs. The report "
-         "that matters tracks leads and revenue attributed to organic."),
-    ],
-    faqs=[
-        ("What does your California SEO service include?", "Technical audits, keyword research, on-page "
-         "optimization, content production, internal linking, digital PR and programmatic SEO, with monthly "
-         "reporting on traffic, rankings and leads."),
-        ("How long before we see SEO results?", "Most clients see measurable movement in rankings and "
-         "impressions within 3 months, and meaningful lead growth between months 4 and 8, depending on "
-         "competition and the technical state of the site."),
-        ("Which areas of California do you serve?", "We serve businesses across California, including Los "
-         "Angeles and the surrounding metro area, as well as companies based in California that sell "
-         "nationally."),
-        ("How much does an SEO agency in California cost?", "Pricing depends on site size, competition and "
-         "goals. We scope every engagement after the free audit and quote a fixed monthly retainer with "
-         "defined deliverables, no long lock-in contracts."),
-        ("How do we get started with a California project?", "Book a free audit. We review your site, your "
-         "California competitors and your traffic, then send a prioritized roadmap with scope, timeline and "
-         "pricing before you commit."),
-        ("Do you work with our in-house team or replace it?", "Both models work. We can run SEO end to end, or "
-         "act as the strategy and technical layer while your team handles content production and publishing."),
-    ],
-    related=[
-        ("agency-cro-california", "CRO agency California"),
-        ("agency-ecommerce-california", "Ecommerce agency California"),
-    ],
-    mid_cta=[
-        ("Tired of paying for rankings that don't convert?",
-         "Let's find out where organic traffic is actually leaking money — no cost, no commitment."),
-        ("Curious what this looks like for your industry?",
-         "Get a free audit scoped to your site and your California competitors."),
-        ("Ready for an agency that reports revenue, not vanity metrics?",
-         "Request your free SEO audit and see the first roadmap before you commit to anything."),
-    ],
-    final_h2="Get your free SEO audit for California",
-    final_body="Tell us about your project and within 48 business hours we'll hand you a real analysis of your "
-               "organic situation — no cost, no commitment.",
-)
+# ---------------------------------------------------------------------------
+# Combina plantilla + datos reales del Excel para una URL puntual
+# ---------------------------------------------------------------------------
+def _fmt(value, **ctx):
+    if isinstance(value, str):
+        return value.format(**ctx)
+    if isinstance(value, list):
+        return [_fmt(v, **ctx) for v in value]
+    if isinstance(value, tuple):
+        return tuple(_fmt(v, **ctx) for v in value)
+    return value
 
-CRO_CA = dict(
-    slug="agency-cro-california",
-    service_label="CRO",
-    service_type_schema="Conversion Rate Optimization",
-    state="California", state_abbr="CA", main_city="Los Angeles",
-    title="CRO Agency in California | Free CRO Audit | Kiss My Site",
-    meta_desc="Hire a CRO agency in California. A/B testing, UX research and analytics that turn your traffic "
-              "into more leads. Book your free audit. Serving Los Angeles.",
-    h1="CRO Agency in California",
-    eyebrow="CRO Agency · California",
-    hero_lede="You already have the traffic. In a market as expensive to advertise in as California, doubling "
-              "your ad spend is the most costly way to grow. We make the traffic you already have leave you "
-              "more money: conversion audits, experimentation and funnel optimization, backed by method and "
-              "evidence.",
-    hero_bullets=[
-        "Conversion audit built on quantitative and qualitative data",
-        "A/B testing program: hypotheses, measurement and learning",
-        "Every change validated with statistical significance, not opinion",
-        "We work with what you already have — no full site redesign required",
-    ],
-    proof_stats=[
-        ("8+", "Years running CRO programs"),
-        ("40+", "Active clients across industries"),
-        ("+95%", "Avg. conversion rate lift, 12 months"),
-        ("1 of 3", "Leaks found in a typical first audit"),
-    ],
-    pain_h2="If you've been burned by a CRO agency in California before, this will sound familiar",
-    pain_items=[
-        ("A full redesign, sold as \"optimization.\"", "Months of work, no A/B test, no way to know what "
-         "actually moved the number."),
-        ("Tests that stop the moment they look good.", "Called a winner before reaching statistical "
-         "significance — then the lift disappears in production."),
-        ("Reports on conversion rate, never on revenue.", "A rate can go up while revenue per session goes "
-         "down. Nobody checked."),
-        ("One-size-fits-all \"best practice\" changes.", "Copied from a blog post, not from your actual "
-         "session recordings or funnel data."),
-        ("No idea what to test next.", "A single test, then silence — no backlog, no prioritization "
-         "framework."),
-    ],
-    services_h2="Full CRO: research, testing and proof",
-    services_lede="We don't run tests for the sake of testing. Every hypothesis comes from real data about your "
-                  "California traffic and how it actually behaves.",
-    services_cards=[
-        ("🔬", "Conversion audit", "Quantitative analytics review plus heatmaps and session recordings to find "
-         "where and why people drop off."),
-        ("🧪", "A/B & multivariate testing", "Structured hypotheses, proper sample-size math, and statistically "
-         "validated results — never a coin flip."),
-        ("🛒", "Checkout & form optimization", "Field-by-field review of your highest-friction steps, where "
-         "small changes move the most revenue."),
-        ("📊", "Analytics & tracking review", "GA4 and GTM audited so every test is measured against numbers "
-         "you can actually trust."),
-        ("🧭", "UX research", "User interviews and usability testing when the data says \"something's wrong\" "
-         "but not \"why.\""),
-        ("📈", "Personalization", "Segment-specific experiences for your highest-value traffic once the "
-         "foundational tests are won."),
-    ],
-    method_h2="From audit to proven lift, in four stages",
-    method_steps=[
-        ("Diagnostic", "Week 1–2", "We review your funnel, analytics setup and your top California competitors. "
-         "You get the three most expensive leaks in writing, whether you hire us or not."),
-        ("Hypothesis backlog", "Week 3", "We prioritize a testing roadmap by expected impact and effort, and set "
-         "up the shared reporting dashboard."),
-        ("Execution", "Month 2–6", "Monthly testing cycles: design, build, run to significance, analyze. "
-         "Biweekly meeting, monthly report."),
-        ("Measure & iterate", "Ongoing", "Winners get rolled out permanently, losers get documented as learning "
-         "— the backlog never runs dry."),
-    ],
-    industries=[
-        ("💻", "SaaS & Technology"), ("🛍️", "E-commerce & Retail"), ("🏨", "Travel & Hospitality"),
-        ("🏥", "Healthcare"), ("🏠", "Real Estate"), ("💰", "Financial Services"),
-        ("🎓", "Education"), ("💼", "Professional Services"),
-    ],
-    approach_h2="Our approach, in practice",
-    approach_lede="We don't have a published California case yet — here's what a real first engagement looks "
-                  "like, based on how we actually work.",
-    approach_steps=[
-        ("We start with the free audit.", "A full funnel and analytics review, plus a look at your top "
-         "California competitors. You get the three most expensive leaks in writing, whether you hire us or "
-         "not."),
-        ("We build a hypothesis backlog, not a single test.", "Prioritized by expected revenue impact, so the "
-         "roadmap survives past the first result."),
-        ("We report on revenue, not just conversion rate.", "Every test tracks revenue per session and cost per "
-         "lead, validated for statistical significance before we call a winner."),
-    ],
-    faqs=[
-        ("What does your CRO service include?", "Analytics setup and review, heatmaps, session recordings, "
-         "user research, a prioritized hypothesis backlog, and A/B tests on landing pages, forms and checkout, "
-         "with a full analysis after each test."),
-        ("How much traffic do we need for CRO to work?", "As a rule of thumb, around 10,000 monthly sessions or "
-         "300 monthly conversions makes A/B testing statistically viable. Below that we use qualitative "
-         "research and sequential testing instead."),
-        ("Which areas of California do you serve?", "We serve businesses across California, including Los "
-         "Angeles and the surrounding metro area, as well as companies based in California that sell "
-         "nationally."),
-        ("How much does a CRO agency in California cost?", "It depends on testing volume and the complexity of "
-         "your stack. We quote a fixed monthly retainer after the free audit, with an agreed number of "
-         "experiments per month."),
-        ("How do we get started with a California project?", "Book a free audit. We review your site, your "
-         "California competitors and your traffic, then send a prioritized roadmap with scope, timeline and "
-         "pricing before you commit."),
-        ("How do you prove CRO results?", "Every test reports conversion rate, cost per lead, revenue per "
-         "session and average order value, validated for statistical significance in GA4 before we call a "
-         "winner."),
-    ],
-    related=[
-        ("agency-seo-california", "SEO agency California"),
-        ("agency-ecommerce-california", "Ecommerce agency California"),
-    ],
-    mid_cta=[
-        ("Your traffic is already there — you're just losing it at the door.",
-         "Get a free conversion audit and find the three most expensive leaks in your funnel."),
-        ("Curious what a test roadmap looks like for your site?",
-         "Request a free audit and we'll show you where the quickest wins are."),
-        ("Ready for growth you can actually prove?",
-         "Get your free CRO audit and see the first test hypotheses before you commit to anything."),
-    ],
-    final_h2="Get your free CRO audit for California",
-    final_body="Tell us about your project and within 48 business hours we'll hand you the most expensive leaks "
-               "in your current funnel — no cost, no commitment.",
-)
+def build_page_data(url):
+    estructura = DATA["estructura"][url]
+    metadatos = DATA["metadatos"][url]
+    faqs = DATA["faqs"][url]
+    schema_extra = DATA["schema_extra"][url]
+    enlaces = DATA["enlaces"].get(url, [])
 
-ECOMMERCE_CA = dict(
-    slug="agency-ecommerce-california",
-    service_label="Ecommerce",
-    service_type_schema="Ecommerce Development",
-    state="California", state_abbr="CA", main_city="Los Angeles",
-    title="Ecommerce Agency in California | Store Audit | Kiss My Site",
-    meta_desc="Hire an ecommerce agency in California. Shopify and BigCommerce builds, catalog SEO and checkout "
-              "CRO that grow revenue. Book your free audit.",
-    h1="Ecommerce Agency in California",
-    eyebrow="Ecommerce Agency · California",
-    hero_lede="The difference between a California store that scales and one that stalls is the foundation. We "
-              "support you at every step — platform, catalog, payments and CRO — to make sure your online store "
-              "is built on solid, strategic ground from day one.",
-    hero_bullets=[
-        "Platform selection and build: Shopify, Shopify Plus, BigCommerce, WooCommerce or VTEX",
-        "Catalog and category SEO built for how people actually search",
-        "Checkout CRO to close the gap between visits and orders",
-        "Migrations that don't lose your existing rankings or revenue",
-    ],
-    proof_stats=[
-        ("8+", "Years building ecommerce stores"),
-        ("40+", "Active clients across industries"),
-        ("+120%", "Avg. store revenue growth, 12 months"),
-        ("0", "Rankings lost on a properly planned migration"),
-    ],
-    pain_h2="If you're evaluating an ecommerce agency in California, you've probably already run into this",
-    pain_items=[
-        ("A store that looks good and converts badly.", "Nobody tested the checkout with real users before "
-         "launch — friction hides in the details."),
-        ("A migration that tanked your rankings.", "No redirect plan, no metadata carried over, and three "
-         "months of organic traffic gone."),
-        ("A platform picked for the wrong reasons.", "Chosen because it was trendy, not because it fit your "
-         "catalog size or growth plan."),
-        ("Integrations that don't talk to each other.", "Inventory, shipping and your ERP live in three "
-         "different places, and someone reconciles it by hand."),
-        ("SEO treated as an afterthought.", "Category and product pages built for design, not for the searches "
-         "that actually drive California traffic."),
-    ],
-    services_h2="Full ecommerce: build, optimize and grow",
-    services_lede="We don't just launch a store and disappear. Every build is scoped around what actually grows "
-                  "revenue after go-live.",
-    services_cards=[
-        ("🛠️", "Store builds & migrations", "Shopify, Shopify Plus, BigCommerce, WooCommerce and VTEX, with a "
-         "full redirect and metadata plan on every migration."),
-        ("🗂️", "Catalog & category SEO", "Faceted navigation, pagination and category structure built around "
-         "real buyer search intent, not just design."),
-        ("💳", "Checkout CRO", "Field-by-field review of your highest-drop-off step, tested and validated, not "
-         "guessed."),
-        ("🔌", "Integrations", "Stripe, PayPal and Shop Pay, plus sales tax, shipping carriers and ERP or 3PL "
-         "tools, so checkout stays fast and reliable."),
-        ("📈", "Analytics & attribution", "GA4 ecommerce tracking wired correctly, so every dollar of revenue is "
-         "attributed to the channel that earned it."),
-        ("✉️", "Lifecycle marketing", "Abandoned cart, post-purchase and win-back flows that turn one order into "
-         "repeat revenue."),
-    ],
-    method_h2="From audit to launch, in four stages",
-    method_steps=[
-        ("Diagnostic", "Week 1–2", "We review your current store (or scope a new one), your California "
-         "competitors, and your catalog and traffic. You get an actionable document either way."),
-        ("Roadmap", "Week 3", "Platform decision, information architecture, and a prioritized backlog of fixes "
-         "or build tasks, with the shared dashboard set up."),
-        ("Execution", "Month 2–6", "Build or fix sprints, catalog and category SEO, checkout CRO. Biweekly "
-         "meeting, monthly report."),
-        ("Measure & iterate", "Ongoing", "We monitor conversion rate, AOV and organic traffic weekly after "
-         "launch, and keep testing the checkout."),
-    ],
-    industries=[
-        ("👗", "Fashion & Apparel"), ("💄", "Beauty & Personal Care"), ("🏠", "Home & Furniture"),
-        ("🍔", "Food & Beverage"), ("💪", "Health & Wellness"), ("🎁", "Specialty & Gifts"),
-        ("📱", "Electronics"), ("🐾", "Pet Products"),
-    ],
-    approach_h2="Our approach, in practice",
-    approach_lede="We don't have a published California case yet — here's what a real first engagement looks "
-                  "like, based on how we actually work.",
-    approach_steps=[
-        ("We start with the free audit.", "A full review of your store or a scoping session for a new one, plus "
-         "a look at your top California competitors."),
-        ("We plan the migration before we touch anything.", "Every URL mapped, every redirect planned, "
-         "metadata and structured data preserved — indexation and traffic monitored daily after launch."),
-        ("We report on revenue, not just traffic.", "Conversion rate, AOV and organic traffic tracked weekly, "
-         "so you know the store is actually working, not just live."),
-    ],
-    faqs=[
-        ("What ecommerce services do you offer in California?", "Ecommerce strategy, store builds and "
-         "migrations, catalog and category SEO, checkout CRO, analytics, and lifecycle marketing automation."),
-        ("Which ecommerce platforms do you work with?", "Shopify, Shopify Plus, BigCommerce, WooCommerce and "
-         "VTEX. We recommend the platform based on catalog size, order volume and the integrations you need."),
-        ("Which areas of California do you serve?", "We serve businesses across California, including Los "
-         "Angeles and the surrounding metro area, as well as companies based in California that sell "
-         "nationally."),
-        ("Can you migrate our store without losing rankings?", "Yes. We map every URL, build the redirect plan, "
-         "preserve metadata and structured data, and monitor indexation and traffic daily for the first weeks "
-         "after launch."),
-        ("How do we get started with a California project?", "Book a free audit. We review your site, your "
-         "California competitors and your traffic, then send a prioritized roadmap with scope, timeline and "
-         "pricing before you commit."),
-        ("Do you handle payments, tax and shipping integrations?", "Yes. We integrate Stripe, PayPal and Shop "
-         "Pay, plus sales tax, shipping carriers and ERP or 3PL tools, so checkout stays fast and reliable."),
-    ],
-    related=[
-        ("agency-seo-california", "SEO agency California"),
-        ("agency-cro-california", "CRO agency California"),
-    ],
-    mid_cta=[
-        ("Don't let a shaky platform cap your growth.",
-         "Get a free store audit and find out what's costing you sales before it costs you more."),
-        ("Curious what this looks like for your catalog?",
-         "Request a free audit scoped to your platform, your products and your California traffic."),
-        ("Ready for a store built to scale, not just launch?",
-         "Get your free ecommerce audit and see the first roadmap before you commit to anything."),
-    ],
-    final_h2="Get your free ecommerce audit for California",
-    final_body="Tell us about your store and within 48 business hours we'll hand you the highest-impact fixes — "
-               "no cost, no commitment.",
-)
+    servicio = estructura["servicio"]
+    state = estructura["estado"]
+    city = estructura["ciudad"]
+    slug = url.split("/en/")[1]
 
-PAGES = [SEO_CA, CRO_CA, ECOMMERCE_CA]
-print(f"Loaded {len(PAGES)} page definitions.")
+    tmpl = SERVICE_TEMPLATES[servicio]
+    d = {k: _fmt(v, state=state, city=city) for k, v in tmpl.items()}
+
+    # Related pages: todo el enlazado saliente de esta URL según el especialista
+    # (hermanas de región + venta cruzada entre servicios + el link a la página USA).
+    related = []
+    for link in enlaces:
+        dest_slug = link["destino"].split("/en/")[1]
+        dest_meta = DATA["estructura"].get(link["destino"], {})
+        dest_servicio = dest_meta.get("servicio", servicio)
+        if dest_meta.get("nivel") == "País":
+            label = f"{dest_servicio} agency USA"
+        else:
+            label = f"{dest_servicio} agency {dest_meta.get('estado', '')}"
+        related.append((dest_slug, label))
+
+    d.update(
+        slug=slug,
+        state=state,
+        state_abbr=estructura["abrev"],
+        main_city=city,
+        eyebrow=f"{tmpl['service_label']} Agency · {state}",
+        title=metadatos["title"],
+        meta_desc=metadatos["meta"],
+        h1=metadatos["h1"],
+        faqs=[tuple(qa) for qa in faqs],
+        related=related,
+        schema_description=schema_extra["description"],
+        schema_area_served=schema_extra["areaServed"],
+    )
+    return d
 
 # ---------------------------------------------------------------------------
 # Render
@@ -523,8 +508,7 @@ def render_faq_schema(faqs):
 }}'''
 
 def json_str(s):
-    import json as _json
-    return _json.dumps(s)
+    return json.dumps(s)
 
 def render_mid_cta(headline, body, hue):
     return f'''<section class="section section-slim" data-hue="{hue}">
@@ -545,9 +529,9 @@ def render_page(d):
   "@id": "{canonical}#business",
   "name": "Kiss My Site — {esc(d['service_label'])} Agency in {esc(d['state'])}",
   "url": "{canonical}",
-  "description": {json_str(d['meta_desc'])},
+  "description": {json_str(d['schema_description'])},
   "serviceType": "{esc(d['service_type_schema'])}",
-  "areaServed": {{ "@type": "State", "name": "{esc(d['state'])}" }},
+  "areaServed": {json.dumps(d['schema_area_served'])},
   "address": {{ "@type": "PostalAddress", "addressCountry": "US" }}
 }}'''
     schema_breadcrumb = f'''{{
@@ -815,10 +799,20 @@ def minify_shared_assets():
         )
         print(f"minified {src} -> {out} ({os.path.getsize(out_path)} bytes)")
 
+def urls_for_states(state_names):
+    out = []
+    for url, info in DATA["estructura"].items():
+        if info["nivel"] == "Estado" and info["estado"] in state_names:
+            out.append(url)
+    return sorted(out)
+
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     minify_shared_assets()
-    for d in PAGES:
+    urls = urls_for_states(ALL_STATES)
+    print(f"Generating {len(urls)} pages for {len(ALL_STATES)} states")
+    for url in urls:
+        d = build_page_data(url)
         html_out = render_page(d)
         path = os.path.join(OUT_DIR, f"{d['slug']}.html")
         with open(path, "w", encoding="utf-8") as f:
