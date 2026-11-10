@@ -25,9 +25,11 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "latam_data.json")
 with open(DATA_PATH, encoding="utf-8") as f:
     DATA = json.load(f)
 
-# País piloto para esta primera tanda (Perú, 9 páginas). El resto queda
-# listo para generarse apenas se apruebe la muestra.
-SAMPLE_COUNTRIES = ["Perú"]
+# Alcance final acordado con el especialista: 5 países + sus 2 ciudades
+# principales cada uno (15 ubicaciones x 3 servicios = 45 páginas). Ya no 82
+# ciudades — el alcance se redujo a este conjunto, que es el que viene
+# completo (estructura + FAQs) en el Excel.
+ALL_COUNTRIES = ["Perú", "Paraguay", "Panamá", "Colombia", "México"]
 
 # ---------------------------------------------------------------------------
 # Variación local por país — pedido explícito del especialista: el término
@@ -366,75 +368,10 @@ def _fmt(value, **ctx):
         return tuple(_fmt(v, **ctx) for v in value)
     return value
 
-def build_faqs(servicio, nivel, lugar):
-    if nivel == "País":
-        q_zona = f"¿Trabajan con empresas en todo {lugar}?"
-        a_zona = (f"Sí. Trabajamos de forma remota con empresas de todo {lugar}, con un referente de cuenta "
-                  "dedicado, llamadas programadas y dashboards de reporte compartidos.")
-    else:
-        q_zona = f"¿Qué zonas de {lugar} cubren?"
-        a_zona = (f"Trabajamos con empresas de {lugar} y su área metropolitana, además de empresas con sede "
-                  f"en {lugar} que venden a nivel nacional.")
-
-    common_start = [
-        (f"¿Cómo arrancamos un proyecto en {lugar}?",
-         f"Pedí la auditoría gratuita. Revisamos tu sitio, tus competidores en {lugar} y tu tráfico, y te "
-         "mandamos un roadmap priorizado con alcance, tiempos y precio antes de que te comprometas."),
-    ]
-
-    if servicio == "SEO":
-        return [
-            (f"¿Qué incluye el servicio de SEO en {lugar}?", "Auditorías técnicas, investigación de keywords, "
-             "optimización on-page, producción de contenido, enlazado interno, digital PR y SEO programático, "
-             "con reporte mensual de tráfico, rankings y leads."),
-            ("¿Cuánto tardamos en ver resultados de SEO?", "La mayoría de los clientes ve movimiento medible "
-             "en rankings e impresiones dentro de los primeros 3 meses, y crecimiento real de leads entre el "
-             "mes 4 y el 8, según la competencia y el estado técnico del sitio."),
-            (q_zona, a_zona),
-            (f"¿Cuánto cuesta una agencia de SEO en {lugar}?", "Depende del tamaño del sitio, la competencia "
-             "y los objetivos. Definimos el alcance después de la auditoría gratuita y cotizamos un abono "
-             "mensual fijo con entregables definidos, sin contratos de permanencia largos."),
-            common_start[0],
-            ("¿Trabajan con nuestro equipo interno o lo reemplazan?", "Los dos modelos funcionan. Podemos "
-             "llevar el SEO de punta a punta, o actuar como la capa estratégica y técnica mientras tu equipo "
-             "se encarga de la producción y publicación de contenido."),
-        ]
-    if servicio == "CRO":
-        return [
-            ("¿Qué incluye el servicio de CRO?", "Configuración y revisión de analítica, mapas de calor, "
-             "grabaciones de sesión, investigación de usuarios, un backlog priorizado de hipótesis y tests A/B "
-             "en landing pages, formularios y checkout, con un análisis completo después de cada test."),
-            ("¿Cuánto tráfico necesitamos para que el CRO funcione?", "Como regla general, unas 10.000 "
-             "sesiones mensuales o 300 conversiones mensuales hacen que el testing A/B sea viable "
-             "estadísticamente. Por debajo de eso usamos investigación cualitativa y testing secuencial."),
-            (q_zona, a_zona),
-            (f"¿Cuánto cuesta una agencia de CRO en {lugar}?", "Depende del volumen de testing y la "
-             "complejidad de tu stack. Cotizamos un abono mensual fijo después de la auditoría gratuita, con "
-             "una cantidad acordada de experimentos por mes."),
-            common_start[0],
-            ("¿Cómo comprueban los resultados de CRO?", "Cada test reporta tasa de conversión, costo por "
-             "lead, ingreso por sesión y ticket promedio, validado con significancia estadística en GA4 antes "
-             "de declarar un ganador."),
-        ]
-    return [
-        (f"¿Qué servicios de ecommerce ofrecen en {lugar}?", "Estrategia de ecommerce, desarrollo y migración "
-         "de tiendas, SEO de catálogo y categorías, CRO de checkout, analítica y automatización de marketing "
-         "de ciclo de vida."),
-        ("¿Con qué plataformas de ecommerce trabajan?", "Shopify, Shopify Plus, BigCommerce, WooCommerce y "
-         "VTEX. Recomendamos la plataforma según el tamaño de catálogo, el volumen de pedidos y las "
-         "integraciones que necesites."),
-        (q_zona, a_zona),
-        ("¿Pueden migrar nuestra tienda sin perder posicionamiento?", "Sí. Mapeamos cada URL, armamos el plan "
-         "de redirecciones, preservamos metadatos y datos estructurados, y monitoreamos indexación y tráfico "
-         "a diario durante las primeras semanas después del lanzamiento."),
-        common_start[0],
-        ("¿Manejan pagos, impuestos e integraciones de envío?", "Sí. Integramos pasarelas de pago, impuestos, "
-         "transportistas y herramientas de ERP o 3PL, para que el checkout sea rápido y confiable."),
-    ]
-
 def build_page_data(url):
     info = DATA["estructura"][url]
     enlaces = DATA["enlaces"].get(url, [])
+    faqs = DATA["faqs"][url]
 
     servicio = info["servicio"]
     pais = info["pais"]
@@ -467,7 +404,7 @@ def build_page_data(url):
         title=info["title"],
         meta_desc=info["meta"],
         h1=info["h1"],
-        faqs=build_faqs(servicio, nivel, lugar),
+        faqs=[tuple(qa) for qa in faqs],
         related=related,
         schema_area_served=(
             {"@type": "Country", "name": pais} if nivel == "País"
@@ -887,8 +824,8 @@ def urls_for_countries(countries):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     minify_shared_assets()
-    urls = urls_for_countries(SAMPLE_COUNTRIES)
-    print(f"Generating {len(urls)} pages for countries: {SAMPLE_COUNTRIES}")
+    urls = urls_for_countries(ALL_COUNTRIES)
+    print(f"Generating {len(urls)} pages for countries: {ALL_COUNTRIES}")
     for url in urls:
         d = build_page_data(url)
         html_out = render_page(d)

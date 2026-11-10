@@ -1577,5 +1577,997 @@
     "keyword": "agencia cro monterrey"
    }
   ]
+ },
+ "faqs": {
+  "/es/agencia-seo-peru": [
+   [
+    "¿Cuál es el precio del posicionamiento web en Perú?",
+    "El precio depende del tamaño del sitio, de qué tan competido esté tu sector en Perú y de cuántas páginas y contenidos hay que trabajar. Primero hacemos una auditoría y, con esos datos, enviamos una propuesta con un fee mensual y entregables definidos, para que sepas qué se hace cada mes y qué resultado esperamos."
+   ],
+   [
+    "¿En cuánto tiempo se ven resultados de SEO en Perú?",
+    "Las correcciones técnicas suelen notarse en las primeras semanas. El crecimiento sostenido en tráfico y contactos normalmente aparece entre el tercer y el sexto mes, según la competencia en Perú y el punto de partida del sitio. Desde el primer mes recibes un reporte con avances para que veas la evolución."
+   ],
+   [
+    "¿Qué hace exactamente una agencia SEO?",
+    "Incluye auditoría técnica (velocidad, indexación y arquitectura), investigación de palabras clave con intención de compra en Perú, optimización de las páginas existentes, creación de contenidos, construcción de enlaces de calidad y un reporte mensual con keywords, tráfico y leads generados."
+   ],
+   [
+    "¿Conviene tener una página por ciudad si atiendo todo Perú?",
+    "Lo más efectivo es tener una página por ciudad si atiendes clientes en varias. Cada página responde a búsquedas locales, como las que se hacen en Lima, Arequipa o Trujillo, con contenido propio de esa ciudad: casos, zonas de cobertura y datos de contacto. Así compites en cada mercado sin que las páginas se canibalicen entre sí."
+   ],
+   [
+    "¿Atienden empresas fuera de la capital?",
+    "Sí. Trabajamos con empresas de Lima, Arequipa y cualquier otra ciudad del Perú, de forma remota. La estrategia cambia según el mercado: competir en Lima no es igual que hacerlo en una ciudad intermedia, por eso definimos prioridades por ciudad desde la auditoría."
+   ]
+  ],
+  "/es/agencia-seo-lima": [
+   [
+    "¿Pueden garantizar el primer lugar en Google?",
+    "Nadie puede garantizar una posición, porque Google decide el orden de los resultados y actualiza su algoritmo con frecuencia. Lo que sí garantizamos es un plan de trabajo claro, metas medibles por trimestre y transparencia total en los reportes, para que veas cómo crecen tu visibilidad y tus contactos en Lima."
+   ],
+   [
+    "¿Cuál es la diferencia entre SEO y Google Ads?",
+    "Google Ads trae visitas desde el primer día, pero dejan de llegar cuando apagas la inversión. El SEO tarda más en arrancar, pero el tráfico que construye se mantiene y baja el costo por lead con el tiempo. Para muchas empresas en Lima lo más rentable es combinarlos: Ads para resultados inmediatos y SEO para crecer de forma sostenible."
+   ],
+   [
+    "¿Cómo miden los resultados del SEO?",
+    "Medimos con Google Search Console, Google Analytics 4 y herramientas de seguimiento de posiciones. El reporte muestra keywords en el top 10, clics orgánicos y páginas que más crecen y, sobre todo, los formularios, llamadas y mensajes de WhatsApp que llegan desde Google, para conectar el SEO con las ventas."
+   ],
+   [
+    "¿Se puede posicionar un negocio en varias zonas de Lima?",
+    "Sí. Creamos una página por sede o zona de cobertura con información propia, la conectamos con su ficha de Google Business y trabajamos reseñas por ubicación. Es la forma de competir en búsquedas tipo “cerca de mí” en zonas como San Isidro, Miraflores o Surco."
+   ],
+   [
+    "¿Atienden empresas fuera de Lima?",
+    "Esta página está enfocada en Lima, pero también trabajamos de forma remota con empresas de Arequipa y del resto de Perú, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-arequipa": [
+   [
+    "¿Cómo afecta la inteligencia artificial al posicionamiento web?",
+    "Sigue funcionando, pero cambia la forma de trabajarlo. Además de posicionar en los resultados tradicionales, optimizamos tus contenidos para que aparezcan citados en los resúmenes de IA de Google y en asistentes como ChatGPT, con respuestas claras, datos estructurados y autoridad de marca. Así tu empresa gana visibilidad también en las búsquedas conversacionales."
+   ],
+   [
+    "¿El SEO funciona para empresas de industria, minería, agroindustria y turismo?",
+    "Sí. En Arequipa hay búsquedas constantes relacionadas con industria, minería, agroindustria y turismo, y muchas veces las empresas que las capturan no son las más grandes sino las que tienen mejor contenido. Definimos las keywords por línea de negocio, priorizamos las que tienen intención de compra y creamos páginas pensadas para convertir esas búsquedas en contactos."
+   ],
+   [
+    "¿Puedo hacer SEO sin cambiar mi página web?",
+    "En la mayoría de los casos no hace falta cambiar la web: trabajamos sobre el sitio actual, corregimos problemas técnicos, mejoramos los textos y creamos páginas nuevas. Solo recomendamos un rediseño cuando la plataforma impide crecer, por ejemplo si es muy lenta o no permite editar contenidos. Si es tu caso, te lo decimos desde la auditoría."
+   ],
+   [
+    "¿Trabajan SEO local para aparecer en Google Maps en Arequipa?",
+    "Optimizamos tu perfil de Google Business, trabajamos una estrategia de reseñas, unificamos nombre, dirección y teléfono en directorios y creamos contenido local. Así tu negocio aparece en el mapa cuando alguien busca tu servicio en zonas como Cayma, Yanahuara o el Cercado."
+   ],
+   [
+    "¿Solo trabajan con empresas de Arequipa?",
+    "Esta página está enfocada en Arequipa, pero también trabajamos de forma remota con empresas de Lima y del resto de Perú, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-paraguay": [
+   [
+    "¿Cuánto cuesta contratar una agencia SEO en Paraguay?",
+    "El precio depende del tamaño del sitio, de qué tan competido esté tu sector en Paraguay y de cuántas páginas y contenidos hay que trabajar. Primero hacemos una auditoría y, con esos datos, enviamos una propuesta con un fee mensual y entregables definidos, para que sepas qué se hace cada mes y qué resultado esperamos."
+   ],
+   [
+    "¿Cuánto tarda en posicionarse una web en Paraguay?",
+    "Las correcciones técnicas suelen notarse en las primeras semanas. El crecimiento sostenido en tráfico y contactos normalmente aparece entre el tercer y el sexto mes, según la competencia en Paraguay y el punto de partida del sitio. Desde el primer mes recibes un reporte con avances para que veas la evolución."
+   ],
+   [
+    "¿Ustedes escriben los contenidos o los tengo que hacer yo?",
+    "Nosotros. Investigamos las búsquedas, redactamos los textos y los optimizamos para SEO. Tu equipo solo revisa y aprueba, porque nadie conoce mejor tu negocio. Escribimos en el español que usan tus clientes en Paraguay, con los términos locales que realmente se buscan en Google."
+   ],
+   [
+    "¿Pueden posicionar mis sedes en distintas ciudades de Paraguay?",
+    "Sí. Optimizamos la ficha de Google Business de cada sede, trabajamos reseñas por ubicación y creamos una página local para cada ciudad. Así tu empresa aparece en el mapa cuando te buscan en ciudades como Asunción, Ciudad del Este o Encarnación."
+   ],
+   [
+    "¿Trabajan con empresas de todo Paraguay?",
+    "Sí. Trabajamos con empresas de Asunción, Ciudad del Este y cualquier otra ciudad de Paraguay, de forma remota. La estrategia cambia según el mercado: competir en Asunción no es igual que hacerlo en una ciudad intermedia, por eso definimos prioridades por ciudad desde la auditoría."
+   ]
+  ],
+  "/es/agencia-seo-asuncion": [
+   [
+    "¿Qué hace exactamente una agencia SEO?",
+    "Incluye auditoría técnica (velocidad, indexación y arquitectura), investigación de palabras clave con intención de compra en Asunción, optimización de las páginas existentes, creación de contenidos, construcción de enlaces de calidad y un reporte mensual con keywords, tráfico y leads generados."
+   ],
+   [
+    "¿Pueden garantizar el primer lugar en Google?",
+    "Nadie puede garantizar una posición, porque Google decide el orden de los resultados y actualiza su algoritmo con frecuencia. Lo que sí garantizamos es un plan de trabajo claro, metas medibles por trimestre y transparencia total en los reportes, para que veas cómo crecen tu visibilidad y tus contactos en Asunción."
+   ],
+   [
+    "¿Cuál es la diferencia entre SEO y Google Ads?",
+    "Google Ads trae visitas desde el primer día, pero dejan de llegar cuando apagas la inversión. El SEO tarda más en arrancar, pero el tráfico que construye se mantiene y baja el costo por lead con el tiempo. Para muchas empresas en Asunción lo más rentable es combinarlos: Ads para resultados inmediatos y SEO para crecer de forma sostenible."
+   ],
+   [
+    "¿Trabajan SEO local para aparecer en Google Maps en Asunción?",
+    "Optimizamos tu perfil de Google Business, trabajamos una estrategia de reseñas, unificamos nombre, dirección y teléfono en directorios y creamos contenido local. Así tu negocio aparece en el mapa cuando alguien busca tu servicio en zonas como Villa Morra, Carmelitas o el centro."
+   ],
+   [
+    "¿Solo trabajan con empresas de Asunción?",
+    "Esta página está enfocada en Asunción, pero también trabajamos de forma remota con empresas de Ciudad del Este y del resto de Paraguay, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-ciudad-del-este": [
+   [
+    "¿Cómo miden los resultados del SEO?",
+    "Medimos con Google Search Console, Google Analytics 4 y herramientas de seguimiento de posiciones. El reporte muestra keywords en el top 10, clics orgánicos y páginas que más crecen y, sobre todo, los formularios, llamadas y mensajes de WhatsApp que llegan desde Google, para conectar el SEO con las ventas."
+   ],
+   [
+    "¿Cómo afecta la inteligencia artificial al posicionamiento web?",
+    "Sigue funcionando, pero cambia la forma de trabajarlo. Además de posicionar en los resultados tradicionales, optimizamos tus contenidos para que aparezcan citados en los resúmenes de IA de Google y en asistentes como ChatGPT, con respuestas claras, datos estructurados y autoridad de marca. Así tu empresa gana visibilidad también en las búsquedas conversacionales."
+   ],
+   [
+    "¿El SEO funciona para empresas de comercio de importados, electrónica y turismo de compras?",
+    "Sí. En Ciudad del Este hay búsquedas constantes relacionadas con comercio de importados, electrónica y turismo de compras, y muchas veces las empresas que las capturan no son las más grandes sino las que tienen mejor contenido. Definimos las keywords por línea de negocio, priorizamos las que tienen intención de compra y creamos páginas pensadas para convertir esas búsquedas en contactos."
+   ],
+   [
+    "¿Se puede posicionar un negocio en varias zonas de Ciudad del Este?",
+    "Sí. Creamos una página por sede o zona de cobertura con información propia, la conectamos con su ficha de Google Business y trabajamos reseñas por ubicación. Es la forma de competir en búsquedas tipo “cerca de mí” en zonas como el microcentro, Hernandarias o Minga Guazú."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad del Este?",
+    "Esta página está enfocada en Ciudad del Este, pero también trabajamos de forma remota con empresas de Asunción y del resto de Paraguay, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-panama": [
+   [
+    "¿Cuál es el precio del posicionamiento web en Panamá?",
+    "El precio depende del tamaño del sitio, de qué tan competido esté tu sector en Panamá y de cuántas páginas y contenidos hay que trabajar. Primero hacemos una auditoría y, con esos datos, enviamos una propuesta con un fee mensual y entregables definidos, para que sepas qué se hace cada mes y qué resultado esperamos."
+   ],
+   [
+    "¿Necesito rediseñar mi web para hacer SEO?",
+    "En la mayoría de los casos no hace falta cambiar la web: trabajamos sobre el sitio actual, corregimos problemas técnicos, mejoramos los textos y creamos páginas nuevas. Solo recomendamos un rediseño cuando la plataforma impide crecer, por ejemplo si es muy lenta o no permite editar contenidos. Si es tu caso, te lo decimos desde la auditoría."
+   ],
+   [
+    "¿Quién se encarga de los textos de la web?",
+    "Nosotros. Investigamos las búsquedas, redactamos los textos y los optimizamos para SEO. Tu equipo solo revisa y aprueba, porque nadie conoce mejor tu negocio. Escribimos en el español que usan tus clientes en Panamá, con los términos locales que realmente se buscan en Google."
+   ],
+   [
+    "¿Conviene tener una página por ciudad si atiendo todo Panamá?",
+    "Lo más efectivo es tener una página por ciudad si atiendes clientes en varias. Cada página responde a búsquedas locales, como las que se hacen en la capital, Colón o David, con contenido propio de esa ciudad: casos, zonas de cobertura y datos de contacto. Así compites en cada mercado sin que las páginas se canibalicen entre sí."
+   ],
+   [
+    "¿Atienden empresas fuera de la capital?",
+    "Sí. Trabajamos con empresas de Ciudad de Panamá, Colón y cualquier otra ciudad de Panamá, de forma remota. La estrategia cambia según el mercado: competir en la Ciudad de Panamá no es igual que hacerlo en una ciudad intermedia, por eso definimos prioridades por ciudad desde la auditoría."
+   ]
+  ],
+  "/es/agencia-seo-ciudad-de-panama": [
+   [
+    "¿En cuánto tiempo se ven resultados de SEO en Ciudad de Panamá?",
+    "Las correcciones técnicas suelen notarse en las primeras semanas. El crecimiento sostenido en tráfico y contactos normalmente aparece entre el tercer y el sexto mes, según la competencia en Ciudad de Panamá y el punto de partida del sitio. Desde el primer mes recibes un reporte con avances para que veas la evolución."
+   ],
+   [
+    "¿Qué hace exactamente una agencia SEO?",
+    "Incluye auditoría técnica (velocidad, indexación y arquitectura), investigación de palabras clave con intención de compra en Ciudad de Panamá, optimización de las páginas existentes, creación de contenidos, construcción de enlaces de calidad y un reporte mensual con keywords, tráfico y leads generados."
+   ],
+   [
+    "¿Pueden garantizar el primer lugar en Google?",
+    "Nadie puede garantizar una posición, porque Google decide el orden de los resultados y actualiza su algoritmo con frecuencia. Lo que sí garantizamos es un plan de trabajo claro, metas medibles por trimestre y transparencia total en los reportes, para que veas cómo crecen tu visibilidad y tus contactos en Ciudad de Panamá."
+   ],
+   [
+    "¿Se puede posicionar un negocio en varias zonas de Ciudad de Panamá?",
+    "Sí. Creamos una página por sede o zona de cobertura con información propia, la conectamos con su ficha de Google Business y trabajamos reseñas por ubicación. Es la forma de competir en búsquedas tipo “cerca de mí” en zonas como Obarrio, Costa del Este o San Francisco."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad de Panamá?",
+    "Esta página está enfocada en Ciudad de Panamá, pero también trabajamos de forma remota con empresas de Colón y del resto de Panamá, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-colon": [
+   [
+    "¿Cuál es la diferencia entre SEO y Google Ads?",
+    "Google Ads trae visitas desde el primer día, pero dejan de llegar cuando apagas la inversión. El SEO tarda más en arrancar, pero el tráfico que construye se mantiene y baja el costo por lead con el tiempo. Para muchas empresas en Colón lo más rentable es combinarlos: Ads para resultados inmediatos y SEO para crecer de forma sostenible."
+   ],
+   [
+    "¿Cómo miden los resultados del SEO?",
+    "Medimos con Google Search Console, Google Analytics 4 y herramientas de seguimiento de posiciones. El reporte muestra keywords en el top 10, clics orgánicos y páginas que más crecen y, sobre todo, los formularios, llamadas y mensajes de WhatsApp que llegan desde Google, para conectar el SEO con las ventas."
+   ],
+   [
+    "¿Cómo afecta la inteligencia artificial al posicionamiento web?",
+    "Sigue funcionando, pero cambia la forma de trabajarlo. Además de posicionar en los resultados tradicionales, optimizamos tus contenidos para que aparezcan citados en los resúmenes de IA de Google y en asistentes como ChatGPT, con respuestas claras, datos estructurados y autoridad de marca. Así tu empresa gana visibilidad también en las búsquedas conversacionales."
+   ],
+   [
+    "¿Trabajan SEO local para aparecer en Google Maps en Colón?",
+    "Optimizamos tu perfil de Google Business, trabajamos una estrategia de reseñas, unificamos nombre, dirección y teléfono en directorios y creamos contenido local. Así tu negocio aparece en el mapa cuando alguien busca tu servicio en zonas como la Zona Libre, Cristóbal o Sabanitas."
+   ],
+   [
+    "¿Solo trabajan con empresas de Colón?",
+    "Esta página está enfocada en Colón, pero también trabajamos de forma remota con empresas de la Ciudad de Panamá y del resto de Panamá, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-colombia": [
+   [
+    "¿El SEO funciona para empresas de servicios, manufactura, salud y educación?",
+    "Sí. En Colombia hay búsquedas constantes relacionadas con servicios, manufactura, salud y educación, y muchas veces las empresas que las capturan no son las más grandes sino las que tienen mejor contenido. Definimos las keywords por línea de negocio, priorizamos las que tienen intención de compra y creamos páginas pensadas para convertir esas búsquedas en contactos."
+   ],
+   [
+    "¿Puedo hacer SEO sin cambiar mi página web?",
+    "En la mayoría de los casos no hace falta cambiar la web: trabajamos sobre el sitio actual, corregimos problemas técnicos, mejoramos los textos y creamos páginas nuevas. Solo recomendamos un rediseño cuando la plataforma impide crecer, por ejemplo si es muy lenta o no permite editar contenidos. Si es tu caso, te lo decimos desde la auditoría."
+   ],
+   [
+    "¿Ustedes escriben los contenidos o los tengo que hacer yo?",
+    "Nosotros. Investigamos las búsquedas, redactamos los textos y los optimizamos para SEO. Tu equipo solo revisa y aprueba, porque nadie conoce mejor tu negocio. Escribimos en el español que usan tus clientes en Colombia, con los términos locales que realmente se buscan en Google."
+   ],
+   [
+    "¿Pueden posicionar mis sedes en distintas ciudades de Colombia?",
+    "Sí. Optimizamos la ficha de Google Business de cada sede, trabajamos reseñas por ubicación y creamos una página local para cada ciudad. Así tu empresa aparece en el mapa cuando te buscan en ciudades como Bogotá, Medellín o Cali."
+   ],
+   [
+    "¿Trabajan con empresas de todo Colombia?",
+    "Sí. Trabajamos con empresas de Bogotá, Medellín y cualquier otra ciudad de Colombia, de forma remota. La estrategia cambia según el mercado: competir en Bogotá no es igual que hacerlo en una ciudad intermedia, por eso definimos prioridades por ciudad desde la auditoría."
+   ]
+  ],
+  "/es/agencia-seo-bogota": [
+   [
+    "¿Cuál es el precio del posicionamiento web en Bogotá?",
+    "El precio depende del tamaño del sitio, de qué tan competido esté tu sector en Bogotá y de cuántas páginas y contenidos hay que trabajar. Primero hacemos una auditoría y, con esos datos, enviamos una propuesta con un fee mensual y entregables definidos, para que sepas qué se hace cada mes y qué resultado esperamos."
+   ],
+   [
+    "¿En cuánto tiempo se ven resultados de SEO en Bogotá?",
+    "Las correcciones técnicas suelen notarse en las primeras semanas. El crecimiento sostenido en tráfico y contactos normalmente aparece entre el tercer y el sexto mes, según la competencia en Bogotá y el punto de partida del sitio. Desde el primer mes recibes un reporte con avances para que veas la evolución."
+   ],
+   [
+    "¿Qué hace exactamente una agencia SEO?",
+    "Incluye auditoría técnica (velocidad, indexación y arquitectura), investigación de palabras clave con intención de compra en Bogotá, optimización de las páginas existentes, creación de contenidos, construcción de enlaces de calidad y un reporte mensual con keywords, tráfico y leads generados."
+   ],
+   [
+    "¿Trabajan SEO local para aparecer en Google Maps en Bogotá?",
+    "Optimizamos tu perfil de Google Business, trabajamos una estrategia de reseñas, unificamos nombre, dirección y teléfono en directorios y creamos contenido local. Así tu negocio aparece en el mapa cuando alguien busca tu servicio en zonas como Chapinero, Usaquén o Suba."
+   ],
+   [
+    "¿Solo trabajan con empresas de Bogotá?",
+    "Esta página está enfocada en Bogotá, pero también trabajamos de forma remota con empresas de Medellín y del resto de Colombia, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-medellin": [
+   [
+    "¿Pueden garantizar el primer lugar en Google?",
+    "Nadie puede garantizar una posición, porque Google decide el orden de los resultados y actualiza su algoritmo con frecuencia. Lo que sí garantizamos es un plan de trabajo claro, metas medibles por trimestre y transparencia total en los reportes, para que veas cómo crecen tu visibilidad y tus contactos en Medellín."
+   ],
+   [
+    "¿Cuál es la diferencia entre SEO y Google Ads?",
+    "Google Ads trae visitas desde el primer día, pero dejan de llegar cuando apagas la inversión. El SEO tarda más en arrancar, pero el tráfico que construye se mantiene y baja el costo por lead con el tiempo. Para muchas empresas en Medellín lo más rentable es combinarlos: Ads para resultados inmediatos y SEO para crecer de forma sostenible."
+   ],
+   [
+    "¿Cómo miden los resultados del SEO?",
+    "Medimos con Google Search Console, Google Analytics 4 y herramientas de seguimiento de posiciones. El reporte muestra keywords en el top 10, clics orgánicos y páginas que más crecen y, sobre todo, los formularios, llamadas y mensajes de WhatsApp que llegan desde Google, para conectar el SEO con las ventas."
+   ],
+   [
+    "¿Se puede posicionar un negocio en varias zonas de Medellín?",
+    "Sí. Creamos una página por sede o zona de cobertura con información propia, la conectamos con su ficha de Google Business y trabajamos reseñas por ubicación. Es la forma de competir en búsquedas tipo “cerca de mí” en zonas como El Poblado, Laureles o Envigado."
+   ],
+   [
+    "¿Atienden empresas fuera de Medellín?",
+    "Esta página está enfocada en Medellín, pero también trabajamos de forma remota con empresas de Bogotá y del resto de Colombia, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-mexico": [
+   [
+    "¿Cómo afecta la inteligencia artificial al posicionamiento web?",
+    "Sigue funcionando, pero cambia la forma de trabajarlo. Además de posicionar en los resultados tradicionales, optimizamos tus contenidos para que aparezcan citados en los resúmenes de IA de Google y en asistentes como ChatGPT, con respuestas claras, datos estructurados y autoridad de marca. Así tu empresa gana visibilidad también en las búsquedas conversacionales."
+   ],
+   [
+    "¿El SEO funciona para empresas de manufactura, retail, servicios y tecnología?",
+    "Sí. En México hay búsquedas constantes relacionadas con manufactura, retail, servicios y tecnología, y muchas veces las empresas que las capturan no son las más grandes sino las que tienen mejor contenido. Definimos las keywords por línea de negocio, priorizamos las que tienen intención de compra y creamos páginas pensadas para convertir esas búsquedas en contactos."
+   ],
+   [
+    "¿Puedo hacer SEO sin cambiar mi página web?",
+    "En la mayoría de los casos no hace falta cambiar la web: trabajamos sobre el sitio actual, corregimos problemas técnicos, mejoramos los textos y creamos páginas nuevas. Solo recomendamos un rediseño cuando la plataforma impide crecer, por ejemplo si es muy lenta o no permite editar contenidos. Si es tu caso, te lo decimos desde la auditoría."
+   ],
+   [
+    "¿Conviene tener una página por ciudad si atiendo todo México?",
+    "Lo más efectivo es tener una página por ciudad si atiendes clientes en varias. Cada página responde a búsquedas locales, como las que se hacen en la Ciudad de México, Monterrey o Guadalajara, con contenido propio de esa ciudad: casos, zonas de cobertura y datos de contacto. Así compites en cada mercado sin que las páginas se canibalicen entre sí."
+   ],
+   [
+    "¿Atienden empresas fuera de la capital?",
+    "Sí. Trabajamos con empresas de Ciudad de México, Monterrey y cualquier otra ciudad de México, de forma remota. La estrategia cambia según el mercado: competir en la Ciudad de México no es igual que hacerlo en una ciudad intermedia, por eso definimos prioridades por ciudad desde la auditoría."
+   ]
+  ],
+  "/es/agencia-seo-cdmx": [
+   [
+    "¿Cuánto cuesta contratar una agencia SEO en Ciudad de México?",
+    "El precio depende del tamaño del sitio, de qué tan competido esté tu sector en Ciudad de México y de cuántas páginas y contenidos hay que trabajar. Primero hacemos una auditoría y, con esos datos, enviamos una propuesta con un fee mensual y entregables definidos, para que sepas qué se hace cada mes y qué resultado esperamos."
+   ],
+   [
+    "¿Cuánto tarda en posicionarse una web en Ciudad de México?",
+    "Las correcciones técnicas suelen notarse en las primeras semanas. El crecimiento sostenido en tráfico y contactos normalmente aparece entre el tercer y el sexto mes, según la competencia en Ciudad de México y el punto de partida del sitio. Desde el primer mes recibes un reporte con avances para que veas la evolución."
+   ],
+   [
+    "¿Ustedes escriben los contenidos o los tengo que hacer yo?",
+    "Nosotros. Investigamos las búsquedas, redactamos los textos y los optimizamos para SEO. Tu equipo solo revisa y aprueba, porque nadie conoce mejor tu negocio. Escribimos en el español que usan tus clientes en Ciudad de México, con los términos locales que realmente se buscan en Google."
+   ],
+   [
+    "¿Se puede posicionar un negocio en varias zonas de Ciudad de México?",
+    "Sí. Creamos una página por sede o zona de cobertura con información propia, la conectamos con su ficha de Google Business y trabajamos reseñas por ubicación. Es la forma de competir en búsquedas tipo “cerca de mí” en zonas como Polanco, la Roma o Santa Fe."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad de México?",
+    "Esta página está enfocada en Ciudad de México, pero también trabajamos de forma remota con empresas de Monterrey y del resto de México, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-seo-monterrey": [
+   [
+    "¿Qué hace exactamente una agencia SEO?",
+    "Incluye auditoría técnica (velocidad, indexación y arquitectura), investigación de palabras clave con intención de compra en Monterrey, optimización de las páginas existentes, creación de contenidos, construcción de enlaces de calidad y un reporte mensual con keywords, tráfico y leads generados."
+   ],
+   [
+    "¿Pueden garantizar el primer lugar en Google?",
+    "Nadie puede garantizar una posición, porque Google decide el orden de los resultados y actualiza su algoritmo con frecuencia. Lo que sí garantizamos es un plan de trabajo claro, metas medibles por trimestre y transparencia total en los reportes, para que veas cómo crecen tu visibilidad y tus contactos en Monterrey."
+   ],
+   [
+    "¿Cuál es la diferencia entre SEO y Google Ads?",
+    "Google Ads trae visitas desde el primer día, pero dejan de llegar cuando apagas la inversión. El SEO tarda más en arrancar, pero el tráfico que construye se mantiene y baja el costo por lead con el tiempo. Para muchas empresas en Monterrey lo más rentable es combinarlos: Ads para resultados inmediatos y SEO para crecer de forma sostenible."
+   ],
+   [
+    "¿Trabajan SEO local para aparecer en Google Maps en Monterrey?",
+    "Optimizamos tu perfil de Google Business, trabajamos una estrategia de reseñas, unificamos nombre, dirección y teléfono en directorios y creamos contenido local. Así tu negocio aparece en el mapa cuando alguien busca tu servicio en zonas como San Pedro Garza García, Valle Oriente o Apodaca."
+   ],
+   [
+    "¿Solo trabajan con empresas de Monterrey?",
+    "Esta página está enfocada en Monterrey, pero también trabajamos de forma remota con empresas de la Ciudad de México y del resto de México, con reuniones por videollamada y reportes compartidos. Si tienes clientes en varias ciudades, armamos una estrategia SEO por ubicación."
+   ]
+  ],
+  "/es/agencia-cro-peru": [
+   [
+    "¿Para qué sirve la optimización de conversión?",
+    "CRO es la optimización de la tasa de conversión: lograr que más visitantes de tu web compren, coticen o te escriban. En lugar de pagar por más tráfico, encontramos dónde se pierden los usuarios y lo corregimos. Para una empresa en Perú significa más ventas con la misma inversión en publicidad."
+   ],
+   [
+    "¿Cuánto cuesta un servicio de CRO en Perú?",
+    "Depende del tamaño del sitio y del volumen de tráfico. Trabajamos en dos formatos: una auditoría CRO puntual con un plan de mejoras priorizado, o un servicio mensual que incluye implementación y pruebas A/B continuas. En ambos casos recibes una propuesta cerrada antes de empezar."
+   ],
+   [
+    "¿Mi web tiene suficientes visitas para hacer pruebas A/B?",
+    "Las pruebas A/B necesitan volumen para ser confiables. Si tu sitio tiene poco tráfico, empezamos con análisis de comportamiento, grabaciones de sesión y entrevistas a clientes para aplicar mejoras de alto impacto sin esperar meses por un resultado estadístico. A medida que crece el tráfico, pasamos a experimentos."
+   ],
+   [
+    "¿Pueden optimizar el checkout con Yape y Plin?",
+    "Revisamos el orden de los medios de pago, la cantidad de pasos y los errores en móvil. En Perú muchos compradores prefieren pagar con Yape y Plin, así que destacar bien esas opciones y quitar campos innecesarios suele reducir el abandono del carrito."
+   ],
+   [
+    "¿Atienden empresas fuera de la capital?",
+    "Sí. Trabajamos con empresas de Lima, Arequipa y cualquier otra ciudad del Perú. Como el CRO se basa en datos y experimentos, el servicio funciona igual para una empresa de Lima que para una de cualquier otra ciudad del país."
+   ]
+  ],
+  "/es/agencia-cro-lima": [
+   [
+    "¿Qué incluye una auditoría CRO?",
+    "Revisamos la analítica para ver en qué paso se van los usuarios, analizamos mapas de calor y grabaciones, evaluamos formularios, velocidad en móvil, mensajes y llamados a la acción, y comparamos tu sitio con la competencia en Lima. El resultado es una lista de mejoras ordenada por impacto esperado y esfuerzo."
+   ],
+   [
+    "¿Cuándo empiezan a subir las conversiones?",
+    "Las mejoras rápidas, como simplificar formularios o corregir errores en móvil, pueden mostrar resultados en pocas semanas. Cada prueba A/B suele correr al menos dos semanas para obtener datos confiables. En un servicio continuo, la tasa de conversión mejora de forma acumulada mes a mes."
+   ],
+   [
+    "¿El CRO sirve para empresas de servicios y no solo para tiendas online?",
+    "Sí. Para empresas de servicios, retail, educación y salud el objetivo suele ser una cotización, una llamada o un mensaje, no una compra. Optimizamos landing pages, formularios y botones de contacto, y medimos la calidad del lead y no solo la cantidad, para que tu equipo comercial reciba contactos con más probabilidad de cierre."
+   ],
+   [
+    "¿Cómo sé cuántos clientes me escriben por WhatsApp desde la web?",
+    "Configuramos eventos para cada clic al botón de WhatsApp, usamos mensajes prellenados por página y, si tu equipo trabaja con la API de WhatsApp Business o un CRM, conectamos las conversaciones con las ventas. Es clave en Lima, donde muchos clientes prefieren escribir antes que llenar un formulario."
+   ],
+   [
+    "¿Atienden empresas fuera de Lima?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Lima, de Arequipa y del resto de Perú con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-arequipa": [
+   [
+    "¿Con qué plataformas hacen las pruebas A/B?",
+    "Usamos Google Analytics 4 y Google Tag Manager para la medición, Microsoft Clarity o Hotjar para mapas de calor y grabaciones, y plataformas de experimentación como VWO u Optimizely según el presupuesto. También nos adaptamos a las herramientas que tu empresa ya tenga en Arequipa."
+   ],
+   [
+    "¿En qué se diferencia el CRO de un rediseño web?",
+    "Un rediseño cambia todo de una vez y no sabes qué parte funcionó. El CRO hace cambios uno a uno y los valida con datos, así que cada mejora se mantiene solo si sube las conversiones. Es una forma más segura de invertir, sobre todo si tu web ya recibe tráfico de campañas en Arequipa."
+   ],
+   [
+    "¿Qué indicadores mejoran con el CRO?",
+    "Medimos tasa de conversión, valor por visita, abandono de carrito o de formulario y costo por adquisición. Cada experimento se reporta con su resultado y el impacto estimado en ventas o leads, expresado en soles, para que veas el retorno de la inversión."
+   ],
+   [
+    "¿Analizan a mi competencia en Arequipa?",
+    "Sí. Revisamos cómo presentan su oferta, precios, garantías y formularios las empresas que compiten contigo en Arequipa y lo usamos como referencia para tus pruebas. No se trata de copiar, sino de entender qué espera el cliente local y superarlo."
+   ],
+   [
+    "¿El servicio de CRO es solo para empresas de Arequipa?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Arequipa, de Lima y del resto de Perú con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-paraguay": [
+   [
+    "¿Qué es CRO y en qué ayuda a mi negocio?",
+    "CRO es la optimización de la tasa de conversión: lograr que más visitantes de tu web compren, coticen o te escriban. En lugar de pagar por más tráfico, encontramos dónde se pierden los usuarios y lo corregimos. Para una empresa en Paraguay significa más ventas con la misma inversión en publicidad."
+   ],
+   [
+    "¿Qué precio tiene una consultoría CRO en Paraguay?",
+    "Depende del tamaño del sitio y del volumen de tráfico. Trabajamos en dos formatos: una auditoría CRO puntual con un plan de mejoras priorizado, o un servicio mensual que incluye implementación y pruebas A/B continuas. En ambos casos recibes una propuesta cerrada antes de empezar."
+   ],
+   [
+    "¿Cómo preparan el sitio para el Black Friday?",
+    "Semanas antes del Black Friday revisamos velocidad, estabilidad del checkout y mensajes de oferta, y probamos las páginas clave con tráfico real. Así llegas a la fecha de más demanda sin fricciones y aprovechas cada visita que traen tus campañas."
+   ],
+   [
+    "¿Cómo mejoran el proceso de pago con Bancard?",
+    "Revisamos el orden de los medios de pago, la cantidad de pasos y los errores en móvil. En Paraguay muchos compradores prefieren pagar con Bancard, así que destacar bien esas opciones y quitar campos innecesarios suele reducir el abandono del carrito."
+   ],
+   [
+    "¿Trabajan con empresas de todo Paraguay?",
+    "Sí. Trabajamos con empresas de Asunción, Ciudad del Este y cualquier otra ciudad de Paraguay. Como el CRO se basa en datos y experimentos, el servicio funciona igual para una empresa de Asunción que para una de cualquier otra ciudad del país."
+   ]
+  ],
+  "/es/agencia-cro-asuncion": [
+   [
+    "¿Mi web tiene suficientes visitas para hacer pruebas A/B?",
+    "Las pruebas A/B necesitan volumen para ser confiables. Si tu sitio tiene poco tráfico, empezamos con análisis de comportamiento, grabaciones de sesión y entrevistas a clientes para aplicar mejoras de alto impacto sin esperar meses por un resultado estadístico. A medida que crece el tráfico, pasamos a experimentos."
+   ],
+   [
+    "¿Qué incluye una auditoría CRO?",
+    "Revisamos la analítica para ver en qué paso se van los usuarios, analizamos mapas de calor y grabaciones, evaluamos formularios, velocidad en móvil, mensajes y llamados a la acción, y comparamos tu sitio con la competencia en Asunción. El resultado es una lista de mejoras ordenada por impacto esperado y esfuerzo."
+   ],
+   [
+    "¿Cuándo empiezan a subir las conversiones?",
+    "Las mejoras rápidas, como simplificar formularios o corregir errores en móvil, pueden mostrar resultados en pocas semanas. Cada prueba A/B suele correr al menos dos semanas para obtener datos confiables. En un servicio continuo, la tasa de conversión mejora de forma acumulada mes a mes."
+   ],
+   [
+    "¿Pueden medir las conversiones que llegan por WhatsApp?",
+    "Configuramos eventos para cada clic al botón de WhatsApp, usamos mensajes prellenados por página y, si tu equipo trabaja con la API de WhatsApp Business o un CRM, conectamos las conversaciones con las ventas. Es clave en Asunción, donde muchos clientes prefieren escribir antes que llenar un formulario."
+   ],
+   [
+    "¿El servicio de CRO es solo para empresas de Asunción?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Asunción, de Ciudad del Este y del resto de Paraguay con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-ciudad-del-este": [
+   [
+    "¿El CRO sirve para empresas de servicios y no solo para tiendas online?",
+    "Sí. Para empresas de comercio de importados, electrónica y turismo de compras el objetivo suele ser una cotización, una llamada o un mensaje, no una compra. Optimizamos landing pages, formularios y botones de contacto, y medimos la calidad del lead y no solo la cantidad, para que tu equipo comercial reciba contactos con más probabilidad de cierre."
+   ],
+   [
+    "¿Con qué plataformas hacen las pruebas A/B?",
+    "Usamos Google Analytics 4 y Google Tag Manager para la medición, Microsoft Clarity o Hotjar para mapas de calor y grabaciones, y plataformas de experimentación como VWO u Optimizely según el presupuesto. También nos adaptamos a las herramientas que tu empresa ya tenga en Ciudad del Este."
+   ],
+   [
+    "¿En qué se diferencia el CRO de un rediseño web?",
+    "Un rediseño cambia todo de una vez y no sabes qué parte funcionó. El CRO hace cambios uno a uno y los valida con datos, así que cada mejora se mantiene solo si sube las conversiones. Es una forma más segura de invertir, sobre todo si tu web ya recibe tráfico de campañas en Ciudad del Este."
+   ],
+   [
+    "¿Tienen en cuenta lo que hace mi competencia en Ciudad del Este?",
+    "Sí. Revisamos cómo presentan su oferta, precios, garantías y formularios las empresas que compiten contigo en Ciudad del Este y lo usamos como referencia para tus pruebas. No se trata de copiar, sino de entender qué espera el cliente local y superarlo."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad del Este?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Ciudad del Este, de Asunción y del resto de Paraguay con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-panama": [
+   [
+    "¿Para qué sirve la optimización de conversión?",
+    "CRO es la optimización de la tasa de conversión: lograr que más visitantes de tu web compren, coticen o te escriban. En lugar de pagar por más tráfico, encontramos dónde se pierden los usuarios y lo corregimos. Para una empresa en Panamá significa más ventas con la misma inversión en publicidad."
+   ],
+   [
+    "¿Cómo se mide el impacto del CRO?",
+    "Medimos tasa de conversión, valor por visita, abandono de carrito o de formulario y costo por adquisición. Cada experimento se reporta con su resultado y el impacto estimado en ventas o leads, expresado en dólares, para que veas el retorno de la inversión."
+   ],
+   [
+    "¿Pueden optimizar mi web antes de el Black Friday?",
+    "Semanas antes del Black Friday revisamos velocidad, estabilidad del checkout y mensajes de oferta, y probamos las páginas clave con tráfico real. Así llegas a la fecha de más demanda sin fricciones y aprovechas cada visita que traen tus campañas."
+   ],
+   [
+    "¿Pueden optimizar el checkout con Yappy?",
+    "Revisamos el orden de los medios de pago, la cantidad de pasos y los errores en móvil. En Panamá muchos compradores prefieren pagar con Yappy, así que destacar bien esas opciones y quitar campos innecesarios suele reducir el abandono del carrito."
+   ],
+   [
+    "¿Atienden empresas fuera de la capital?",
+    "Sí. Trabajamos con empresas de Ciudad de Panamá, Colón y cualquier otra ciudad de Panamá. Como el CRO se basa en datos y experimentos, el servicio funciona igual para una empresa de la Ciudad de Panamá que para una de cualquier otra ciudad del país."
+   ]
+  ],
+  "/es/agencia-cro-ciudad-de-panama": [
+   [
+    "¿Cuánto cuesta un servicio de CRO en Ciudad de Panamá?",
+    "Depende del tamaño del sitio y del volumen de tráfico. Trabajamos en dos formatos: una auditoría CRO puntual con un plan de mejoras priorizado, o un servicio mensual que incluye implementación y pruebas A/B continuas. En ambos casos recibes una propuesta cerrada antes de empezar."
+   ],
+   [
+    "¿Mi web tiene suficientes visitas para hacer pruebas A/B?",
+    "Las pruebas A/B necesitan volumen para ser confiables. Si tu sitio tiene poco tráfico, empezamos con análisis de comportamiento, grabaciones de sesión y entrevistas a clientes para aplicar mejoras de alto impacto sin esperar meses por un resultado estadístico. A medida que crece el tráfico, pasamos a experimentos."
+   ],
+   [
+    "¿Qué incluye una auditoría CRO?",
+    "Revisamos la analítica para ver en qué paso se van los usuarios, analizamos mapas de calor y grabaciones, evaluamos formularios, velocidad en móvil, mensajes y llamados a la acción, y comparamos tu sitio con la competencia en Ciudad de Panamá. El resultado es una lista de mejoras ordenada por impacto esperado y esfuerzo."
+   ],
+   [
+    "¿Cómo sé cuántos clientes me escriben por WhatsApp desde la web?",
+    "Configuramos eventos para cada clic al botón de WhatsApp, usamos mensajes prellenados por página y, si tu equipo trabaja con la API de WhatsApp Business o un CRM, conectamos las conversaciones con las ventas. Es clave en Ciudad de Panamá, donde muchos clientes prefieren escribir antes que llenar un formulario."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad de Panamá?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Ciudad de Panamá, de Colón y del resto de Panamá con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-colon": [
+   [
+    "¿Cuándo empiezan a subir las conversiones?",
+    "Las mejoras rápidas, como simplificar formularios o corregir errores en móvil, pueden mostrar resultados en pocas semanas. Cada prueba A/B suele correr al menos dos semanas para obtener datos confiables. En un servicio continuo, la tasa de conversión mejora de forma acumulada mes a mes."
+   ],
+   [
+    "¿El CRO sirve para empresas de servicios y no solo para tiendas online?",
+    "Sí. Para empresas de comercio mayorista, logística y servicios portuarios el objetivo suele ser una cotización, una llamada o un mensaje, no una compra. Optimizamos landing pages, formularios y botones de contacto, y medimos la calidad del lead y no solo la cantidad, para que tu equipo comercial reciba contactos con más probabilidad de cierre."
+   ],
+   [
+    "¿Con qué plataformas hacen las pruebas A/B?",
+    "Usamos Google Analytics 4 y Google Tag Manager para la medición, Microsoft Clarity o Hotjar para mapas de calor y grabaciones, y plataformas de experimentación como VWO u Optimizely según el presupuesto. También nos adaptamos a las herramientas que tu empresa ya tenga en Colón."
+   ],
+   [
+    "¿Analizan a mi competencia en Colón?",
+    "Sí. Revisamos cómo presentan su oferta, precios, garantías y formularios las empresas que compiten contigo en Colón y lo usamos como referencia para tus pruebas. No se trata de copiar, sino de entender qué espera el cliente local y superarlo."
+   ],
+   [
+    "¿El servicio de CRO es solo para empresas de Colón?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Colón, de la Ciudad de Panamá y del resto de Panamá con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-colombia": [
+   [
+    "¿En qué se diferencia el CRO de un rediseño web?",
+    "Un rediseño cambia todo de una vez y no sabes qué parte funcionó. El CRO hace cambios uno a uno y los valida con datos, así que cada mejora se mantiene solo si sube las conversiones. Es una forma más segura de invertir, sobre todo si tu web ya recibe tráfico de campañas en Colombia."
+   ],
+   [
+    "¿Qué indicadores mejoran con el CRO?",
+    "Medimos tasa de conversión, valor por visita, abandono de carrito o de formulario y costo por adquisición. Cada experimento se reporta con su resultado y el impacto estimado en ventas o leads, expresado en pesos colombianos, para que veas el retorno de la inversión."
+   ],
+   [
+    "¿Cómo preparan el sitio para el Cyberlunes?",
+    "Semanas antes del Cyberlunes revisamos velocidad, estabilidad del checkout y mensajes de oferta, y probamos las páginas clave con tráfico real. Así llegas a la fecha de más demanda sin fricciones y aprovechas cada visita que traen tus campañas."
+   ],
+   [
+    "¿Cómo mejoran el proceso de pago con PSE y Nequi?",
+    "Revisamos el orden de los medios de pago, la cantidad de pasos y los errores en móvil. En Colombia muchos compradores prefieren pagar con PSE y Nequi, así que destacar bien esas opciones y quitar campos innecesarios suele reducir el abandono del carrito."
+   ],
+   [
+    "¿Trabajan con empresas de todo Colombia?",
+    "Sí. Trabajamos con empresas de Bogotá, Medellín y cualquier otra ciudad de Colombia. Como el CRO se basa en datos y experimentos, el servicio funciona igual para una empresa de Bogotá que para una de cualquier otra ciudad del país."
+   ]
+  ],
+  "/es/agencia-cro-bogota": [
+   [
+    "¿Para qué sirve la optimización de conversión?",
+    "CRO es la optimización de la tasa de conversión: lograr que más visitantes de tu web compren, coticen o te escriban. En lugar de pagar por más tráfico, encontramos dónde se pierden los usuarios y lo corregimos. Para una empresa en Bogotá significa más ventas con la misma inversión en publicidad."
+   ],
+   [
+    "¿Cuánto cuesta un servicio de CRO en Bogotá?",
+    "Depende del tamaño del sitio y del volumen de tráfico. Trabajamos en dos formatos: una auditoría CRO puntual con un plan de mejoras priorizado, o un servicio mensual que incluye implementación y pruebas A/B continuas. En ambos casos recibes una propuesta cerrada antes de empezar."
+   ],
+   [
+    "¿Mi web tiene suficientes visitas para hacer pruebas A/B?",
+    "Las pruebas A/B necesitan volumen para ser confiables. Si tu sitio tiene poco tráfico, empezamos con análisis de comportamiento, grabaciones de sesión y entrevistas a clientes para aplicar mejoras de alto impacto sin esperar meses por un resultado estadístico. A medida que crece el tráfico, pasamos a experimentos."
+   ],
+   [
+    "¿Pueden medir las conversiones que llegan por WhatsApp?",
+    "Configuramos eventos para cada clic al botón de WhatsApp, usamos mensajes prellenados por página y, si tu equipo trabaja con la API de WhatsApp Business o un CRM, conectamos las conversaciones con las ventas. Es clave en Bogotá, donde muchos clientes prefieren escribir antes que llenar un formulario."
+   ],
+   [
+    "¿El servicio de CRO es solo para empresas de Bogotá?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Bogotá, de Medellín y del resto de Colombia con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-medellin": [
+   [
+    "¿Qué incluye una auditoría CRO?",
+    "Revisamos la analítica para ver en qué paso se van los usuarios, analizamos mapas de calor y grabaciones, evaluamos formularios, velocidad en móvil, mensajes y llamados a la acción, y comparamos tu sitio con la competencia en Medellín. El resultado es una lista de mejoras ordenada por impacto esperado y esfuerzo."
+   ],
+   [
+    "¿Cuándo empiezan a subir las conversiones?",
+    "Las mejoras rápidas, como simplificar formularios o corregir errores en móvil, pueden mostrar resultados en pocas semanas. Cada prueba A/B suele correr al menos dos semanas para obtener datos confiables. En un servicio continuo, la tasa de conversión mejora de forma acumulada mes a mes."
+   ],
+   [
+    "¿El CRO sirve para empresas de servicios y no solo para tiendas online?",
+    "Sí. Para empresas de manufactura, moda, salud y tecnología el objetivo suele ser una cotización, una llamada o un mensaje, no una compra. Optimizamos landing pages, formularios y botones de contacto, y medimos la calidad del lead y no solo la cantidad, para que tu equipo comercial reciba contactos con más probabilidad de cierre."
+   ],
+   [
+    "¿Tienen en cuenta lo que hace mi competencia en Medellín?",
+    "Sí. Revisamos cómo presentan su oferta, precios, garantías y formularios las empresas que compiten contigo en Medellín y lo usamos como referencia para tus pruebas. No se trata de copiar, sino de entender qué espera el cliente local y superarlo."
+   ],
+   [
+    "¿Atienden empresas fuera de Medellín?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Medellín, de Bogotá y del resto de Colombia con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-mexico": [
+   [
+    "¿Con qué plataformas hacen las pruebas A/B?",
+    "Usamos Google Analytics 4 y Google Tag Manager para la medición, Microsoft Clarity o Hotjar para mapas de calor y grabaciones, y plataformas de experimentación como VWO u Optimizely según el presupuesto. También nos adaptamos a las herramientas que tu empresa ya tenga en México."
+   ],
+   [
+    "¿En qué se diferencia el CRO de un rediseño web?",
+    "Un rediseño cambia todo de una vez y no sabes qué parte funcionó. El CRO hace cambios uno a uno y los valida con datos, así que cada mejora se mantiene solo si sube las conversiones. Es una forma más segura de invertir, sobre todo si tu web ya recibe tráfico de campañas en México."
+   ],
+   [
+    "¿Qué indicadores mejoran con el CRO?",
+    "Medimos tasa de conversión, valor por visita, abandono de carrito o de formulario y costo por adquisición. Cada experimento se reporta con su resultado y el impacto estimado en ventas o leads, expresado en pesos mexicanos, para que veas el retorno de la inversión."
+   ],
+   [
+    "¿Pueden optimizar el checkout con OXXO Pay y SPEI?",
+    "Revisamos el orden de los medios de pago, la cantidad de pasos y los errores en móvil. En México muchos compradores prefieren pagar con OXXO Pay y SPEI, así que destacar bien esas opciones y quitar campos innecesarios suele reducir el abandono del carrito."
+   ],
+   [
+    "¿Atienden empresas fuera de la capital?",
+    "Sí. Trabajamos con empresas de Ciudad de México, Monterrey y cualquier otra ciudad de México. Como el CRO se basa en datos y experimentos, el servicio funciona igual para una empresa de la Ciudad de México que para una de cualquier otra ciudad del país."
+   ]
+  ],
+  "/es/agencia-cro-cdmx": [
+   [
+    "¿Qué es CRO y en qué ayuda a mi negocio?",
+    "CRO es la optimización de la tasa de conversión: lograr que más visitantes de tu web compren, coticen o te escriban. En lugar de pagar por más tráfico, encontramos dónde se pierden los usuarios y lo corregimos. Para una empresa en Ciudad de México significa más ventas con la misma inversión en publicidad."
+   ],
+   [
+    "¿Qué precio tiene una consultoría CRO en Ciudad de México?",
+    "Depende del tamaño del sitio y del volumen de tráfico. Trabajamos en dos formatos: una auditoría CRO puntual con un plan de mejoras priorizado, o un servicio mensual que incluye implementación y pruebas A/B continuas. En ambos casos recibes una propuesta cerrada antes de empezar."
+   ],
+   [
+    "¿Cómo preparan el sitio para el Hot Sale y El Buen Fin?",
+    "Semanas antes del Hot Sale y El Buen Fin revisamos velocidad, estabilidad del checkout y mensajes de oferta, y probamos las páginas clave con tráfico real. Así llegas a la fecha de más demanda sin fricciones y aprovechas cada visita que traen tus campañas."
+   ],
+   [
+    "¿Cómo sé cuántos clientes me escriben por WhatsApp desde la web?",
+    "Configuramos eventos para cada clic al botón de WhatsApp, usamos mensajes prellenados por página y, si tu equipo trabaja con la API de WhatsApp Business o un CRM, conectamos las conversaciones con las ventas. Es clave en Ciudad de México, donde muchos clientes prefieren escribir antes que llenar un formulario."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad de México?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Ciudad de México, de Monterrey y del resto de México con el mismo método."
+   ]
+  ],
+  "/es/agencia-cro-monterrey": [
+   [
+    "¿Mi web tiene suficientes visitas para hacer pruebas A/B?",
+    "Las pruebas A/B necesitan volumen para ser confiables. Si tu sitio tiene poco tráfico, empezamos con análisis de comportamiento, grabaciones de sesión y entrevistas a clientes para aplicar mejoras de alto impacto sin esperar meses por un resultado estadístico. A medida que crece el tráfico, pasamos a experimentos."
+   ],
+   [
+    "¿Qué incluye una auditoría CRO?",
+    "Revisamos la analítica para ver en qué paso se van los usuarios, analizamos mapas de calor y grabaciones, evaluamos formularios, velocidad en móvil, mensajes y llamados a la acción, y comparamos tu sitio con la competencia en Monterrey. El resultado es una lista de mejoras ordenada por impacto esperado y esfuerzo."
+   ],
+   [
+    "¿Cuándo empiezan a subir las conversiones?",
+    "Las mejoras rápidas, como simplificar formularios o corregir errores en móvil, pueden mostrar resultados en pocas semanas. Cada prueba A/B suele correr al menos dos semanas para obtener datos confiables. En un servicio continuo, la tasa de conversión mejora de forma acumulada mes a mes."
+   ],
+   [
+    "¿Analizan a mi competencia en Monterrey?",
+    "Sí. Revisamos cómo presentan su oferta, precios, garantías y formularios las empresas que compiten contigo en Monterrey y lo usamos como referencia para tus pruebas. No se trata de copiar, sino de entender qué espera el cliente local y superarlo."
+   ],
+   [
+    "¿El servicio de CRO es solo para empresas de Monterrey?",
+    "El trabajo de CRO es remoto: analizamos los datos, diseñamos las pruebas y las implementamos sin necesidad de reuniones presenciales. Trabajamos con empresas de Monterrey, de la Ciudad de México y del resto de México con el mismo método."
+   ]
+  ],
+  "/es/agencia-ecommerce-peru": [
+   [
+    "¿Qué precio tiene el desarrollo de una tienda virtual en Perú?",
+    "Depende de la plataforma, el tamaño del catálogo y las integraciones con pagos, facturación, inventario o ERP. Una tienda en Shopify con catálogo estándar cuesta mucho menos que un proyecto en VTEX con integraciones a medida. Después de una reunión de diagnóstico enviamos una propuesta cerrada con alcance, tiempos y costos."
+   ],
+   [
+    "¿Qué plataforma recomiendan: Shopify, WooCommerce o VTEX?",
+    "Shopify es ideal para lanzar rápido y crecer sin preocuparte por servidores. WooCommerce da más control y funciona bien si ya tienes WordPress. VTEX y Magento convienen a marcas con catálogos grandes, varios almacenes o venta B2B. Recomendamos la plataforma según tu volumen, presupuesto y planes de crecimiento en Perú."
+   ],
+   [
+    "¿En cuántas semanas puedo empezar a vender online?",
+    "Una tienda con catálogo estándar en Shopify o WooCommerce suele estar lista en 6 a 10 semanas. Si hay integraciones con ERP, facturación electrónica o venta B2B, el plazo puede ser mayor. Al inicio entregamos un cronograma por etapas con fechas de revisión."
+   ],
+   [
+    "¿Qué medios de pago puedo integrar en mi tienda en Perú?",
+    "Integramos los medios que más usan los compradores en Perú: Yape, Plin, Niubiz, Izipay y Culqi, además de tarjetas de crédito y débito. Configuramos los precios en soles y probamos cada pasarela antes del lanzamiento para que ningún pago quede a mitad de camino."
+   ],
+   [
+    "¿Pueden ayudarme a vender online en todo Perú?",
+    "Sí. Trabajamos con marcas de Lima, Arequipa y cualquier otra ciudad del Perú. Configuramos la tienda para vender a todo el país, con tarifas de envío por región y los medios de pago que prefieren los compradores locales."
+   ]
+  ],
+  "/es/agencia-ecommerce-lima": [
+   [
+    "¿La tienda queda conectada con la facturación electrónica SUNAT?",
+    "Integramos la tienda con tu proveedor de facturación electrónica SUNAT para que cada venta genere su comprobante automáticamente, sin digitar pedidos a mano. Si ya trabajas con un sistema contable o un ERP, también conectamos la tienda con él."
+   ],
+   [
+    "Quiero cambiar de plataforma, ¿perderé mis ventas desde Google?",
+    "Una migración bien hecha no debería costarte tráfico. Mapeamos todas las URLs, configuramos redirecciones 301, conservamos los títulos y contenidos que ya posicionan y monitoreamos Search Console las semanas siguientes. También migramos clientes, pedidos y catálogo."
+   ],
+   [
+    "¿Ofrecen soporte después del lanzamiento?",
+    "Ofrecemos planes mensuales de soporte y crecimiento que incluyen mantenimiento, nuevas funcionalidades, optimización de conversión y campañas. La idea no es entregar la tienda y desaparecer, sino ayudarte a que venda más cada mes."
+   ],
+   [
+    "¿Pueden integrar los envíos de mi tienda en Perú?",
+    "Configuramos envíos a Lima y a provincias, retiro en tienda y, si lo necesitas, pago contraentrega. Las tarifas se calculan automáticamente en el checkout y el cliente recibe el seguimiento de su pedido, lo que reduce consultas y reclamos."
+   ],
+   [
+    "¿Atienden empresas fuera de Lima?",
+    "Desarrollamos tiendas para empresas de Lima, de Arequipa y del resto de Perú. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-arequipa": [
+   [
+    "¿Cómo atraigo tráfico a mi tienda virtual?",
+    "Además del desarrollo, trabajamos SEO para ecommerce (categorías, fichas de producto y contenidos), campañas de Google Shopping y Meta Ads y optimización de conversión. Tener todo con un mismo equipo evita que la tienda quede lista pero sin visitas."
+   ],
+   [
+    "¿Cómo preparan la tienda para el CyberWow?",
+    "Con anticipación ajustamos inventario, precios y banners, probamos la carga del sitio y del checkout, y configuramos campañas y correos para la fecha. Después del CyberWow analizamos qué productos y canales funcionaron mejor para preparar la siguiente temporada."
+   ],
+   [
+    "¿Se puede vender al por mayor desde una tienda online?",
+    "Sí. Configuramos catálogos y listas de precios por cliente o por volumen, pedidos mínimos, cotizaciones en línea y condiciones de crédito. Es una solución muy útil para distribuidores e importadores en Arequipa que quieren dejar de tomar pedidos por correo o por teléfono."
+   ],
+   [
+    "¿Pueden conectar mi tienda con marketplaces?",
+    "Sí. Sincronizamos catálogo, precios e inventario con Mercado Libre, Falabella o Ripley, para que gestiones todo desde un solo lugar. Tu tienda propia sigue siendo el canal con mejor margen y con los datos de tus clientes, y los marketplaces suman alcance."
+   ],
+   [
+    "¿Solo desarrollan tiendas para empresas de Arequipa?",
+    "Desarrollamos tiendas para empresas de Arequipa, de Lima y del resto de Perú. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-paraguay": [
+   [
+    "¿Cuánto cuesta crear una tienda online en Paraguay?",
+    "Depende de la plataforma, el tamaño del catálogo y las integraciones con pagos, facturación, inventario o ERP. Una tienda en Shopify con catálogo estándar cuesta mucho menos que un proyecto en VTEX con integraciones a medida. Después de una reunión de diagnóstico enviamos una propuesta cerrada con alcance, tiempos y costos."
+   ],
+   [
+    "¿Cuál es la mejor plataforma para una tienda online en Paraguay?",
+    "Shopify es ideal para lanzar rápido y crecer sin preocuparte por servidores. WooCommerce da más control y funciona bien si ya tienes WordPress. VTEX y Magento convienen a marcas con catálogos grandes, varios almacenes o venta B2B. Recomendamos la plataforma según tu volumen, presupuesto y planes de crecimiento en Paraguay."
+   ],
+   [
+    "¿Cuánto tiempo toma lanzar una tienda online?",
+    "Una tienda con catálogo estándar en Shopify o WooCommerce suele estar lista en 6 a 10 semanas. Si hay integraciones con ERP, facturación electrónica o venta B2B, el plazo puede ser mayor. Al inicio entregamos un cronograma por etapas con fechas de revisión."
+   ],
+   [
+    "¿Puedo recibir pagos con Bancard en mi tienda online?",
+    "Integramos los medios que más usan los compradores en Paraguay: Bancard, Pagopar y billeteras como Tigo Money, además de tarjetas de crédito y débito. Configuramos los precios en guaraníes y probamos cada pasarela antes del lanzamiento para que ningún pago quede a mitad de camino."
+   ],
+   [
+    "¿Trabajan con marcas de todo Paraguay?",
+    "Sí. Trabajamos con marcas de Asunción, Ciudad del Este y cualquier otra ciudad de Paraguay. Configuramos la tienda para vender a todo el país, con tarifas de envío por región y los medios de pago que prefieren los compradores locales."
+   ]
+  ],
+  "/es/agencia-ecommerce-asuncion": [
+   [
+    "¿Cómo se integra la facturación electrónica SIFEN con mi tienda?",
+    "Integramos la tienda con tu proveedor de facturación electrónica SIFEN para que cada venta genere su comprobante automáticamente, sin digitar pedidos a mano. Si ya trabajas con un sistema contable o un ERP, también conectamos la tienda con él."
+   ],
+   [
+    "¿Pueden migrar mi tienda sin perder posicionamiento?",
+    "Una migración bien hecha no debería costarte tráfico. Mapeamos todas las URLs, configuramos redirecciones 301, conservamos los títulos y contenidos que ya posicionan y monitoreamos Search Console las semanas siguientes. También migramos clientes, pedidos y catálogo."
+   ],
+   [
+    "¿Qué pasa con la tienda una vez publicada?",
+    "Ofrecemos planes mensuales de soporte y crecimiento que incluyen mantenimiento, nuevas funcionalidades, optimización de conversión y campañas. La idea no es entregar la tienda y desaparecer, sino ayudarte a que venda más cada mes."
+   ],
+   [
+    "¿Cómo se gestionan los envíos en Asunción?",
+    "Configuramos delivery en Gran Asunción, envíos al interior del país y retiro en tienda. Las tarifas se calculan automáticamente en el checkout y el cliente recibe el seguimiento de su pedido, lo que reduce consultas y reclamos."
+   ],
+   [
+    "¿Solo desarrollan tiendas para empresas de Asunción?",
+    "Desarrollamos tiendas para empresas de Asunción, de Ciudad del Este y del resto de Paraguay. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-ciudad-del-este": [
+   [
+    "¿También hacen SEO y campañas para la tienda?",
+    "Además del desarrollo, trabajamos SEO para ecommerce (categorías, fichas de producto y contenidos), campañas de Google Shopping y Meta Ads y optimización de conversión. Tener todo con un mismo equipo evita que la tienda quede lista pero sin visitas."
+   ],
+   [
+    "¿Qué hacen para que la tienda venda más en el Black Friday?",
+    "Con anticipación ajustamos inventario, precios y banners, probamos la carga del sitio y del checkout, y configuramos campañas y correos para la fecha. Después del Black Friday analizamos qué productos y canales funcionaron mejor para preparar la siguiente temporada."
+   ],
+   [
+    "¿Pueden crear un ecommerce B2B con precios por cliente?",
+    "Sí. Configuramos catálogos y listas de precios por cliente o por volumen, pedidos mínimos, cotizaciones en línea y condiciones de crédito. Es una solución muy útil para distribuidores e importadores en Ciudad del Este que quieren dejar de tomar pedidos por correo o por teléfono."
+   ],
+   [
+    "¿Puedo vender en marketplaces además de mi tienda propia?",
+    "Sí. Sincronizamos catálogo, precios e inventario con Mercado Libre y los catálogos de Instagram, Facebook y WhatsApp, para que gestiones todo desde un solo lugar. Tu tienda propia sigue siendo el canal con mejor margen y con los datos de tus clientes, y los marketplaces suman alcance."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad del Este?",
+    "Desarrollamos tiendas para empresas de Ciudad del Este, de Asunción y del resto de Paraguay. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-panama": [
+   [
+    "¿Qué precio tiene el desarrollo de una tienda online en Panamá?",
+    "Depende de la plataforma, el tamaño del catálogo y las integraciones con pagos, facturación, inventario o ERP. Una tienda en Shopify con catálogo estándar cuesta mucho menos que un proyecto en VTEX con integraciones a medida. Después de una reunión de diagnóstico enviamos una propuesta cerrada con alcance, tiempos y costos."
+   ],
+   [
+    "¿Qué plataforma recomiendan: Shopify, WooCommerce o VTEX?",
+    "Shopify es ideal para lanzar rápido y crecer sin preocuparte por servidores. WooCommerce da más control y funciona bien si ya tienes WordPress. VTEX y Magento convienen a marcas con catálogos grandes, varios almacenes o venta B2B. Recomendamos la plataforma según tu volumen, presupuesto y planes de crecimiento en Panamá."
+   ],
+   [
+    "¿En cuántas semanas puedo empezar a vender online?",
+    "Una tienda con catálogo estándar en Shopify o WooCommerce suele estar lista en 6 a 10 semanas. Si hay integraciones con ERP, facturación electrónica o venta B2B, el plazo puede ser mayor. Al inicio entregamos un cronograma por etapas con fechas de revisión."
+   ],
+   [
+    "¿Qué medios de pago puedo integrar en mi tienda en Panamá?",
+    "Integramos los medios que más usan los compradores en Panamá: Yappy y pasarelas de pago locales, además de tarjetas de crédito y débito. Configuramos los precios en dólares y probamos cada pasarela antes del lanzamiento para que ningún pago quede a mitad de camino."
+   ],
+   [
+    "¿Pueden ayudarme a vender online en todo Panamá?",
+    "Sí. Trabajamos con marcas de Ciudad de Panamá, Colón y cualquier otra ciudad de Panamá. Configuramos la tienda para vender a todo el país, con tarifas de envío por región y los medios de pago que prefieren los compradores locales."
+   ]
+  ],
+  "/es/agencia-ecommerce-ciudad-de-panama": [
+   [
+    "¿La tienda queda conectada con la facturación electrónica de la DGI?",
+    "Integramos la tienda con tu proveedor de facturación electrónica de la DGI para que cada venta genere su comprobante automáticamente, sin digitar pedidos a mano. Si ya trabajas con un sistema contable o un ERP, también conectamos la tienda con él."
+   ],
+   [
+    "Quiero cambiar de plataforma, ¿perderé mis ventas desde Google?",
+    "Una migración bien hecha no debería costarte tráfico. Mapeamos todas las URLs, configuramos redirecciones 301, conservamos los títulos y contenidos que ya posicionan y monitoreamos Search Console las semanas siguientes. También migramos clientes, pedidos y catálogo."
+   ],
+   [
+    "¿Ofrecen soporte después del lanzamiento?",
+    "Ofrecemos planes mensuales de soporte y crecimiento que incluyen mantenimiento, nuevas funcionalidades, optimización de conversión y campañas. La idea no es entregar la tienda y desaparecer, sino ayudarte a que venda más cada mes."
+   ],
+   [
+    "¿Pueden integrar los envíos de mi tienda en Panamá?",
+    "Configuramos entregas en la capital, envíos al interior del país y retiro en tienda. Las tarifas se calculan automáticamente en el checkout y el cliente recibe el seguimiento de su pedido, lo que reduce consultas y reclamos."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad de Panamá?",
+    "Desarrollamos tiendas para empresas de Ciudad de Panamá, de Colón y del resto de Panamá. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-colon": [
+   [
+    "¿Cómo atraigo tráfico a mi tienda online?",
+    "Además del desarrollo, trabajamos SEO para ecommerce (categorías, fichas de producto y contenidos), campañas de Google Shopping y Meta Ads y optimización de conversión. Tener todo con un mismo equipo evita que la tienda quede lista pero sin visitas."
+   ],
+   [
+    "¿Cómo preparan la tienda para el Black Friday?",
+    "Con anticipación ajustamos inventario, precios y banners, probamos la carga del sitio y del checkout, y configuramos campañas y correos para la fecha. Después del Black Friday analizamos qué productos y canales funcionaron mejor para preparar la siguiente temporada."
+   ],
+   [
+    "¿Se puede vender al por mayor desde una tienda online?",
+    "Sí. Configuramos catálogos y listas de precios por cliente o por volumen, pedidos mínimos, cotizaciones en línea y condiciones de crédito. Es una solución muy útil para distribuidores e importadores en Colón que quieren dejar de tomar pedidos por correo o por teléfono."
+   ],
+   [
+    "¿Pueden conectar mi tienda con marketplaces?",
+    "Sí. Sincronizamos catálogo, precios e inventario con los catálogos de Instagram, Facebook y WhatsApp y marketplaces regionales, para que gestiones todo desde un solo lugar. Tu tienda propia sigue siendo el canal con mejor margen y con los datos de tus clientes, y los marketplaces suman alcance."
+   ],
+   [
+    "¿Solo desarrollan tiendas para empresas de Colón?",
+    "Desarrollamos tiendas para empresas de Colón, de la Ciudad de Panamá y del resto de Panamá. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-colombia": [
+   [
+    "¿Cuánto cuesta crear una tienda virtual en Colombia?",
+    "Depende de la plataforma, el tamaño del catálogo y las integraciones con pagos, facturación, inventario o ERP. Una tienda en Shopify con catálogo estándar cuesta mucho menos que un proyecto en VTEX con integraciones a medida. Después de una reunión de diagnóstico enviamos una propuesta cerrada con alcance, tiempos y costos."
+   ],
+   [
+    "¿Cuál es la mejor plataforma para una tienda virtual en Colombia?",
+    "Shopify es ideal para lanzar rápido y crecer sin preocuparte por servidores. WooCommerce da más control y funciona bien si ya tienes WordPress. VTEX y Magento convienen a marcas con catálogos grandes, varios almacenes o venta B2B. Recomendamos la plataforma según tu volumen, presupuesto y planes de crecimiento en Colombia."
+   ],
+   [
+    "¿Cuánto tiempo toma lanzar una tienda virtual?",
+    "Una tienda con catálogo estándar en Shopify o WooCommerce suele estar lista en 6 a 10 semanas. Si hay integraciones con ERP, facturación electrónica o venta B2B, el plazo puede ser mayor. Al inicio entregamos un cronograma por etapas con fechas de revisión."
+   ],
+   [
+    "¿Puedo recibir pagos con PSE y Nequi en mi tienda virtual?",
+    "Integramos los medios que más usan los compradores en Colombia: PSE, Nequi, Daviplata, Wompi y Mercado Pago, además de tarjetas de crédito y débito. Configuramos los precios en pesos colombianos y probamos cada pasarela antes del lanzamiento para que ningún pago quede a mitad de camino."
+   ],
+   [
+    "¿Trabajan con marcas de todo Colombia?",
+    "Sí. Trabajamos con marcas de Bogotá, Medellín y cualquier otra ciudad de Colombia. Configuramos la tienda para vender a todo el país, con tarifas de envío por región y los medios de pago que prefieren los compradores locales."
+   ]
+  ],
+  "/es/agencia-ecommerce-bogota": [
+   [
+    "¿Cómo se integra la facturación electrónica DIAN con mi tienda?",
+    "Integramos la tienda con tu proveedor de facturación electrónica DIAN para que cada venta genere su comprobante automáticamente, sin digitar pedidos a mano. Si ya trabajas con un sistema contable o un ERP, también conectamos la tienda con él."
+   ],
+   [
+    "¿Pueden migrar mi tienda sin perder posicionamiento?",
+    "Una migración bien hecha no debería costarte tráfico. Mapeamos todas las URLs, configuramos redirecciones 301, conservamos los títulos y contenidos que ya posicionan y monitoreamos Search Console las semanas siguientes. También migramos clientes, pedidos y catálogo."
+   ],
+   [
+    "¿Qué pasa con la tienda una vez publicada?",
+    "Ofrecemos planes mensuales de soporte y crecimiento que incluyen mantenimiento, nuevas funcionalidades, optimización de conversión y campañas. La idea no es entregar la tienda y desaparecer, sino ayudarte a que venda más cada mes."
+   ],
+   [
+    "¿Cómo se gestionan los envíos en Bogotá?",
+    "Configuramos envíos con transportadoras nacionales, cálculo de flete por ciudad y pago contraentrega. Las tarifas se calculan automáticamente en el checkout y el cliente recibe el seguimiento de su pedido, lo que reduce consultas y reclamos."
+   ],
+   [
+    "¿Solo desarrollan tiendas para empresas de Bogotá?",
+    "Desarrollamos tiendas para empresas de Bogotá, de Medellín y del resto de Colombia. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-medellin": [
+   [
+    "¿También hacen SEO y campañas para la tienda?",
+    "Además del desarrollo, trabajamos SEO para ecommerce (categorías, fichas de producto y contenidos), campañas de Google Shopping y Meta Ads y optimización de conversión. Tener todo con un mismo equipo evita que la tienda quede lista pero sin visitas."
+   ],
+   [
+    "¿Qué hacen para que la tienda venda más en el Cyberlunes?",
+    "Con anticipación ajustamos inventario, precios y banners, probamos la carga del sitio y del checkout, y configuramos campañas y correos para la fecha. Después del Cyberlunes analizamos qué productos y canales funcionaron mejor para preparar la siguiente temporada."
+   ],
+   [
+    "¿Pueden crear un ecommerce B2B con precios por cliente?",
+    "Sí. Configuramos catálogos y listas de precios por cliente o por volumen, pedidos mínimos, cotizaciones en línea y condiciones de crédito. Es una solución muy útil para distribuidores e importadores en Medellín que quieren dejar de tomar pedidos por correo o por teléfono."
+   ],
+   [
+    "¿Puedo vender en marketplaces además de mi tienda propia?",
+    "Sí. Sincronizamos catálogo, precios e inventario con Mercado Libre, Falabella o Éxito, para que gestiones todo desde un solo lugar. Tu tienda propia sigue siendo el canal con mejor margen y con los datos de tus clientes, y los marketplaces suman alcance."
+   ],
+   [
+    "¿Atienden empresas fuera de Medellín?",
+    "Desarrollamos tiendas para empresas de Medellín, de Bogotá y del resto de Colombia. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-mexico": [
+   [
+    "¿Qué precio tiene el desarrollo de una tienda en línea en México?",
+    "Depende de la plataforma, el tamaño del catálogo y las integraciones con pagos, facturación, inventario o ERP. Una tienda en Shopify con catálogo estándar cuesta mucho menos que un proyecto en VTEX con integraciones a medida. Después de una reunión de diagnóstico enviamos una propuesta cerrada con alcance, tiempos y costos."
+   ],
+   [
+    "¿Qué plataforma recomiendan: Shopify, WooCommerce o VTEX?",
+    "Shopify es ideal para lanzar rápido y crecer sin preocuparte por servidores. WooCommerce da más control y funciona bien si ya tienes WordPress. VTEX y Magento convienen a marcas con catálogos grandes, varios almacenes o venta B2B. Recomendamos la plataforma según tu volumen, presupuesto y planes de crecimiento en México."
+   ],
+   [
+    "¿En cuántas semanas puedo empezar a vender online?",
+    "Una tienda con catálogo estándar en Shopify o WooCommerce suele estar lista en 6 a 10 semanas. Si hay integraciones con ERP, facturación electrónica o venta B2B, el plazo puede ser mayor. Al inicio entregamos un cronograma por etapas con fechas de revisión."
+   ],
+   [
+    "¿Qué medios de pago puedo integrar en mi tienda en México?",
+    "Integramos los medios que más usan los compradores en México: OXXO Pay, SPEI, Mercado Pago, Stripe y Conekta, además de tarjetas de crédito y débito. Configuramos los precios en pesos mexicanos y probamos cada pasarela antes del lanzamiento para que ningún pago quede a mitad de camino."
+   ],
+   [
+    "¿Pueden ayudarme a vender online en todo México?",
+    "Sí. Trabajamos con marcas de Ciudad de México, Monterrey y cualquier otra ciudad de México. Configuramos la tienda para vender a todo el país, con tarifas de envío por región y los medios de pago que prefieren los compradores locales."
+   ]
+  ],
+  "/es/agencia-ecommerce-cdmx": [
+   [
+    "¿La tienda queda conectada con la facturación CFDI 4.0?",
+    "Integramos la tienda con tu proveedor de facturación CFDI 4.0 para que cada venta genere su comprobante automáticamente, sin digitar pedidos a mano. Si ya trabajas con un sistema contable o un ERP, también conectamos la tienda con él."
+   ],
+   [
+    "Quiero cambiar de plataforma, ¿perderé mis ventas desde Google?",
+    "Una migración bien hecha no debería costarte tráfico. Mapeamos todas las URLs, configuramos redirecciones 301, conservamos los títulos y contenidos que ya posicionan y monitoreamos Search Console las semanas siguientes. También migramos clientes, pedidos y catálogo."
+   ],
+   [
+    "¿Ofrecen soporte después del lanzamiento?",
+    "Ofrecemos planes mensuales de soporte y crecimiento que incluyen mantenimiento, nuevas funcionalidades, optimización de conversión y campañas. La idea no es entregar la tienda y desaparecer, sino ayudarte a que venda más cada mes."
+   ],
+   [
+    "¿Pueden integrar los envíos de mi tienda en México?",
+    "Configuramos envíos con paqueterías nacionales, generación automática de guías y entregas a todo el país. Las tarifas se calculan automáticamente en el checkout y el cliente recibe el seguimiento de su pedido, lo que reduce consultas y reclamos."
+   ],
+   [
+    "¿Atienden empresas fuera de Ciudad de México?",
+    "Desarrollamos tiendas para empresas de Ciudad de México, de Monterrey y del resto de México. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ],
+  "/es/agencia-ecommerce-monterrey": [
+   [
+    "¿Cómo atraigo tráfico a mi tienda en línea?",
+    "Además del desarrollo, trabajamos SEO para ecommerce (categorías, fichas de producto y contenidos), campañas de Google Shopping y Meta Ads y optimización de conversión. Tener todo con un mismo equipo evita que la tienda quede lista pero sin visitas."
+   ],
+   [
+    "¿Cómo preparan la tienda para el Hot Sale y El Buen Fin?",
+    "Con anticipación ajustamos inventario, precios y banners, probamos la carga del sitio y del checkout, y configuramos campañas y correos para la fecha. Después del Hot Sale y El Buen Fin analizamos qué productos y canales funcionaron mejor para preparar la siguiente temporada."
+   ],
+   [
+    "¿Se puede vender al por mayor desde una tienda online?",
+    "Sí. Configuramos catálogos y listas de precios por cliente o por volumen, pedidos mínimos, cotizaciones en línea y condiciones de crédito. Es una solución muy útil para distribuidores e importadores en Monterrey que quieren dejar de tomar pedidos por correo o por teléfono."
+   ],
+   [
+    "¿Pueden conectar mi tienda con marketplaces?",
+    "Sí. Sincronizamos catálogo, precios e inventario con Mercado Libre, Amazon o Walmart, para que gestiones todo desde un solo lugar. Tu tienda propia sigue siendo el canal con mejor margen y con los datos de tus clientes, y los marketplaces suman alcance."
+   ],
+   [
+    "¿Solo desarrollan tiendas para empresas de Monterrey?",
+    "Desarrollamos tiendas para empresas de Monterrey, de la Ciudad de México y del resto de México. Todo el proyecto puede hacerse de forma remota y, si vendes a todo el país, configuramos envíos y tarifas para cada región."
+   ]
+  ]
  }
 }
