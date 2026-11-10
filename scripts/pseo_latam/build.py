@@ -75,7 +75,7 @@ DIFFERENTIATORS_TABLE = [
     ("Reporta métricas de vanidad", "Reporta ingresos y pipeline atribuidos"),
     ("Una estrategia genérica para cada cliente", "Un roadmap armado con tus propios datos y competidores"),
     ("Un account manager que rota", "El mismo consultor senior de la auditoría a la ejecución"),
-    ("Te ata a un contrato de 12 meses", "Sin permanencia mínima — te quedás porque funciona"),
+    ("Te ata a un contrato de 12 meses", "Sin permanencia mínima: te quedás porque funciona"),
     ("Manda un PDF una vez por trimestre", "Sesiones de trabajo quincenales y un dashboard compartido en vivo"),
 ]
 
@@ -87,15 +87,15 @@ SERVICE_TEMPLATES = {
     "SEO": dict(
         service_type_schema="Optimización en motores de búsqueda",
         hero_lede="Si el posicionamiento orgánico no está trabajando activamente para vos, estás dejando "
-                  "tráfico calificado —y ventas— sobre la mesa todos los días en uno de los mercados más "
+                  "tráfico calificado y ventas sobre la mesa todos los días en uno de los mercados más "
                   "competitivos de la región. Auditamos tu sitio, armamos un plan técnico, de contenidos y de "
                   "autoridad basado en la intención real de búsqueda, y lo medimos hasta los ingresos, no solo "
                   "hasta los rankings.",
         hero_bullets=[
-            "Auditoría técnica completa, priorizada por impacto en ingresos — no un checklist de 200 ítems",
+            "Auditoría técnica completa, priorizada por impacto en ingresos, no un checklist de 200 ítems",
             "Contenido construido alrededor de la intención de búsqueda en {lugar}, no de volumen de keywords "
             "genérico",
-            "Tu propio dashboard en vivo — el mismo que usamos nosotros, todos los días",
+            "Tu propio dashboard en vivo: el mismo que usamos nosotros, todos los días",
             "Sin contratos de permanencia. Si no estamos moviendo la aguja, lo vas a saber.",
         ],
         proof_stats=[
@@ -109,13 +109,13 @@ SERVICE_TEMPLATES = {
             ("Reportes llenos de rankings y cero ingresos.", "Subiste keywords al top 3 y los ingresos se "
              "mantuvieron igual. Te vendieron rankings, no demanda."),
             ("Un plan de contenidos que nadie pidió leer.", "Cero volumen de búsqueda, cero intención de "
-             "compra — tráfico en el papel, no en tu cuenta bancaria."),
+             "compra: tráfico en el papel, no en tu cuenta bancaria."),
             ("Deuda técnica que nadie toca.", "Google gasta presupuesto de rastreo en URLs que no deberían "
              "existir, mientras tus páginas más importantes no se indexan."),
             ("100% dependiente de medios pagos.", "El día que pausás la inversión publicitaria, el tráfico se "
              "cae a cero."),
             ("Nadie te puede decir cuánto genera lo orgánico realmente.", "Ni la agencia anterior, ni tu "
-             "configuración de analítica — y sin ese número, cualquier conversación de presupuesto es una "
+             "configuración de analítica, y sin ese número, cualquier conversación de presupuesto es una "
              "suposición."),
         ],
         services_h2="SEO integral: técnico, contenido y autoridad",
@@ -127,12 +127,12 @@ SERVICE_TEMPLATES = {
             ("🔍", "Investigación de keywords", "Mapeamos todo tu mercado por intención de búsqueda real y lo "
              "cruzamos con tu catálogo o servicios, resolviendo canibalización y vacíos."),
             ("✍️", "Producción de contenido", "Páginas de categoría, comparativas y guías de compra escritas "
-             "para ganar una decisión — cada página construida alrededor de una keyword y una métrica."),
+             "para ganar una decisión: cada página construida alrededor de una keyword y una métrica."),
             ("🔗", "Digital PR", "Enlaces editoriales de medios reales y relevantes. Sin granjas de enlaces, "
              "sin riesgo de penalización."),
             ("📍", "SEO local", "Perfil de Google Business, landing pages locales y citaciones, para que "
              "aparezcas en búsquedas \"cerca de mí\" y a nivel ciudad en {lugar}."),
-            ("🧩", "SEO programático", "Landing pages estructuradas y basadas en datos, a escala — hechas "
+            ("🧩", "SEO programático", "Landing pages estructuradas y basadas en datos, a escala, hechas "
              "bien, con contenido realmente diferencial, no páginas duplicadas finas."),
         ],
         method_h2="De la auditoría a los ingresos, en cuatro etapas",
@@ -144,7 +144,7 @@ SERVICE_TEMPLATES = {
             ("Ejecución", "Mes 2-6", "Sprints mensuales: arreglos técnicos junto a tu equipo de desarrollo, "
              "publicación de contenido y construcción de autoridad. Reunión quincenal, reporte mensual."),
             ("Medición e iteración", "Continuo", "Redoblamos lo que funciona, cortamos lo que no, y abrimos "
-             "nuevos clusters — acá es donde lo orgánico empieza a bajar el costo de adquisición."),
+             "nuevos clusters. Acá es donde lo orgánico empieza a bajar el costo de adquisición."),
         ],
         industries=[
             ("💻", "Tecnología y SaaS"), ("🎬", "Entretenimiento y medios"), ("🏨", "Turismo y hotelería"),
@@ -152,20 +152,20 @@ SERVICE_TEMPLATES = {
             ("🌱", "Agro y alimentos"), ("💼", "Servicios profesionales"),
         ],
         approach_h2="Nuestro enfoque, en la práctica",
-        approach_lede="Todavía no tenemos un caso publicado en {lugar} — así es un primer proyecto real, "
+        approach_lede="Todavía no tenemos un caso publicado en {lugar}: así es un primer proyecto real, "
                       "basado en cómo trabajamos.",
         approach_steps=[
             ("Arrancamos con la auditoría gratuita.", "Un rastreo completo más una revisión de tus principales "
              "competidores en {lugar}. Te llevás los tres problemas más costosos que encontramos, por escrito, "
              "nos contrates o no."),
-            ("Armamos un roadmap atado a ingresos.", "No un checklist — un plan priorizado que dice qué "
+            ("Armamos un roadmap atado a ingresos.", "No un checklist: un plan priorizado que dice qué "
              "arreglo mueve qué número, y por cuánto, aproximadamente."),
             ("Reportamos lo que le importa al negocio.", "Tráfico orgánico y rankings son insumos. El reporte "
              "que importa mide leads e ingresos atribuidos a lo orgánico."),
         ],
         mid_cta=[
             ("¿Cansado de pagar por rankings que no convierten?",
-             "Averigüemos dónde se está perdiendo tráfico orgánico — sin costo, sin compromiso."),
+             "Averigüemos dónde se está perdiendo tráfico orgánico, sin costo y sin compromiso."),
             ("¿Querés ver cómo se vería esto para tu industria?",
              "Pedí una auditoría gratuita enfocada en tu sitio y tus competidores en {lugar}."),
             ("¿Listo para una agencia que reporta ingresos, no métricas de vanidad?",
@@ -173,7 +173,7 @@ SERVICE_TEMPLATES = {
         ],
         final_h2="Conseguí tu auditoría de SEO gratis para {lugar}",
         final_body="Contanos sobre tu proyecto y en 48 horas hábiles te entregamos un análisis real de tu "
-                   "situación orgánica — sin costo, sin compromiso.",
+                   "situación orgánica, sin costo y sin compromiso.",
     ),
     "CRO": dict(
         service_type_schema="Optimización de tasa de conversión",
@@ -185,7 +185,7 @@ SERVICE_TEMPLATES = {
             "Auditoría de conversión basada en datos cuantitativos y cualitativos",
             "Programa de testing A/B: hipótesis, medición y aprendizaje",
             "Cada cambio validado con significancia estadística, no con opinión",
-            "Trabajamos con lo que ya tenés — no hace falta un rediseño completo",
+            "Trabajamos con lo que ya tenés: no hace falta un rediseño completo",
         ],
         proof_stats=[
             ("8+", "Años gestionando programas de CRO"),
@@ -198,12 +198,12 @@ SERVICE_TEMPLATES = {
             ("Un rediseño completo, vendido como \"optimización\".", "Meses de trabajo, ningún test A/B, "
              "ninguna forma de saber qué movió realmente el número."),
             ("Tests que se cortan apenas \"van ganando\".", "Declarados ganadores antes de llegar a "
-             "significancia estadística — y la mejora desaparece en producción."),
+             "significancia estadística, y la mejora desaparece en producción."),
             ("Reportes de tasa de conversión, nunca de ingresos.", "Una tasa puede subir mientras el ingreso "
              "por sesión baja. Nadie lo revisó."),
             ("Cambios de \"mejores prácticas\" genéricas.", "Copiados de un blog, no de tus grabaciones de "
              "sesión ni de tus datos de funnel reales."),
-            ("Ninguna idea de qué testear después.", "Un solo test, y después silencio — sin backlog, sin "
+            ("Ninguna idea de qué testear después.", "Un solo test y después silencio, sin backlog ni "
              "marco de priorización."),
         ],
         services_h2="CRO integral: investigación, testing y evidencia",
@@ -213,7 +213,7 @@ SERVICE_TEMPLATES = {
             ("🔬", "Auditoría de conversión", "Revisión cuantitativa de analítica más mapas de calor y "
              "grabaciones de sesión para encontrar dónde y por qué se cae la gente."),
             ("🧪", "Testing A/B y multivariado", "Hipótesis estructuradas, cálculo correcto de tamaño de "
-             "muestra y resultados validados estadísticamente — nunca una moneda al aire."),
+             "muestra y resultados validados estadísticamente: nunca una moneda al aire."),
             ("🛒", "Optimización de checkout y formularios", "Revisión campo por campo de tus pasos de mayor "
              "fricción, donde los cambios chicos mueven más ingresos."),
             ("📊", "Revisión de analítica y tracking", "GA4 y GTM auditados para que cada test se mida contra "
@@ -233,7 +233,7 @@ SERVICE_TEMPLATES = {
             ("Ejecución", "Mes 2-6", "Ciclos mensuales de testing: diseño, construcción, corrida hasta "
              "significancia, análisis. Reunión quincenal, reporte mensual."),
             ("Medición e iteración", "Continuo", "Los ganadores se implementan de forma permanente, los "
-             "perdedores quedan documentados como aprendizaje — el backlog nunca se seca."),
+             "perdedores quedan documentados como aprendizaje. El backlog nunca se seca."),
         ],
         industries=[
             ("💻", "SaaS y tecnología"), ("🛍️", "Ecommerce y retail"), ("🏨", "Turismo y hotelería"),
@@ -241,7 +241,7 @@ SERVICE_TEMPLATES = {
             ("🎓", "Educación"), ("💼", "Servicios profesionales"),
         ],
         approach_h2="Nuestro enfoque, en la práctica",
-        approach_lede="Todavía no tenemos un caso publicado en {lugar} — así es un primer proyecto real, "
+        approach_lede="Todavía no tenemos un caso publicado en {lugar}: así es un primer proyecto real, "
                       "basado en cómo trabajamos.",
         approach_steps=[
             ("Arrancamos con la auditoría gratuita.", "Una revisión completa de funnel y analítica, más un "
@@ -253,7 +253,7 @@ SERVICE_TEMPLATES = {
              "por lead, validado con significancia estadística antes de declarar un ganador."),
         ],
         mid_cta=[
-            ("Tu tráfico ya está ahí — lo estás perdiendo en la puerta.",
+            ("Tu tráfico ya está ahí: lo estás perdiendo en la puerta.",
              "Pedí una auditoría de conversión gratuita y encontrá las tres fugas más costosas de tu funnel."),
             ("¿Querés ver cómo sería un roadmap de testing para tu sitio?",
              "Pedí una auditoría gratuita y te mostramos dónde están las ganancias más rápidas."),
@@ -263,12 +263,12 @@ SERVICE_TEMPLATES = {
         ],
         final_h2="Conseguí tu auditoría de CRO gratis para {lugar}",
         final_body="Contanos sobre tu proyecto y en 48 horas hábiles te entregamos las fugas más costosas de "
-                   "tu funnel actual — sin costo, sin compromiso.",
+                   "tu funnel actual, sin costo y sin compromiso.",
     ),
     "Ecommerce": dict(
         service_type_schema="Desarrollo de Ecommerce",
         hero_lede="La diferencia entre una {tienda} en {lugar} que escala y una que se estanca es la base. Te "
-                  "acompañamos en cada paso — plataforma, catálogo, pagos y CRO — para que tu tienda esté "
+                  "acompañamos en cada paso (plataforma, catálogo, pagos y CRO) para que tu tienda esté "
                   "construida sobre bases sólidas y estratégicas desde el día uno.",
         hero_bullets=[
             "Selección y desarrollo de plataforma: Shopify, Shopify Plus, BigCommerce, WooCommerce o VTEX",
@@ -285,7 +285,7 @@ SERVICE_TEMPLATES = {
         pain_h2="Si estás evaluando una agencia de ecommerce en {lugar}, probablemente ya te topaste con esto",
         pain_items=[
             ("Una tienda que se ve bien y convierte mal.", "Nadie testeó el checkout con usuarios reales antes "
-             "del lanzamiento — la fricción se esconde en los detalles."),
+             "del lanzamiento: la fricción se esconde en los detalles."),
             ("Una migración que hundió tu posicionamiento.", "Sin plan de redirecciones, sin metadatos "
              "migrados, y tres meses de tráfico orgánico perdido."),
             ("Una plataforma elegida por los motivos equivocados.", "Elegida porque estaba de moda, no porque "
@@ -330,13 +330,13 @@ SERVICE_TEMPLATES = {
             ("📱", "Electrónica"), ("🐾", "Productos para mascotas"),
         ],
         approach_h2="Nuestro enfoque, en la práctica",
-        approach_lede="Todavía no tenemos un caso publicado en {lugar} — así es un primer proyecto real, "
+        approach_lede="Todavía no tenemos un caso publicado en {lugar}: así es un primer proyecto real, "
                       "basado en cómo trabajamos.",
         approach_steps=[
             ("Arrancamos con la auditoría gratuita.", "Una revisión completa de tu tienda, o una sesión de "
              "alcance para una nueva, más un vistazo a tus principales competidores en {lugar}."),
             ("Planificamos la migración antes de tocar nada.", "Cada URL mapeada, cada redirección "
-             "planificada, metadatos y datos estructurados preservados — indexación y tráfico monitoreados a "
+             "planificada, metadatos y datos estructurados preservados, con indexación y tráfico monitoreados a "
              "diario después del lanzamiento."),
             ("Reportamos ingresos, no solo tráfico.", "Tasa de conversión, ticket promedio y tráfico orgánico "
              "medidos semana a semana, para que sepas que la tienda realmente está funcionando, no solo "
@@ -353,7 +353,7 @@ SERVICE_TEMPLATES = {
         ],
         final_h2="Conseguí tu auditoría de ecommerce gratis para {lugar}",
         final_body="Contanos sobre tu tienda y en 48 horas hábiles te entregamos los arreglos de mayor "
-                   "impacto — sin costo, sin compromiso.",
+                   "impacto, sin costo y sin compromiso.",
     ),
 }
 
@@ -720,7 +720,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="svc2-card glass glow-card">
       <h3>Auditoría de {esc(d['service_label'])} Gratis</h3>
-      <p>Revisamos tu sitio real y te entregamos los tres problemas más costosos — con una estimación de lo que te están costando.</p>
+      <p>Revisamos tu sitio real y te entregamos los tres problemas más costosos, con una estimación de lo que te están costando.</p>
       <a class="pill pill-glow" href="#pseo-contact">Quiero mi auditoría &rarr;</a>
     </div>
   </div>
@@ -855,7 +855,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="full"><button class="pill pill-glow" type="submit">Pedir mi auditoría gratis &rarr;</button></div>
       </form>
       <div class="svc2-success" id="svc2success-{d['slug']}">
-        <h3>¡Gracias — pedido enviado! 🎉</h3>
+        <h3>¡Gracias, pedido enviado! 🎉</h3>
         <p>Te vamos a contactar dentro de las 48 horas hábiles al email que nos diste.</p>
       </div>
     </div>
