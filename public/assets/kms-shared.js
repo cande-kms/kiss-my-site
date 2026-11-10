@@ -537,7 +537,9 @@ document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeM
 (function(){
   var WA_PHONE = '5491131652844';
   var el = document.getElementById('whatsappFloat');
-  if(el) el.href = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent("Hi KMS, I'm visiting from your site and I have a question");
+  var isEs = document.documentElement.lang === 'es';
+  var msg = isEs ? 'Hola KMS, vengo de su sitio y tengo una consulta' : "Hi KMS, I'm visiting from your site and I have a question";
+  if(el) el.href = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(msg);
 })();
 
 var WEB3FORMS_KEYS = ['e7a0904a-a886-49a3-b9e7-2c716fe8b3b2', '81a34f81-7dc3-4089-b3d2-a4e7aaec9344'];
